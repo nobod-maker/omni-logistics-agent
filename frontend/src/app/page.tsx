@@ -12,6 +12,7 @@ import { TelemetryFeed } from '@/components/TelemetryFeed';
 import { DisruptionModal } from '@/components/DisruptionModal';
 import { ResolutionDrawer } from '@/components/ResolutionDrawer';
 import { TariffLookupModal } from '@/components/TariffLookupModal';
+import { AgencyRosterModal } from '@/components/AgencyRosterModal';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
@@ -24,6 +25,7 @@ export default function ControlTowerHome() {
   const [isDisruptionModalOpen, setIsDisruptionModalOpen] = useState(false);
   const [isResolutionDrawerOpen, setIsResolutionDrawerOpen] = useState(false);
   const [isTariffModalOpen, setIsTariffModalOpen] = useState(false);
+  const [isAgencyRosterOpen, setIsAgencyRosterOpen] = useState(false);
 
   // Active Multi-Agent Resolution Plan
   const [currentResolution, setCurrentResolution] = useState<DisruptionResolution | null>(null);
@@ -178,6 +180,7 @@ export default function ControlTowerHome() {
         shipments={shipments}
         onSimulateDelay={handleSimulateDelay}
         onOpenTariffModal={() => setIsTariffModalOpen(true)}
+        onOpenAgencyRoster={() => setIsAgencyRosterOpen(true)}
         onRefresh={() => {
           fetchShipments();
           fetchEvents();
@@ -231,6 +234,13 @@ export default function ControlTowerHome() {
       <TariffLookupModal
         isOpen={isTariffModalOpen}
         onClose={() => setIsTariffModalOpen(false)}
+        apiBaseUrl={API_BASE}
+      />
+
+      {/* Agency Agents 271 Ready-Made Specialists Roster Modal */}
+      <AgencyRosterModal
+        isOpen={isAgencyRosterOpen}
+        onClose={() => setIsAgencyRosterOpen(false)}
         apiBaseUrl={API_BASE}
       />
     </main>

@@ -6,6 +6,7 @@ from app.schemas import SubAgentPlan, DisruptionResolution
 from app.agents.terminal import TerminalAgent
 from app.agents.customs import CustomsAgent
 from app.agents.routing import RoutingAgent
+from app.agents.agency_loader import AgencyAgentLoader
 
 try:
     import google.generativeai as genai
@@ -66,12 +67,16 @@ class MasterOrchestrator:
             routing_plan.source_citations
         ))
 
-        # 5. Build Transparent Chain-of-Thought (CoT) Logs
+        # 5. Build Transparent Chain-of-Thought (CoT) Logs with Agency Agent Intelligence
+        agency_orchestrator = AgencyAgentLoader.load_agent("agency-agents-orchestrator")
+        orch_persona_tag = f"Active Ready-Made Persona: {agency_orchestrator['name']}" if agency_orchestrator else "Master Orchestrator"
+        
         cot_steps = [
+            f"[AGENCY AGENT FRAMEWORK] {orch_persona_tag} directing Multi-Agent workflow pipeline.",
             f"[INGESTION] Received delay anomaly: {vessel_name} (+{delay_hours}h at {berth}). Container {container_id} (Valued at ${value:,.2f}).",
-            f"[DELEGATION -> TERMINAL AGENT] Verified STS crane queue at {berth}. Cancelled GT-8821 booking slot; rescheduled window to prevent ${360:.2f} yard demurrage. Cost impact: ${terminal_plan.financial_impact:.2f}.",
-            f"[DELEGATION -> CUSTOMS AGENT] Audited BoL against UAE HS Tariff Database ({shipment.get('hs_code')}). Validated Free Zone 0% duty exemption. Green-channel clearance requested.",
-            f"[DELEGATION -> ROUTING AGENT] Simulated multimodal transit against customer SLA penalty rate (${sla_rate:.2f}/hr). Unmitigated risk: ${sla_penalties_prevented:,.2f}. Selected expedited multimodal split routing costing ${abs(routing_plan.financial_impact):,.2f}.",
+            f"[DELEGATION -> TERMINAL AGENT] Guided by Operations Manager persona. Verified STS crane queue at {berth}. Cancelled GT-8821 booking slot; rescheduled window to prevent ${360:.2f} yard demurrage. Cost impact: ${terminal_plan.financial_impact:.2f}.",
+            f"[DELEGATION -> CUSTOMS AGENT] Guided by Automation Governance Architect persona. Audited BoL against UAE HS Tariff Database ({shipment.get('hs_code')}). Validated Free Zone 0% duty exemption. Green-channel clearance requested.",
+            f"[DELEGATION -> ROUTING AGENT] Guided by Supply Chain Strategist & GIS Spatial Data Engineer personas. Simulated multimodal transit against customer SLA penalty rate (${sla_rate:.2f}/hr). Unmitigated risk: ${sla_penalties_prevented:,.2f}. Selected expedited multimodal split routing costing ${abs(routing_plan.financial_impact):,.2f}.",
             f"[SYNTHESIS & MARGIN CALCULUS] Total Mitigation Cost: ${gross_costs:,.2f} vs. SLA Penalties Avoided: ${sla_penalties_prevented:,.2f}. Net Saved Margin: +${net_margin_delta:,.2f}.",
             f"[GOVERNANCE CHECK] Evaluated safety thresholds: Net Cost (${gross_costs:,.2f} <= $10,000) & Confidence ({confidence_score * 100:.1f}% >= 85%)."
         ]

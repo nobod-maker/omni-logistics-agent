@@ -17,6 +17,7 @@ interface MetricsOverviewProps {
   shipments: Shipment[];
   onSimulateDelay: () => void;
   onOpenTariffModal: () => void;
+  onOpenAgencyRoster: () => void;
   onRefresh: () => void;
   isSimulating: boolean;
 }
@@ -25,6 +26,7 @@ export const MetricsOverview: React.FC<MetricsOverviewProps> = ({
   shipments,
   onSimulateDelay,
   onOpenTariffModal,
+  onOpenAgencyRoster,
   onRefresh,
   isSimulating
 }) => {
@@ -137,6 +139,15 @@ export const MetricsOverview: React.FC<MetricsOverviewProps> = ({
 
         {/* Action Trigger Buttons */}
         <div className="flex items-center gap-2">
+          <button
+            onClick={onOpenAgencyRoster}
+            className="flex items-center gap-1.5 px-3 py-2 text-xs font-medium rounded-lg bg-cyan-950/70 hover:bg-cyan-900/80 text-cyan-300 border border-cyan-500/40 shadow-cyan-glow transition"
+            title="Browse 271 Ready-Made Agency AI Agents"
+          >
+            <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+            <span>Agency AI (271)</span>
+          </button>
+
           <button
             onClick={onOpenTariffModal}
             className="flex items-center gap-1.5 px-3 py-2 text-xs font-medium rounded-lg bg-slate-800/80 hover:bg-slate-700 text-slate-200 border border-slate-700 transition"

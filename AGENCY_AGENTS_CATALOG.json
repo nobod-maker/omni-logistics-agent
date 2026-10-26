@@ -1,0 +1,1628 @@
+[
+  {
+    "slug": "agency-anthropologist",
+    "name": "Anthropologist",
+    "division": "academic",
+    "description": "Expert in cultural systems, rituals, kinship, belief systems, and ethnographic method \u2014 builds culturally coherent socie..."
+  },
+  {
+    "slug": "agency-geographer",
+    "name": "Geographer",
+    "division": "academic",
+    "description": "Expert in physical and human geography, climate systems, cartography, and spatial analysis \u2014 builds geographically coher..."
+  },
+  {
+    "slug": "agency-historian",
+    "name": "Historian",
+    "division": "academic",
+    "description": "Expert in historical analysis, periodization, material culture, and historiography \u2014 validates historical coherence and ..."
+  },
+  {
+    "slug": "agency-narratologist",
+    "name": "Narratologist",
+    "division": "academic",
+    "description": "Expert in narrative theory, story structure, character arcs, and literary analysis \u2014 grounds advice in established frame..."
+  },
+  {
+    "slug": "agency-psychologist",
+    "name": "Psychologist",
+    "division": "academic",
+    "description": "Expert in human behavior, personality theory, motivation, and cognitive patterns \u2014 builds psychologically credible chara..."
+  },
+  {
+    "slug": "agency-statistician",
+    "name": "Statistician",
+    "division": "academic",
+    "description": "Expert in quantitative research methodology, experimental design, and statistical inference \u2014 pressure-tests claims, des..."
+  },
+  {
+    "slug": "agency-brand-guardian",
+    "name": "Brand Guardian",
+    "division": "design",
+    "description": "Expert brand strategist and guardian specializing in brand identity development, consistency maintenance, and strategic ..."
+  },
+  {
+    "slug": "agency-image-prompt-engineer",
+    "name": "Image Prompt Engineer",
+    "division": "design",
+    "description": "Expert photography prompt engineer specializing in crafting detailed, evocative prompts for AI image generation. Masters..."
+  },
+  {
+    "slug": "agency-inclusive-visuals-specialist",
+    "name": "Inclusive Visuals Specialist",
+    "division": "design",
+    "description": "Representation expert who defeats systemic AI biases to generate culturally accurate, affirming, and non-stereotypical i..."
+  },
+  {
+    "slug": "agency-persona-walkthrough-specialist",
+    "name": "Persona Walkthrough Specialist",
+    "division": "design",
+    "description": "Simulate cognitive walkthroughs of web pages from a defined persona's psychological perspective \u2014 captures emotional rea..."
+  },
+  {
+    "slug": "agency-ui-designer",
+    "name": "UI Designer",
+    "division": "design",
+    "description": "Expert UI designer specializing in visual design systems, component libraries, and pixel-perfect interface creation. Cre..."
+  },
+  {
+    "slug": "agency-ui-finish-gate-reviewer",
+    "name": "UI Finish-Gate Reviewer",
+    "division": "design",
+    "description": "Product-interface reviewer who catches generic, interchangeable UI before it ships by grounding critique in real product..."
+  },
+  {
+    "slug": "agency-ux-architect",
+    "name": "UX Architect",
+    "division": "design",
+    "description": "Technical architecture and UX specialist who provides developers with solid foundations, CSS systems, and clear implemen..."
+  },
+  {
+    "slug": "agency-ux-researcher",
+    "name": "UX Researcher",
+    "division": "design",
+    "description": "Expert user experience researcher specializing in user behavior analysis, usability testing, and data-driven design insi..."
+  },
+  {
+    "slug": "agency-visual-storyteller",
+    "name": "Visual Storyteller",
+    "division": "design",
+    "description": "Expert visual communication specialist focused on creating compelling visual narratives, multimedia content, and brand s..."
+  },
+  {
+    "slug": "agency-whimsy-injector",
+    "name": "Whimsy Injector",
+    "division": "design",
+    "description": "Expert creative specialist focused on adding personality, delight, and playful elements to brand experiences. Creates me..."
+  },
+  {
+    "slug": "agency-ai-data-remediation-engineer",
+    "name": "AI Data Remediation Engineer",
+    "division": "engineering",
+    "description": "Specialist in self-healing data pipelines \u2014 uses air-gapped local SLMs and semantic clustering to automatically detect, ..."
+  },
+  {
+    "slug": "agency-ai-engineer",
+    "name": "AI Engineer",
+    "division": "engineering",
+    "description": "Expert AI/ML engineer specializing in machine learning model development, deployment, and integration into production sy..."
+  },
+  {
+    "slug": "agency-api-platform-engineer",
+    "name": "API Platform Engineer",
+    "division": "engineering",
+    "description": "Expert API platform engineer for public and partner APIs \u2014 contract-first design (OpenAPI/gRPC), versioning and deprecat..."
+  },
+  {
+    "slug": "agency-ats-validator-architect",
+    "name": "ATS Validator Architect",
+    "division": "engineering",
+    "description": "Architect and validator for Applicant Tracking Systems (ATS) and resume parsers. Combines deterministic information retr..."
+  },
+  {
+    "slug": "agency-autonomous-optimization-architect",
+    "name": "Autonomous Optimization Architect",
+    "division": "engineering",
+    "description": "Intelligent system governor that continuously shadow-tests APIs for performance while enforcing strict financial and sec..."
+  },
+  {
+    "slug": "agency-backend-architect",
+    "name": "Backend Architect",
+    "division": "engineering",
+    "description": "Senior backend architect specializing in scalable system design, database architecture, API development, and cloud infra..."
+  },
+  {
+    "slug": "agency-china-network-engineer",
+    "name": "China Network Engineer",
+    "division": "engineering",
+    "description": "Expert in mainland China's mainstream enterprise networking stacks \u2014 Huawei VRP, H3C Comware, Ruijie RGOS, and Hillstone..."
+  },
+  {
+    "slug": "agency-cms-developer",
+    "name": "CMS Developer",
+    "division": "engineering",
+    "description": "Drupal and WordPress specialist for theme development, custom plugins/modules, content architecture, and code-first CMS ..."
+  },
+  {
+    "slug": "agency-code-reviewer",
+    "name": "Code Reviewer",
+    "division": "engineering",
+    "description": "Expert code reviewer who provides constructive, actionable feedback focused on correctness, maintainability, security, a..."
+  },
+  {
+    "slug": "agency-codebase-onboarding-engineer",
+    "name": "Codebase Onboarding Engineer",
+    "division": "engineering",
+    "description": "Expert developer onboarding specialist who helps new engineers understand unfamiliar codebases fast by reading source co..."
+  },
+  {
+    "slug": "agency-data-engineer",
+    "name": "Data Engineer",
+    "division": "engineering",
+    "description": "Expert data engineer specializing in building reliable data pipelines, lakehouse architectures, and scalable data infras..."
+  },
+  {
+    "slug": "agency-data-visualization-engineer",
+    "name": "Data Visualization Engineer",
+    "division": "engineering",
+    "description": "Expert data visualization engineer \u2014 chart-type selection by data and question, perceptually honest encodings, colorblin..."
+  },
+  {
+    "slug": "agency-database-optimizer",
+    "name": "Database Optimizer",
+    "division": "engineering",
+    "description": "Expert database specialist focusing on schema design, query optimization, indexing strategies, and performance tuning fo..."
+  },
+  {
+    "slug": "agency-database-reliability-engineer",
+    "name": "Database Reliability Engineer",
+    "division": "engineering",
+    "description": "Expert database reliability engineer (DBRE) \u2014 high availability and replication, automated failover, backup and point-in..."
+  },
+  {
+    "slug": "agency-desktop-app-engineer",
+    "name": "Desktop App Engineer",
+    "division": "engineering",
+    "description": "Expert desktop application engineer for Electron and Tauri \u2014 secure IPC and process isolation, code signing and notariza..."
+  },
+  {
+    "slug": "agency-developer-tooling-engineer",
+    "name": "Developer Tooling Engineer",
+    "division": "engineering",
+    "description": "Expert developer-tooling and CLI engineer \u2014 building command-line tools and internal developer platforms with great DX: ..."
+  },
+  {
+    "slug": "agency-devops-automator",
+    "name": "DevOps Automator",
+    "division": "engineering",
+    "description": "Expert DevOps engineer specializing in infrastructure automation, CI/CD pipeline development, and cloud operations"
+  },
+  {
+    "slug": "agency-drupal-performance-engineer",
+    "name": "Drupal Performance Engineer",
+    "division": "engineering",
+    "description": "Expert Drupal 10/11 performance engineer specializing in Core Web Vitals, render and dynamic page caching, BigPipe, cach..."
+  },
+  {
+    "slug": "agency-drupal-shopping-cart-engineer",
+    "name": "Drupal Shopping Cart Engineer",
+    "division": "engineering",
+    "description": "Expert Drupal e-commerce engineer specializing in Drupal Commerce for product catalog management, payment gateway integr..."
+  },
+  {
+    "slug": "agency-electrical-engineer",
+    "name": "Electrical Engineer",
+    "division": "engineering",
+    "description": "Power systems engineer for telecom sites, buildings and infrastructure projects. Sizes loads, cables, batteries, rectifi..."
+  },
+  {
+    "slug": "agency-email-intelligence-engineer",
+    "name": "Email Intelligence Engineer",
+    "division": "engineering",
+    "description": "Expert in extracting structured, reasoning-ready data from raw email threads for AI agents and automation systems"
+  },
+  {
+    "slug": "agency-embedded-firmware-engineer",
+    "name": "Embedded Firmware Engineer",
+    "division": "engineering",
+    "description": "Specialist in bare-metal and RTOS firmware - ESP32/ESP-IDF, PlatformIO, Arduino, ARM Cortex-M, STM32 HAL/LL, Nordic nRF5..."
+  },
+  {
+    "slug": "agency-feishu-integration-developer",
+    "name": "Feishu Integration Developer",
+    "division": "engineering",
+    "description": "Full-stack integration expert specializing in the Feishu (Lark) Open Platform \u2014 proficient in Feishu bots, mini programs..."
+  },
+  {
+    "slug": "agency-filament-optimization-specialist",
+    "name": "Filament Optimization Specialist",
+    "division": "engineering",
+    "description": "Expert in restructuring and optimizing Filament PHP admin interfaces for maximum usability and efficiency. Focuses on im..."
+  },
+  {
+    "slug": "agency-finops-engineer",
+    "name": "FinOps Engineer",
+    "division": "engineering",
+    "description": "Expert cloud cost engineer for AWS/GCP/Azure \u2014 cost allocation and tagging, rightsizing, commitment planning (reserved i..."
+  },
+  {
+    "slug": "agency-frontend-developer",
+    "name": "Frontend Developer",
+    "division": "engineering",
+    "description": "Expert frontend developer specializing in modern web technologies, React/Vue/Angular frameworks, UI implementation, and ..."
+  },
+  {
+    "slug": "agency-gaussdb-expert-engineer",
+    "name": "GaussDB Expert Engineer",
+    "division": "engineering",
+    "description": "Expert database specialist focusing on GaussDB OLTP \u2014 Huawei's self-developed enterprise-grade relational database (NOT ..."
+  },
+  {
+    "slug": "agency-git-workflow-master",
+    "name": "Git Workflow Master",
+    "division": "engineering",
+    "description": "Expert in Git workflows, branching strategies, and version control best practices including conventional commits, rebasi..."
+  },
+  {
+    "slug": "agency-internationalization-engineer",
+    "name": "Internationalization Engineer",
+    "division": "engineering",
+    "description": "Expert i18n engineer for ICU MessageFormat, CLDR plural rules, RTL and bidirectional layouts, locale-aware date/number/c..."
+  },
+  {
+    "slug": "agency-identity-access-engineer",
+    "name": "Identity & Access Engineer",
+    "division": "engineering",
+    "description": "Expert identity engineer for OAuth 2.0/OIDC flows, enterprise SSO (SAML/OIDC) and SCIM provisioning, passkeys/WebAuthn, ..."
+  },
+  {
+    "slug": "agency-incident-response-commander",
+    "name": "Incident Response Commander",
+    "division": "engineering",
+    "description": "Expert incident commander specializing in production incident management, structured response coordination, post-mortem ..."
+  },
+  {
+    "slug": "agency-iot-fleet-engineer",
+    "name": "IoT Fleet Engineer",
+    "division": "engineering",
+    "description": "Expert IoT and edge fleet engineer \u2014 device provisioning and identity, MQTT/telemetry pipelines, staged over-the-air (OT..."
+  },
+  {
+    "slug": "agency-it-service-manager",
+    "name": "IT Service Manager",
+    "division": "engineering",
+    "description": "Expert IT service management specialist using ITIL 4 framework for service catalog design, incident and problem manageme..."
+  },
+  {
+    "slug": "agency-knowledge-graph-engineer",
+    "name": "Knowledge Graph Engineer",
+    "division": "engineering",
+    "description": "Structures information and capabilities into interconnected nodes (entities) and edges (relationships) \u2014 enabling dynami..."
+  },
+  {
+    "slug": "agency-llm-post-training-engineer",
+    "name": "LLM Post-Training Engineer",
+    "division": "engineering",
+    "description": "Evidence-driven owner for SFT, preference optimization, RLHF/RLVR, MoE post-training, and the release gates that turn a ..."
+  },
+  {
+    "slug": "agency-minimal-change-engineer",
+    "name": "Minimal Change Engineer",
+    "division": "engineering",
+    "description": "Engineering specialist focused on minimum-viable diffs \u2014 fixes only what was asked, refuses scope creep, prefers three s..."
+  },
+  {
+    "slug": "agency-mobile-app-builder",
+    "name": "Mobile App Builder",
+    "division": "engineering",
+    "description": "Specialized mobile application developer with expertise in native iOS/Android development and cross-platform frameworks"
+  },
+  {
+    "slug": "agency-mobile-release-engineer",
+    "name": "Mobile Release Engineer",
+    "division": "engineering",
+    "description": "Expert mobile release and distribution engineer for iOS and Android \u2014 code signing, provisioning, fastlane pipelines, Ap..."
+  },
+  {
+    "slug": "agency-multi-agent-systems-architect",
+    "name": "Multi-Agent Systems Architect",
+    "division": "engineering",
+    "description": "Systems architect specializing in the design, coordination, and governance of multi-agent AI pipelines \u2014 covering topolo..."
+  },
+  {
+    "slug": "agency-network-engineer",
+    "name": "Network Engineer",
+    "division": "engineering",
+    "description": "Expert network engineer for Cisco IOS/IOS-XE, Cisco ASA/FTD, Juniper Junos, and Palo Alto PAN-OS routing, switching, fir..."
+  },
+  {
+    "slug": "agency-orgscript-engineer",
+    "name": "OrgScript Engineer",
+    "division": "engineering",
+    "description": "Expert in designing, parsing, and implementing OrgScript grammar, AST validation, and business logic definitions."
+  },
+  {
+    "slug": "agency-payments-billing-engineer",
+    "name": "Payments & Billing Engineer",
+    "division": "engineering",
+    "description": "Expert payments engineer for PSP integrations (Stripe, Adyen, Braintree, PayPal), idempotent payment flows, webhook proc..."
+  },
+  {
+    "slug": "agency-pdf-engine-architect",
+    "name": "PDF Engine Architect",
+    "division": "engineering",
+    "description": "Architect and specialist in deterministic HTML-to-PDF document compilation, Playwright browser context pools, dynamic Eu..."
+  },
+  {
+    "slug": "agency-platform-engineer",
+    "name": "Platform Engineer",
+    "division": "engineering",
+    "description": "Expert internal developer platform (IDP) engineer specializing in golden paths, paved roads, and self-serve infrastructu..."
+  },
+  {
+    "slug": "agency-privacy-engineer",
+    "name": "Privacy Engineer",
+    "division": "engineering",
+    "description": "Expert privacy engineer who implements privacy in code \u2014 PII discovery and classification, data minimization, consent en..."
+  },
+  {
+    "slug": "agency-prompt-engineer",
+    "name": "Prompt Engineer",
+    "division": "engineering",
+    "description": "Specialist in crafting, testing, and systematically optimizing prompts for LLMs \u2014 turning vague instructions into reliab..."
+  },
+  {
+    "slug": "agency-rag-pipeline-engineer",
+    "name": "RAG Pipeline Engineer",
+    "division": "engineering",
+    "description": "Production RAG specialist focused on chunking strategy, retrieval quality, hybrid search, re-ranking, and eval-driven it..."
+  },
+  {
+    "slug": "agency-rapid-prototyper",
+    "name": "Rapid Prototyper",
+    "division": "engineering",
+    "description": "Specialized in ultra-fast proof-of-concept development and MVP creation using efficient tools and frameworks"
+  },
+  {
+    "slug": "agency-realtime-collaboration-engineer",
+    "name": "Realtime Collaboration Engineer",
+    "division": "engineering",
+    "description": "Expert realtime systems engineer for WebSocket/SSE infrastructure, presence, CRDT and OT-based collaborative editing, of..."
+  },
+  {
+    "slug": "agency-rust-refactoring-specialist",
+    "name": "Rust Refactoring Specialist",
+    "division": "engineering",
+    "description": "Expert Rust engineer for repository-scale refactoring, safe renames, module restructuring, duplication removal, panic ha..."
+  },
+  {
+    "slug": "agency-search-relevance-engineer",
+    "name": "Search Relevance Engineer",
+    "division": "engineering",
+    "description": "Expert search engineer for Elasticsearch and OpenSearch \u2014 index and analyzer design, BM25 query tuning, hybrid lexical+v..."
+  },
+  {
+    "slug": "agency-section-508-accessibility-specialist",
+    "name": "Section 508 Accessibility Specialist",
+    "division": "engineering",
+    "description": "Expert U.S. federal Section 508 accessibility engineer (the 508 legal baseline is WCAG 2.0 Level AA; WCAG 2.1/2.2 AA are..."
+  },
+  {
+    "slug": "agency-senior-developer",
+    "name": "Senior Developer",
+    "division": "engineering",
+    "description": "Premium implementation specialist - Masters Laravel/Livewire/FluxUI, advanced CSS, Three.js integration"
+  },
+  {
+    "slug": "agency-servicenow-developer-mentor",
+    "name": "ServiceNow Developer & Mentor",
+    "division": "engineering",
+    "description": "ServiceNow platform developer and step-by-step troubleshooter \u2014 Business Rules, Script Includes, GlideRecord/GlideAggreg..."
+  },
+  {
+    "slug": "agency-software-architect",
+    "name": "Software Architect",
+    "division": "engineering",
+    "description": "Expert software architect specializing in system design, domain-driven design, architectural patterns, and technical dec..."
+  },
+  {
+    "slug": "agency-solidity-smart-contract-engineer",
+    "name": "Solidity Smart Contract Engineer",
+    "division": "engineering",
+    "description": "Expert Solidity developer specializing in EVM smart contract architecture, gas optimization, upgradeable proxy patterns,..."
+  },
+  {
+    "slug": "agency-sre-site-reliability-engineer",
+    "name": "SRE (Site Reliability Engineer)",
+    "division": "engineering",
+    "description": "Expert site reliability engineer specializing in SLOs, error budgets, observability, chaos engineering, and toil reducti..."
+  },
+  {
+    "slug": "agency-technical-writer",
+    "name": "Technical Writer",
+    "division": "engineering",
+    "description": "Expert technical writer specializing in developer documentation, API references, README files, and tutorials. Transforms..."
+  },
+  {
+    "slug": "agency-universal-document-compiler",
+    "name": "Universal Document Compiler",
+    "division": "engineering",
+    "description": "Architect of schema-agnostic document ASTs, algorithmic data-shape layout inference, bidirectional CST-to-canvas synchro..."
+  },
+  {
+    "slug": "agency-uswds-developer",
+    "name": "USWDS Developer",
+    "division": "engineering",
+    "description": "Expert U.S. Web Design System frontend developer specializing in USWDS components and design tokens, accessible-by-defau..."
+  },
+  {
+    "slug": "agency-video-streaming-engineer",
+    "name": "Video Streaming Engineer",
+    "division": "engineering",
+    "description": "Expert video streaming engineer for adaptive bitrate delivery \u2014 HLS/DASH packaging, ffmpeg transcode ladders, CMAF low-l..."
+  },
+  {
+    "slug": "agency-voice-ai-integration-engineer",
+    "name": "Voice AI Integration Engineer",
+    "division": "engineering",
+    "description": "Expert in building end-to-end speech transcription pipelines using Whisper-style models and cloud ASR services \u2014 from ra..."
+  },
+  {
+    "slug": "agency-webassembly-engineer",
+    "name": "WebAssembly Engineer",
+    "division": "engineering",
+    "description": "Expert WebAssembly engineer \u2014 compiling Rust/C++/Go to Wasm, JS interop and the boundary marshalling cost, WASI and serv..."
+  },
+  {
+    "slug": "agency-wechat-mini-program-developer",
+    "name": "WeChat Mini Program Developer",
+    "division": "engineering",
+    "description": "Expert WeChat Mini Program developer specializing in \u5c0f\u7a0b\u5e8f development with WXML/WXSS/WXS, WeChat API integration, payment..."
+  },
+  {
+    "slug": "agency-wordpress-performance-engineer",
+    "name": "WordPress Performance Engineer",
+    "division": "engineering",
+    "description": "Expert WordPress performance engineer specializing in Core Web Vitals, object caching (Redis/Memcached), page caching, d..."
+  },
+  {
+    "slug": "agency-wordpress-shopping-cart-engineer",
+    "name": "WordPress Shopping Cart Engineer",
+    "division": "engineering",
+    "description": "Expert WordPress e-commerce engineer specializing in WooCommerce for product catalog management, payment gateway integra..."
+  },
+  {
+    "slug": "agency-bookkeeper-controller",
+    "name": "Bookkeeper & Controller",
+    "division": "finance",
+    "description": "Expert bookkeeper and controller specializing in day-to-day accounting operations, financial reconciliations, month-end ..."
+  },
+  {
+    "slug": "agency-financial-analyst",
+    "name": "Financial Analyst",
+    "division": "finance",
+    "description": "Expert financial analyst specializing in financial modeling, forecasting, scenario analysis, and data-driven decision su..."
+  },
+  {
+    "slug": "agency-fpa-analyst",
+    "name": "FP&A Analyst",
+    "division": "finance",
+    "description": "Expert Financial Planning & Analysis (FP&A) analyst specializing in budgeting, variance analysis, financial planning, ro..."
+  },
+  {
+    "slug": "agency-investment-researcher",
+    "name": "Investment Researcher",
+    "division": "finance",
+    "description": "Expert investment researcher specializing in market research, due diligence, portfolio analysis, and asset valuation. Co..."
+  },
+  {
+    "slug": "agency-tax-strategist",
+    "name": "Tax Strategist",
+    "division": "finance",
+    "description": "Expert tax strategist specializing in tax optimization, multi-jurisdictional compliance, transfer pricing, and strategic..."
+  },
+  {
+    "slug": "agency-economy-designer",
+    "name": "Economy Designer",
+    "division": "game-development",
+    "description": "Virtual economy architect - Masters currency systems, sources and sinks, monetization modeling, inflation control, and d..."
+  },
+  {
+    "slug": "agency-game-audio-engineer",
+    "name": "Game Audio Engineer",
+    "division": "game-development",
+    "description": "Interactive audio specialist - Masters FMOD/Wwise integration, adaptive music systems, spatial audio, and audio performa..."
+  },
+  {
+    "slug": "agency-game-designer",
+    "name": "Game Designer",
+    "division": "game-development",
+    "description": "Systems and mechanics architect - Masters GDD authorship, player psychology, economy balancing, and gameplay loop design..."
+  },
+  {
+    "slug": "agency-level-designer",
+    "name": "Level Designer",
+    "division": "game-development",
+    "description": "Spatial storytelling and flow specialist - Masters layout theory, pacing architecture, encounter design, and environment..."
+  },
+  {
+    "slug": "agency-narrative-designer",
+    "name": "Narrative Designer",
+    "division": "game-development",
+    "description": "Story systems and dialogue architect - Masters GDD-aligned narrative design, branching dialogue, lore architecture, and ..."
+  },
+  {
+    "slug": "agency-technical-artist",
+    "name": "Technical Artist",
+    "division": "game-development",
+    "description": "Art-to-engine pipeline specialist - Masters shaders, VFX systems, LOD pipelines, performance budgeting, and cross-engine..."
+  },
+  {
+    "slug": "agency-3d-scene-developer",
+    "name": "3D & Scene Developer",
+    "division": "gis",
+    "description": "Web 3D visualization specialist who creates immersive 3D scenes, terrain models, point cloud visualizations, and interac..."
+  },
+  {
+    "slug": "agency-gis-analyst",
+    "name": "GIS Analyst",
+    "division": "gis",
+    "description": "Day-to-day GIS operator who creates maps, manages layers, performs spatial queries, and maintains geospatial data integr..."
+  },
+  {
+    "slug": "agency-bimgis-specialist",
+    "name": "BIM/GIS Specialist",
+    "division": "gis",
+    "description": "Integration specialist who bridges Building Information Modeling and Geographic Information Systems \u2014 Revit/IFC data con..."
+  },
+  {
+    "slug": "agency-cartography-designer",
+    "name": "Cartography Designer",
+    "division": "gis",
+    "description": "Map aesthetics specialist who designs beautiful, readable, and effective maps \u2014 color theory, typography, label placemen..."
+  },
+  {
+    "slug": "agency-dronereality-mapping-specialist",
+    "name": "Drone/Reality Mapping Specialist",
+    "division": "gis",
+    "description": "Photogrammetry and reality capture expert who processes drone imagery into orthomosaics, digital terrain models, point c..."
+  },
+  {
+    "slug": "agency-geoaiml-engineer",
+    "name": "GeoAI/ML Engineer",
+    "division": "gis",
+    "description": "Geospatial machine learning specialist who builds models for feature extraction, object detection, image segmentation, a..."
+  },
+  {
+    "slug": "agency-geoprocessing-specialist",
+    "name": "Geoprocessing Specialist",
+    "division": "gis",
+    "description": "ArcPy and Python toolbox expert who automates spatial workflows \u2014 builds .pyt toolboxes, Model Builder processes, batch ..."
+  },
+  {
+    "slug": "agency-gis-qa-engineer",
+    "name": "GIS QA Engineer",
+    "division": "gis",
+    "description": "Quality assurance specialist who validates geospatial data integrity \u2014 topology checks, metadata audits, CRS consistency..."
+  },
+  {
+    "slug": "agency-solution-engineer",
+    "name": "Solution Engineer",
+    "division": "gis",
+    "description": "Hands-on GIS prototype builder who takes strategy from Technical Consultant and turns it into working demos, proof-of-co..."
+  },
+  {
+    "slug": "agency-spatial-data-engineer",
+    "name": "Spatial Data Engineer",
+    "division": "gis",
+    "description": "ETL specialist who transforms messy geospatial data from any source into clean, standardized, production-ready datasets ..."
+  },
+  {
+    "slug": "agency-spatial-data-scientist",
+    "name": "Spatial Data Scientist",
+    "division": "gis",
+    "description": "Advanced spatial analytics specialist who applies statistical modeling, spatial econometrics, clustering, and predictive..."
+  },
+  {
+    "slug": "agency-technical-consultant",
+    "name": "Technical Consultant",
+    "division": "gis",
+    "description": "Strategic GIS advisor who translates business problems into geospatial solutions \u2014 gap analysis, technology roadmaps, RF..."
+  },
+  {
+    "slug": "agency-web-gis-developer",
+    "name": "Web GIS Developer",
+    "division": "gis",
+    "description": "Full-stack web GIS engineer who builds interactive mapping applications \u2014 MapLibre GL JS, ArcGIS JS API, Leaflet, real-t..."
+  },
+  {
+    "slug": "agency-clinical-evidence-agent",
+    "name": "Clinical Evidence Agent",
+    "division": "healthcare",
+    "description": "Evidence standards and clinical credibility framework for AI agents"
+  },
+  {
+    "slug": "agency-healthcare-innovation-strategist",
+    "name": "Healthcare Innovation Strategist",
+    "division": "healthcare",
+    "description": "Strategic narrative architect for healthcare founders operating at"
+  },
+  {
+    "slug": "agency-sovereign-health-systems-agent",
+    "name": "Sovereign Health Systems Agent",
+    "division": "healthcare",
+    "description": "Government health mandate engagement framework for AI agents"
+  },
+  {
+    "slug": "agency-aeo-foundations-architect",
+    "name": "AEO Foundations Architect",
+    "division": "marketing",
+    "description": "Expert in AI Engine Optimization infrastructure \u2014 implements llms.txt, AI-aware robots.txt, token-budgeted content, stru..."
+  },
+  {
+    "slug": "agency-agentic-search-optimizer",
+    "name": "Agentic Search Optimizer",
+    "division": "marketing",
+    "description": "Expert in WebMCP readiness and agentic task completion \u2014 audits whether AI agents can actually accomplish tasks on your ..."
+  },
+  {
+    "slug": "agency-ai-citation-strategist",
+    "name": "AI Citation Strategist",
+    "division": "marketing",
+    "description": "Expert in AI recommendation engine optimization (AEO/GEO) \u2014 audits brand visibility across ChatGPT, Claude, Gemini, and ..."
+  },
+  {
+    "slug": "agency-app-store-optimizer",
+    "name": "App Store Optimizer",
+    "division": "marketing",
+    "description": "Expert app store marketing specialist focused on App Store Optimization (ASO), conversion rate optimization, and app dis..."
+  },
+  {
+    "slug": "agency-baidu-seo-specialist",
+    "name": "Baidu SEO Specialist",
+    "division": "marketing",
+    "description": "Expert Baidu search optimization specialist focused on Chinese search engine ranking, Baidu ecosystem integration, ICP c..."
+  },
+  {
+    "slug": "agency-bilibili-content-strategist",
+    "name": "Bilibili Content Strategist",
+    "division": "marketing",
+    "description": "Expert Bilibili marketing specialist focused on UP\u4e3b growth, danmaku culture mastery, B\u7ad9 algorithm optimization, communit..."
+  },
+  {
+    "slug": "agency-book-co-author",
+    "name": "Book Co-Author",
+    "division": "marketing",
+    "description": "Strategic thought-leadership book collaborator for founders, experts, and operators turning voice notes, fragments, and ..."
+  },
+  {
+    "slug": "agency-carousel-growth-engine",
+    "name": "Carousel Growth Engine",
+    "division": "marketing",
+    "description": "Autonomous TikTok and Instagram carousel generation specialist. Analyzes any website URL with Playwright, generates vira..."
+  },
+  {
+    "slug": "agency-china-e-commerce-operator",
+    "name": "China E-Commerce Operator",
+    "division": "marketing",
+    "description": "Expert China e-commerce operations specialist covering Taobao, Tmall, Pinduoduo, and JD ecosystems with deep expertise i..."
+  },
+  {
+    "slug": "agency-china-market-localization-strategist",
+    "name": "China Market Localization Strategist",
+    "division": "marketing",
+    "description": "Full-stack China market localization expert who transforms real-time trend signals into executable go-to-market strategi..."
+  },
+  {
+    "slug": "agency-content-creator",
+    "name": "Content Creator",
+    "division": "marketing",
+    "description": "Expert content strategist and creator for multi-platform campaigns. Develops editorial calendars, creates compelling cop..."
+  },
+  {
+    "slug": "agency-cross-border-e-commerce-specialist",
+    "name": "Cross-Border E-Commerce Specialist",
+    "division": "marketing",
+    "description": "Full-funnel cross-border e-commerce strategist covering Amazon, Shopee, Lazada, AliExpress, Temu, and TikTok Shop operat..."
+  },
+  {
+    "slug": "agency-developer-community-builder",
+    "name": "Developer Community Builder",
+    "division": "marketing",
+    "description": "Grows and sustains developer communities \u2014 Discord servers, GitHub discussions, forums, and contributor programs \u2014 turni..."
+  },
+  {
+    "slug": "agency-douyin-strategist",
+    "name": "Douyin Strategist",
+    "division": "marketing",
+    "description": "Short-video marketing expert specializing in the Douyin platform, with deep expertise in recommendation algorithm mechan..."
+  },
+  {
+    "slug": "agency-email-marketing-strategist",
+    "name": "Email Marketing Strategist",
+    "division": "marketing",
+    "description": "Expert email marketing strategist for CRM-driven campaigns, lifecycle automation, segmentation architecture, and deliver..."
+  },
+  {
+    "slug": "agency-global-podcast-strategist",
+    "name": "Global Podcast Strategist",
+    "division": "marketing",
+    "description": "Expert podcast growth specialist focused on show positioning, audience development, content strategy, and monetisation. ..."
+  },
+  {
+    "slug": "agency-growth-hacker",
+    "name": "Growth Hacker",
+    "division": "marketing",
+    "description": "Expert growth strategist specializing in rapid user acquisition through data-driven experimentation. Develops viral loop..."
+  },
+  {
+    "slug": "agency-instagram-curator",
+    "name": "Instagram Curator",
+    "division": "marketing",
+    "description": "Expert Instagram marketing specialist focused on visual storytelling, community building, and multi-format content optim..."
+  },
+  {
+    "slug": "agency-kuaishou-strategist",
+    "name": "Kuaishou Strategist",
+    "division": "marketing",
+    "description": "Expert Kuaishou marketing strategist specializing in short-video content for China's lower-tier city markets, live comme..."
+  },
+  {
+    "slug": "agency-linkedin-content-creator",
+    "name": "LinkedIn Content Creator",
+    "division": "marketing",
+    "description": "Expert LinkedIn content strategist focused on thought leadership, personal brand building, and high-engagement professio..."
+  },
+  {
+    "slug": "agency-livestream-commerce-coach",
+    "name": "Livestream Commerce Coach",
+    "division": "marketing",
+    "description": "Veteran livestream e-commerce coach specializing in host training and live room operations across Douyin, Kuaishou, Taob..."
+  },
+  {
+    "slug": "agency-multi-platform-publisher",
+    "name": "Multi-Platform Publisher",
+    "division": "marketing",
+    "description": "Expert orchestrator for one-click Chinese blog publishing. Routes a single article to \u77e5\u4e4e / \u5c0f\u7ea2\u4e66 / CSDN / B\u7ad9 / \u516c\u4f17\u53f7 / \u6398\u91d1 vi..."
+  },
+  {
+    "slug": "agency-podcast-strategist",
+    "name": "Podcast Strategist",
+    "division": "marketing",
+    "description": "Content strategy and operations expert for the Chinese podcast market, with deep expertise in Xiaoyuzhou, Ximalaya, and ..."
+  },
+  {
+    "slug": "agency-pr-communications-manager",
+    "name": "PR & Communications Manager",
+    "division": "marketing",
+    "description": "Strategic public relations and communications specialist for media relations, press releases, crisis communications, exe..."
+  },
+  {
+    "slug": "agency-private-domain-operator",
+    "name": "Private Domain Operator",
+    "division": "marketing",
+    "description": "Expert in building enterprise WeChat (WeCom) private domain ecosystems, with deep expertise in SCRM systems, segmented c..."
+  },
+  {
+    "slug": "agency-reddit-community-builder",
+    "name": "Reddit Community Builder",
+    "division": "marketing",
+    "description": "Expert Reddit marketing specialist focused on authentic community engagement, value-driven content creation, and long-te..."
+  },
+  {
+    "slug": "agency-seo-specialist",
+    "name": "SEO Specialist",
+    "division": "marketing",
+    "description": "Expert search engine optimization strategist specializing in technical SEO, content optimization, link authority buildin..."
+  },
+  {
+    "slug": "agency-short-video-editing-coach",
+    "name": "Short-Video Editing Coach",
+    "division": "marketing",
+    "description": "Hands-on short-video editing coach covering the full post-production pipeline, with mastery of CapCut Pro, Premiere Pro,..."
+  },
+  {
+    "slug": "agency-social-media-strategist",
+    "name": "Social Media Strategist",
+    "division": "marketing",
+    "description": "Expert social media strategist for LinkedIn, Twitter, and professional platforms. Creates cross-platform campaigns, buil..."
+  },
+  {
+    "slug": "agency-tiktok-strategist",
+    "name": "TikTok Strategist",
+    "division": "marketing",
+    "description": "Expert TikTok marketing specialist focused on viral content creation, algorithm optimization, and community building. Ma..."
+  },
+  {
+    "slug": "agency-twitter-engager",
+    "name": "Twitter Engager",
+    "division": "marketing",
+    "description": "Expert Twitter marketing specialist focused on real-time engagement, thought leadership building, and community-driven g..."
+  },
+  {
+    "slug": "agency-video-optimization-specialist",
+    "name": "Video Optimization Specialist",
+    "division": "marketing",
+    "description": "Video marketing strategist specializing in YouTube algorithm optimization, audience retention, chaptering, thumbnail con..."
+  },
+  {
+    "slug": "agency-wechat-official-account-manager",
+    "name": "WeChat Official Account Manager",
+    "division": "marketing",
+    "description": "Expert WeChat Official Account (OA) strategist specializing in content marketing, subscriber engagement, and conversion ..."
+  },
+  {
+    "slug": "agency-weibo-strategist",
+    "name": "Weibo Strategist",
+    "division": "marketing",
+    "description": "Full-spectrum operations expert for Sina Weibo, with deep expertise in trending topic mechanics, Super Topic community m..."
+  },
+  {
+    "slug": "agency-xtwitter-intelligence-analyst",
+    "name": "X/Twitter Intelligence Analyst",
+    "division": "marketing",
+    "description": "Social intelligence specialist for X/Twitter research, trend detection, account monitoring, and evidence-backed audience..."
+  },
+  {
+    "slug": "agency-xiaohongshu-specialist",
+    "name": "Xiaohongshu Specialist",
+    "division": "marketing",
+    "description": "Expert Xiaohongshu marketing specialist focused on lifestyle content, trend-driven strategies, and authentic community e..."
+  },
+  {
+    "slug": "agency-zhihu-strategist",
+    "name": "Zhihu Strategist",
+    "division": "marketing",
+    "description": "Expert Zhihu marketing specialist focused on thought leadership, community credibility, and knowledge-driven engagement...."
+  },
+  {
+    "slug": "agency-paid-media-auditor",
+    "name": "Paid Media Auditor",
+    "division": "paid-media",
+    "description": "Comprehensive paid media auditor who systematically evaluates Google Ads, Microsoft Ads, and Meta accounts across 200+ c..."
+  },
+  {
+    "slug": "agency-ad-creative-strategist",
+    "name": "Ad Creative Strategist",
+    "division": "paid-media",
+    "description": "Paid media creative specialist focused on ad copywriting, RSA optimization, asset group design, and creative testing fra..."
+  },
+  {
+    "slug": "agency-paid-social-strategist",
+    "name": "Paid Social Strategist",
+    "division": "paid-media",
+    "description": "Cross-platform paid social advertising specialist covering Meta (Facebook/Instagram), LinkedIn, TikTok, Pinterest, X, an..."
+  },
+  {
+    "slug": "agency-ppc-campaign-strategist",
+    "name": "PPC Campaign Strategist",
+    "division": "paid-media",
+    "description": "Senior paid media strategist specializing in large-scale search, shopping, and performance max campaign architecture acr..."
+  },
+  {
+    "slug": "agency-programmatic-display-buyer",
+    "name": "Programmatic & Display Buyer",
+    "division": "paid-media",
+    "description": "Display advertising and programmatic media buying specialist covering managed placements, Google Display Network, DV360,..."
+  },
+  {
+    "slug": "agency-search-query-analyst",
+    "name": "Search Query Analyst",
+    "division": "paid-media",
+    "description": "Specialist in search term analysis, negative keyword architecture, and query-to-intent mapping. Turns raw search query d..."
+  },
+  {
+    "slug": "agency-tracking-measurement-specialist",
+    "name": "Tracking & Measurement Specialist",
+    "division": "paid-media",
+    "description": "Expert in conversion tracking architecture, tag management, and attribution modeling across Google Tag Manager, GA4, Goo..."
+  },
+  {
+    "slug": "agency-behavioral-nudge-engine",
+    "name": "Behavioral Nudge Engine",
+    "division": "product",
+    "description": "Behavioral psychology specialist that adapts software interaction cadences and styles to maximize user motivation and su..."
+  },
+  {
+    "slug": "agency-dx-engineer",
+    "name": "DX Engineer",
+    "division": "product",
+    "description": "Removes every unnecessary step between a developer and their first success \u2014 SDK samples, onboarding flows, error messag..."
+  },
+  {
+    "slug": "agency-feedback-synthesizer",
+    "name": "Feedback Synthesizer",
+    "division": "product",
+    "description": "Expert in collecting, analyzing, and synthesizing user feedback from multiple channels to extract actionable product ins..."
+  },
+  {
+    "slug": "agency-product-manager",
+    "name": "Product Manager",
+    "division": "product",
+    "description": "Holistic product leader who owns the full product lifecycle \u2014 from discovery and strategy through roadmap, stakeholder a..."
+  },
+  {
+    "slug": "agency-sprint-prioritizer",
+    "name": "Sprint Prioritizer",
+    "division": "product",
+    "description": "Expert product manager specializing in agile sprint planning, feature prioritization, and resource allocation. Focused o..."
+  },
+  {
+    "slug": "agency-trend-researcher",
+    "name": "Trend Researcher",
+    "division": "product",
+    "description": "Expert market intelligence analyst specializing in identifying emerging trends, competitive analysis, and opportunity as..."
+  },
+  {
+    "slug": "agency-experiment-tracker",
+    "name": "Experiment Tracker",
+    "division": "project-management",
+    "description": "Expert project manager specializing in experiment design, execution tracking, and data-driven decision making. Focused o..."
+  },
+  {
+    "slug": "agency-jira-workflow-steward",
+    "name": "Jira Workflow Steward",
+    "division": "project-management",
+    "description": "Expert delivery operations specialist who enforces Jira-linked Git workflows, traceable commits, structured pull request..."
+  },
+  {
+    "slug": "agency-meeting-notes-specialist",
+    "name": "Meeting Notes Specialist",
+    "division": "project-management",
+    "description": "Extract structured decisions, action items, and open questions from meeting transcripts or rough notes into a clean 4-se..."
+  },
+  {
+    "slug": "agency-project-shepherd",
+    "name": "Project Shepherd",
+    "division": "project-management",
+    "description": "Expert project manager specializing in cross-functional project coordination, timeline management, and stakeholder align..."
+  },
+  {
+    "slug": "agency-studio-operations",
+    "name": "Studio Operations",
+    "division": "project-management",
+    "description": "Expert operations manager specializing in day-to-day studio efficiency, process optimization, and resource coordination...."
+  },
+  {
+    "slug": "agency-studio-producer",
+    "name": "Studio Producer",
+    "division": "project-management",
+    "description": "Senior strategic leader specializing in high-level creative and technical project orchestration, resource allocation, an..."
+  },
+  {
+    "slug": "agency-senior-project-manager",
+    "name": "Senior Project Manager",
+    "division": "project-management",
+    "description": "Converts specs to tasks and remembers previous projects. Focused on realistic scope, no background processes, exact spec..."
+  },
+  {
+    "slug": "agency-research-synthesist",
+    "name": "Research Synthesist",
+    "division": "research",
+    "description": "Expert in literature review, source evaluation, and evidence synthesis \u2014 turns a scattered pile of sources into a struct..."
+  },
+  {
+    "slug": "agency-account-strategist",
+    "name": "Account Strategist",
+    "division": "sales",
+    "description": "Expert post-sale account strategist specializing in land-and-expand execution, stakeholder mapping, QBR facilitation, an..."
+  },
+  {
+    "slug": "agency-sales-coach",
+    "name": "Sales Coach",
+    "division": "sales",
+    "description": "Expert sales coaching specialist focused on rep development, pipeline review facilitation, call coaching, deal strategy,..."
+  },
+  {
+    "slug": "agency-deal-strategist",
+    "name": "Deal Strategist",
+    "division": "sales",
+    "description": "Senior deal strategist specializing in MEDDPICC qualification, competitive positioning, and win planning for complex B2B..."
+  },
+  {
+    "slug": "agency-discovery-coach",
+    "name": "Discovery Coach",
+    "division": "sales",
+    "description": "Coaches sales teams on elite discovery methodology \u2014 question design, current-state mapping, gap quantification, and cal..."
+  },
+  {
+    "slug": "agency-sales-engineer",
+    "name": "Sales Engineer",
+    "division": "sales",
+    "description": "Senior pre-sales engineer specializing in technical discovery, demo engineering, POC scoping, competitive battlecards, a..."
+  },
+  {
+    "slug": "agency-offer-lead-gen-strategist",
+    "name": "Offer & Lead Gen Strategist",
+    "division": "sales",
+    "description": "Top-of-funnel architect who designs irresistible offers and lead magnets that attract qualified buyers at scale. Special..."
+  },
+  {
+    "slug": "agency-outbound-strategist",
+    "name": "Outbound Strategist",
+    "division": "sales",
+    "description": "Signal-based outbound specialist who designs multi-channel prospecting sequences, defines ICPs, and builds pipeline thro..."
+  },
+  {
+    "slug": "agency-pipeline-analyst",
+    "name": "Pipeline Analyst",
+    "division": "sales",
+    "description": "Revenue operations analyst specializing in pipeline health diagnostics, deal velocity analysis, forecast accuracy, and d..."
+  },
+  {
+    "slug": "agency-proposal-strategist",
+    "name": "Proposal Strategist",
+    "division": "sales",
+    "description": "Strategic proposal architect who transforms RFPs and sales opportunities into compelling win narratives. Specializes in ..."
+  },
+  {
+    "slug": "agency-ai-generated-code-security-auditor",
+    "name": "AI-Generated Code Security Auditor",
+    "division": "security",
+    "description": "Security reviewer for AI-generated and vibe-coded apps \u2014 hunts the hardcoded secrets, broken row-level security, and pro..."
+  },
+  {
+    "slug": "agency-application-security-engineer",
+    "name": "Application Security Engineer",
+    "division": "security",
+    "description": "AppSec specialist who secures the software development lifecycle through threat modeling, secure code review, SAST/DAST ..."
+  },
+  {
+    "slug": "agency-security-architect",
+    "name": "Security Architect",
+    "division": "security",
+    "description": "Expert security architect specializing in threat modeling, secure-by-design architecture, trust-boundary analysis, defen..."
+  },
+  {
+    "slug": "agency-blockchain-security-auditor",
+    "name": "Blockchain Security Auditor",
+    "division": "security",
+    "description": "Expert smart contract security auditor specializing in vulnerability detection, formal verification, exploit analysis, a..."
+  },
+  {
+    "slug": "agency-cloud-security-architect",
+    "name": "Cloud Security Architect",
+    "division": "security",
+    "description": "Cloud-native security specialist designing zero trust architectures, implementing defense-in-depth across AWS, Azure, an..."
+  },
+  {
+    "slug": "agency-compliance-auditor",
+    "name": "Compliance Auditor",
+    "division": "security",
+    "description": "Expert technical compliance auditor specializing in SOC 2, ISO 27001, HIPAA, and PCI-DSS audits \u2014 from readiness assessm..."
+  },
+  {
+    "slug": "agency-incident-responder",
+    "name": "Incident Responder",
+    "division": "security",
+    "description": "Digital forensics and incident response specialist who leads breach investigations, contains active threats, coordinates..."
+  },
+  {
+    "slug": "agency-penetration-tester",
+    "name": "Penetration Tester",
+    "division": "security",
+    "description": "Offensive security specialist conducting authorized penetration tests, red team operations, and vulnerability assessment..."
+  },
+  {
+    "slug": "agency-secrets-credential-hygiene-engineer",
+    "name": "Secrets & Credential Hygiene Engineer",
+    "division": "security",
+    "description": "Owns the full lifecycle of secrets and credentials \u2014 detection, prevention, vaulting, rotation, and leak response \u2014 so a..."
+  },
+  {
+    "slug": "agency-senior-secops-engineer",
+    "name": "Senior SecOps Engineer",
+    "division": "security",
+    "description": "Defensive application security specialist who scans every code submission for secrets and sensitive data exposure before..."
+  },
+  {
+    "slug": "agency-threat-detection-engineer",
+    "name": "Threat Detection Engineer",
+    "division": "security",
+    "description": "Expert detection engineer specializing in SIEM rule development, MITRE ATT&CK coverage mapping, threat hunting, alert tu..."
+  },
+  {
+    "slug": "agency-threat-intelligence-analyst",
+    "name": "Threat Intelligence Analyst",
+    "division": "security",
+    "description": "Cyber threat intelligence specialist who tracks adversary groups, maps attack campaigns to MITRE ATT&CK, produces action..."
+  },
+  {
+    "slug": "agency-macos-spatialmetal-engineer",
+    "name": "macOS Spatial/Metal Engineer",
+    "division": "spatial-computing",
+    "description": "Native Swift and Metal specialist building high-performance 3D rendering systems and spatial computing experiences for m..."
+  },
+  {
+    "slug": "agency-terminal-integration-specialist",
+    "name": "Terminal Integration Specialist",
+    "division": "spatial-computing",
+    "description": "Terminal emulation, text rendering optimization, and SwiftTerm integration for modern Swift applications"
+  },
+  {
+    "slug": "agency-visionos-spatial-engineer",
+    "name": "visionOS Spatial Engineer",
+    "division": "spatial-computing",
+    "description": "Native visionOS spatial computing, SwiftUI volumetric interfaces, and Liquid Glass design implementation"
+  },
+  {
+    "slug": "agency-xr-cockpit-interaction-specialist",
+    "name": "XR Cockpit Interaction Specialist",
+    "division": "spatial-computing",
+    "description": "Specialist in designing and developing immersive cockpit-based control systems for XR environments"
+  },
+  {
+    "slug": "agency-xr-immersive-developer",
+    "name": "XR Immersive Developer",
+    "division": "spatial-computing",
+    "description": "Expert WebXR and immersive technology developer with specialization in browser-based AR/VR/XR applications"
+  },
+  {
+    "slug": "agency-xr-interface-architect",
+    "name": "XR Interface Architect",
+    "division": "spatial-computing",
+    "description": "Spatial interaction designer and interface strategist for immersive AR/VR/XR environments"
+  },
+  {
+    "slug": "agency-accounts-payable-agent",
+    "name": "Accounts Payable Agent",
+    "division": "specialized",
+    "description": "Autonomous payment processing specialist that executes vendor payments, contractor invoices, and recurring bills across ..."
+  },
+  {
+    "slug": "agency-agentic-identity-trust-architect",
+    "name": "Agentic Identity & Trust Architect",
+    "division": "specialized",
+    "description": "Designs identity, authentication, and trust verification systems for autonomous AI agents operating in multi-agent envir..."
+  },
+  {
+    "slug": "agency-agents-orchestrator",
+    "name": "Agents Orchestrator",
+    "division": "specialized",
+    "description": "Autonomous pipeline manager that orchestrates the entire development workflow. You are the leader of this process."
+  },
+  {
+    "slug": "agency-automation-governance-architect",
+    "name": "Automation Governance Architect",
+    "division": "specialized",
+    "description": "Governance-first architect for business automations (n8n-first) who audits value, risk, and maintainability before imple..."
+  },
+  {
+    "slug": "agency-business-strategist",
+    "name": "Business Strategist",
+    "division": "specialized",
+    "description": "Senior management consulting specialist for competitive analysis, market entry strategy, business model design, growth p..."
+  },
+  {
+    "slug": "agency-change-management-consultant",
+    "name": "Change Management Consultant",
+    "division": "specialized",
+    "description": "Expert change management specialist using ADKAR, Kotter, and Prosci frameworks to guide organizations through technology..."
+  },
+  {
+    "slug": "agency-chief-financial-officer",
+    "name": "Chief Financial Officer",
+    "division": "specialized",
+    "description": "Strategic finance executive who governs capital allocation, treasury operations, financial planning, M&A finance, invest..."
+  },
+  {
+    "slug": "agency-corporate-training-designer",
+    "name": "Corporate Training Designer",
+    "division": "specialized",
+    "description": "Expert in enterprise training system design and curriculum development \u2014 proficient in training needs analysis, instruct..."
+  },
+  {
+    "slug": "agency-customer-service",
+    "name": "Customer Service",
+    "division": "specialized",
+    "description": "Friendly, professional customer service specialist for any industry \u2014 handling inquiries, complaints, account support, F..."
+  },
+  {
+    "slug": "agency-customer-success-manager",
+    "name": "Customer Success Manager",
+    "division": "specialized",
+    "description": "Strategic customer success specialist for onboarding, health scoring, QBR facilitation, churn prevention, expansion iden..."
+  },
+  {
+    "slug": "agency-data-consolidation-agent",
+    "name": "Data Consolidation Agent",
+    "division": "specialized",
+    "description": "AI agent that consolidates extracted sales data into live reporting dashboards with territory, rep, and pipeline summari..."
+  },
+  {
+    "slug": "agency-data-privacy-officer",
+    "name": "Data Privacy Officer",
+    "division": "specialized",
+    "description": "Corporate data privacy specialist and DPO who builds GDPR, CCPA, and global privacy compliance programs \u2014 covering data ..."
+  },
+  {
+    "slug": "agency-esg-sustainability-officer",
+    "name": "ESG & Sustainability Officer",
+    "division": "specialized",
+    "description": "Corporate sustainability strategist and ESG reporting specialist who builds environmental, social, and governance progra..."
+  },
+  {
+    "slug": "agency-government-digital-presales-consultant",
+    "name": "Government Digital Presales Consultant",
+    "division": "specialized",
+    "description": "Presales expert for China's government digital transformation market (ToG), proficient in policy interpretation, solutio..."
+  },
+  {
+    "slug": "agency-grant-writer",
+    "name": "Grant Writer",
+    "division": "specialized",
+    "description": "Expert grant writing specialist for nonprofits, research institutions, and social enterprises \u2014 covering prospect resear..."
+  },
+  {
+    "slug": "agency-aging-parent-care-companion",
+    "name": "Aging Parent Care Companion",
+    "division": "specialized",
+    "description": "Compassionate, HIPAA-aligned care coordination and decision-support agent for family caregivers managing an aging parent..."
+  },
+  {
+    "slug": "agency-healthcare-customer-service",
+    "name": "Healthcare Customer Service",
+    "division": "specialized",
+    "description": "Empathetic healthcare customer service specialist for patient support, billing inquiries, appointment management, insura..."
+  },
+  {
+    "slug": "agency-healthcare-marketing-compliance-specialist",
+    "name": "Healthcare Marketing Compliance Specialist",
+    "division": "specialized",
+    "description": "Expert in healthcare marketing compliance in China, proficient in the Advertising Law, Medical Advertisement Management ..."
+  },
+  {
+    "slug": "agency-hospitality-guest-services",
+    "name": "Hospitality Guest Services",
+    "division": "specialized",
+    "description": "Comprehensive hospitality guest services specialist for hotels, resorts, restaurants, and event venues \u2014 covering reserv..."
+  },
+  {
+    "slug": "agency-hr-onboarding",
+    "name": "HR Onboarding",
+    "division": "specialized",
+    "description": "Comprehensive HR onboarding specialist for employee orientation, documentation management, compliance tracking, benefits..."
+  },
+  {
+    "slug": "agency-identity-graph-operator",
+    "name": "Identity Graph Operator",
+    "division": "specialized",
+    "description": "Operates a shared identity graph that multiple AI agents resolve against. Ensures every agent in a multi-agent system ge..."
+  },
+  {
+    "slug": "agency-language-translator",
+    "name": "Language Translator",
+    "division": "specialized",
+    "description": "Real-time Spanish \u2194 English translation specialist with cultural context, regional dialect awareness, travel phrase guid..."
+  },
+  {
+    "slug": "agency-legal-billing-time-tracking",
+    "name": "Legal Billing & Time Tracking",
+    "division": "specialized",
+    "description": "Comprehensive legal billing and time tracking specialist for accurate time capture, invoice generation, billing narrativ..."
+  },
+  {
+    "slug": "agency-legal-client-intake",
+    "name": "Legal Client Intake",
+    "division": "specialized",
+    "description": "Comprehensive legal client intake specialist for qualifying prospects, collecting case information, scheduling consultat..."
+  },
+  {
+    "slug": "agency-legal-document-review",
+    "name": "Legal Document Review",
+    "division": "specialized",
+    "description": "Comprehensive legal document review specialist for contracts, litigation documents, and real estate agreements \u2014 summari..."
+  },
+  {
+    "slug": "agency-loan-officer-assistant",
+    "name": "Loan Officer Assistant",
+    "division": "specialized",
+    "description": "Comprehensive loan officer assistant for mortgage and lending professionals \u2014 covering borrower intake, pre-qualificatio..."
+  },
+  {
+    "slug": "agency-lspindex-engineer",
+    "name": "LSP/Index Engineer",
+    "division": "specialized",
+    "description": "Language Server Protocol specialist building unified code intelligence systems through LSP client orchestration and sema..."
+  },
+  {
+    "slug": "agency-ma-integration-manager",
+    "name": "M&A Integration Manager",
+    "division": "specialized",
+    "description": "Mergers and acquisitions integration specialist who designs and executes post-merger integration programs \u2014 covering Day..."
+  },
+  {
+    "slug": "agency-medical-billing-coding-specialist",
+    "name": "Medical Billing & Coding Specialist",
+    "division": "specialized",
+    "description": "Expert medical billing and coding specialist for ICD-10-CM/PCS, CPT, and HCPCS coding, claim submission, denial manageme..."
+  },
+  {
+    "slug": "agency-operations-manager",
+    "name": "Operations Manager",
+    "division": "specialized",
+    "description": "Business operations specialist who applies Lean, Six Sigma, and systems thinking to process mapping, capacity planning, ..."
+  },
+  {
+    "slug": "agency-organizational-psychologist",
+    "name": "Organizational Psychologist",
+    "division": "specialized",
+    "description": "Applied organizational psychologist who diagnoses team dynamics, psychological safety, burnout risk, and culture health ..."
+  },
+  {
+    "slug": "agency-personal-growth-mentor",
+    "name": "Personal Growth Mentor",
+    "division": "specialized",
+    "description": "Cross-domain personal development mentor for goal clarity, habit design, strategic decisions, and accountability without..."
+  },
+  {
+    "slug": "agency-real-estate-buyer-seller",
+    "name": "Real Estate Buyer & Seller",
+    "division": "specialized",
+    "description": "Comprehensive real estate agent assistant for buyer representation, seller representation, listing management, offer neg..."
+  },
+  {
+    "slug": "agency-recruitment-specialist",
+    "name": "Recruitment Specialist",
+    "division": "specialized",
+    "description": "Expert recruitment operations and talent acquisition specialist \u2014 skilled in China's major hiring platforms, talent asse..."
+  },
+  {
+    "slug": "agency-report-distribution-agent",
+    "name": "Report Distribution Agent",
+    "division": "specialized",
+    "description": "AI agent that automates distribution of consolidated sales reports to representatives based on territorial parameters"
+  },
+  {
+    "slug": "agency-resume-tailor",
+    "name": "Resume Tailor",
+    "division": "specialized",
+    "description": "Candidate-side resume optimization specialist who analyzes job descriptions, maps real experience to role requirements, ..."
+  },
+  {
+    "slug": "agency-retail-customer-returns",
+    "name": "Retail Customer Returns",
+    "division": "specialized",
+    "description": "Comprehensive retail customer returns specialist for processing returns, exchanges, and refunds across in-store, online,..."
+  },
+  {
+    "slug": "agency-sales-data-extraction-agent",
+    "name": "Sales Data Extraction Agent",
+    "division": "specialized",
+    "description": "AI agent specialized in monitoring Excel files and extracting key sales metrics (MTD, YTD, Year End) for internal live r..."
+  },
+  {
+    "slug": "agency-sales-outreach",
+    "name": "Sales Outreach",
+    "division": "specialized",
+    "description": "Consultative B2B sales outreach specialist for cold prospecting, lead follow-up, objection handling, proposal writing, a..."
+  },
+  {
+    "slug": "agency-chief-of-staff",
+    "name": "Chief of Staff",
+    "division": "specialized",
+    "description": "Master coordinator for founders and executives \u2014 filters noise, owns processes, enforces consistency, routes decisions, ..."
+  },
+  {
+    "slug": "agency-civil-engineer",
+    "name": "Civil Engineer",
+    "division": "specialized",
+    "description": "Expert civil and structural engineer with global standards coverage \u2014 Eurocode, DIN, ACI, AISC, ASCE, AS/NZS, CSA, GB, I..."
+  },
+  {
+    "slug": "agency-codebase-archaeologist",
+    "name": "Codebase Archaeologist",
+    "division": "specialized",
+    "description": "Multi-session, multi-tool drift detection specialist who audits codebases touched by several AI coding tools (Claude, Cu..."
+  },
+  {
+    "slug": "agency-cultural-intelligence-strategist",
+    "name": "Cultural Intelligence Strategist",
+    "division": "specialized",
+    "description": "CQ specialist that detects invisible exclusion, researches global context, and ensures software resonates authentically ..."
+  },
+  {
+    "slug": "agency-developer-advocate",
+    "name": "Developer Advocate",
+    "division": "specialized",
+    "description": "Expert developer advocate specializing in building developer communities, creating compelling technical content, optimiz..."
+  },
+  {
+    "slug": "agency-document-generator",
+    "name": "Document Generator",
+    "division": "specialized",
+    "description": "Expert document creation specialist who generates professional PDF, PPTX, DOCX, and XLSX files using code-based approach..."
+  },
+  {
+    "slug": "agency-fedramp-rmf-compliance-engineer",
+    "name": "FedRAMP & RMF Compliance Engineer",
+    "division": "specialized",
+    "description": "Expert FedRAMP and NIST Risk Management Framework compliance engineer specializing in both FedRAMP authorization pathway..."
+  },
+  {
+    "slug": "agency-focus-music-architect",
+    "name": "Focus Music Architect",
+    "division": "specialized",
+    "description": "Instrumental focus music specialist and neuroacoustic prompt engineer \u2014 crafts high-yield prompts, soundscape architectu..."
+  },
+  {
+    "slug": "agency-french-consulting-market-navigator",
+    "name": "French Consulting Market Navigator",
+    "division": "specialized",
+    "description": "Navigate the French ESN/SI freelance ecosystem \u2014 margin models, platform mechanics (Malt, collective.work), portage sala..."
+  },
+  {
+    "slug": "agency-korean-business-navigator",
+    "name": "Korean Business Navigator",
+    "division": "specialized",
+    "description": "Korean business culture for foreign professionals \u2014 \ud488\uc758 decision process, nunchi reading, KakaoTalk business etiquette, h..."
+  },
+  {
+    "slug": "agency-master-plan-architect",
+    "name": "Master Plan Architect",
+    "division": "specialized",
+    "description": "Master planning architect, technical educator, and ruthless plan critic who specializes in deep architectural teaching, ..."
+  },
+  {
+    "slug": "agency-mcp-builder",
+    "name": "MCP Builder",
+    "division": "specialized",
+    "description": "Expert Model Context Protocol developer who designs, builds, and tests MCP servers that extend AI agent capabilities wit..."
+  },
+  {
+    "slug": "agency-model-qa-specialist",
+    "name": "Model QA Specialist",
+    "division": "specialized",
+    "description": "Independent model QA expert who audits ML and statistical models end-to-end - from documentation review and data reconst..."
+  },
+  {
+    "slug": "agency-pricing-analyst",
+    "name": "Pricing Analyst",
+    "division": "specialized",
+    "description": "Specialized pricing analyst who develops optimal pricing models through market research, competitor analysis, cost struc..."
+  },
+  {
+    "slug": "agency-salesforce-architect",
+    "name": "Salesforce Architect",
+    "division": "specialized",
+    "description": "Solution architecture for Salesforce platform \u2014 multi-cloud design, integration patterns, governor limits, deployment st..."
+  },
+  {
+    "slug": "agency-strategy-duel-agent",
+    "name": "Strategy Duel Agent",
+    "division": "specialized",
+    "description": "Conducts live strategy duels using game theory and the 36 Chinese stratagems"
+  },
+  {
+    "slug": "agency-workflow-architect",
+    "name": "Workflow Architect",
+    "division": "specialized",
+    "description": "Workflow design specialist who maps complete workflow trees for every system, user journey, and agent interaction \u2014 cove..."
+  },
+  {
+    "slug": "agency-study-abroad-advisor",
+    "name": "Study Abroad Advisor",
+    "division": "specialized",
+    "description": "Full-spectrum study abroad planning expert covering the US, UK, Canada, Australia, Europe, Hong Kong, and Singapore \u2014 pr..."
+  },
+  {
+    "slug": "agency-supply-chain-strategist",
+    "name": "Supply Chain Strategist",
+    "division": "specialized",
+    "description": "Expert supply chain management and procurement strategy specialist \u2014 skilled in supplier development, strategic sourcing..."
+  },
+  {
+    "slug": "agency-zk-steward",
+    "name": "ZK Steward",
+    "division": "specialized",
+    "description": "Knowledge-base steward in the spirit of Niklas Luhmann's Zettelkasten. Default perspective: Luhmann; switches to domain ..."
+  },
+  {
+    "slug": "agency-executive-brief",
+    "name": "Executive Brief",
+    "division": "strategy",
+    "description": "Specialized AI Agent: Executive Brief"
+  },
+  {
+    "slug": "agency-nexus-strategy",
+    "name": "Nexus Strategy",
+    "division": "strategy",
+    "description": "Specialized AI Agent: Nexus Strategy"
+  },
+  {
+    "slug": "agency-quickstart",
+    "name": "Quickstart",
+    "division": "strategy",
+    "description": "Specialized AI Agent: Quickstart"
+  },
+  {
+    "slug": "agency-analytics-reporter",
+    "name": "Analytics Reporter",
+    "division": "support",
+    "description": "Expert data analyst transforming raw data into actionable business insights. Creates dashboards, performs statistical an..."
+  },
+  {
+    "slug": "agency-executive-summary-generator",
+    "name": "Executive Summary Generator",
+    "division": "support",
+    "description": "Consultant-grade AI specialist trained to think and communicate like a senior strategy consultant. Transforms complex bu..."
+  },
+  {
+    "slug": "agency-finance-tracker",
+    "name": "Finance Tracker",
+    "division": "support",
+    "description": "Expert financial analyst and controller specializing in financial planning, budget management, and business performance ..."
+  },
+  {
+    "slug": "agency-infrastructure-maintainer",
+    "name": "Infrastructure Maintainer",
+    "division": "support",
+    "description": "Expert infrastructure specialist focused on system reliability, performance optimization, and technical operations manag..."
+  },
+  {
+    "slug": "agency-legal-compliance-checker",
+    "name": "Legal Compliance Checker",
+    "division": "support",
+    "description": "Expert legal and compliance specialist ensuring business operations, data handling, and content creation comply with rel..."
+  },
+  {
+    "slug": "agency-support-responder",
+    "name": "Support Responder",
+    "division": "support",
+    "description": "Expert customer support specialist delivering exceptional customer service, issue resolution, and user experience optimi..."
+  },
+  {
+    "slug": "agency-accessibility-auditor",
+    "name": "Accessibility Auditor",
+    "division": "testing",
+    "description": "Expert accessibility specialist who audits interfaces against WCAG standards, tests with assistive technologies, and ens..."
+  },
+  {
+    "slug": "agency-api-tester",
+    "name": "API Tester",
+    "division": "testing",
+    "description": "Expert API testing specialist focused on comprehensive API validation, performance testing, and quality assurance across..."
+  },
+  {
+    "slug": "agency-evidence-collector",
+    "name": "Evidence Collector",
+    "division": "testing",
+    "description": "Screenshot-obsessed, fantasy-allergic QA specialist - Reports reproducible issues with evidence and marks untested scope..."
+  },
+  {
+    "slug": "agency-performance-benchmarker",
+    "name": "Performance Benchmarker",
+    "division": "testing",
+    "description": "Expert performance testing and optimization specialist focused on measuring, analyzing, and improving system performance..."
+  },
+  {
+    "slug": "agency-reality-checker",
+    "name": "Reality Checker",
+    "division": "testing",
+    "description": "Stops fantasy approvals, evidence-based certification - Default to \"NEEDS WORK\", requires overwhelming proof for product..."
+  },
+  {
+    "slug": "agency-test-automation-engineer",
+    "name": "Test Automation Engineer",
+    "division": "testing",
+    "description": "Expert end-to-end test automation engineer for Playwright and Cypress \u2014 resilient selectors, flake elimination, isolated..."
+  },
+  {
+    "slug": "agency-test-results-analyzer",
+    "name": "Test Results Analyzer",
+    "division": "testing",
+    "description": "Expert test analysis specialist focused on comprehensive test result evaluation, quality metrics analysis, and actionabl..."
+  },
+  {
+    "slug": "agency-tool-evaluator",
+    "name": "Tool Evaluator",
+    "division": "testing",
+    "description": "Expert technology assessment specialist focused on evaluating, testing, and recommending tools, software, and platforms ..."
+  },
+  {
+    "slug": "agency-workflow-optimizer",
+    "name": "Workflow Optimizer",
+    "division": "testing",
+    "description": "Expert process improvement specialist focused on analyzing, optimizing, and automating workflows across all business fun..."
+  }
+]

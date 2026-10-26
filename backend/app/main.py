@@ -37,6 +37,7 @@ from app.services.mock_data import (
     MOCK_UAE_TARIFF_DATABASE
 )
 from app.agents.master import MasterOrchestrator
+from app.agents.agency_loader import AgencyAgentLoader
 
 load_dotenv()
 
@@ -212,6 +213,33 @@ async def execute_action(payload: ExecuteActionRequest):
 async def tariff_lookup(hs_code: str = Query(..., description="HS Code to query")):
     """Query synthetic UAE Customs Tariff database with official source attribution."""
     return get_tariff_info(hs_code)
+
+
+@app.get("/api/agency-agents")
+async def list_agency_agents(
+    division: Optional[str] = Query(None, description="Filter by division (e.g. specialized, gis, finance, engineering)"),
+    search: Optional[str] = Query(None, description="Search keyword in name or description")
+):
+    """Browse the installed 271 ready-made Agency Agent specialists."""
+    catalog = AgencyAgentLoader.get_catalog()
+    if division:
+        catalog = [a for a in catalog if a.get("division", "").lower() == division.lower()]
+    if search:
+        s_lower = search.lower()
+        catalog = [a for a in catalog if s_lower in a.get("name", "").lower() or s_lower in a.get("description", "").lower()]
+    return {
+        "total_available": len(catalog),
+        "agents": catalog
+    }
+
+
+@app.get("/api/agency-agents/{slug}")
+async def get_agency_agent_details(slug: str):
+    """Retrieve full personality, instructions, and workflows of a ready-made agency agent."""
+    agent = AgencyAgentLoader.load_agent(slug)
+    if not agent:
+        raise HTTPException(status_code=404, detail=f"Agency Agent '{slug}' not found.")
+    return agent
 
 
 @app.post("/api/seed")
