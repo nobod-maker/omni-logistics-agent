@@ -90,3 +90,24 @@ export interface TariffRecord {
   inspection_risk_score: number;
   source_citation: string;
 }
+
+export interface MirsalIIDeclaration {
+  declaration_number: string;
+  container_id: string;
+  hs_code: string;
+  cargo_description: string;
+  consignee_name: string;
+  consignee_license: string;
+  is_free_zone: boolean;
+  cif_value_usd: number;
+  duty_rate_pct: number;
+  duty_amount_usd: number;
+  vat_rate_pct: number;
+  vat_amount_usd: number;
+  free_zone_exemption_applied: boolean;
+  risk_channel: string;
+  regulatory_approvals: string[];
+  source_citation: string;
+  verification_hash: string;
+  status: string;
+}

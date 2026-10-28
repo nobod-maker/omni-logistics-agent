@@ -77,11 +77,13 @@ export const ResolutionDrawer: React.FC<ResolutionDrawerProps> = ({
 
       {/* Safety Warning Banner if Locked */}
       {isLocked && (
-        <div className="bg-amber-950/40 border-b border-amber-500/40 px-6 py-3 flex items-start gap-3">
-          <AlertOctagon className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
-          <div className="text-xs text-amber-200">
-            <div className="font-bold">Human Review Required (Safety Governance Lock)</div>
-            <div>{resolution.human_approval_reason}</div>
+        <div className="bg-gradient-to-r from-red-950/70 to-amber-950/70 border-b border-red-500/50 px-6 py-3.5 flex items-start gap-3">
+          <AlertOctagon className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5 animate-pulse" />
+          <div className="text-xs">
+            <div className="font-bold text-red-300 font-mono tracking-wide">
+              🔒 HUMAN SUPERVISOR OVERRIDE REQUIRED (Exceeds $10,000 Autonomous Ceiling)
+            </div>
+            <div className="text-slate-300 mt-0.5">{resolution.human_approval_reason}</div>
           </div>
         </div>
       )}
@@ -93,7 +95,7 @@ export const ResolutionDrawer: React.FC<ResolutionDrawerProps> = ({
           <div>
             <div className="text-[10px] text-slate-400 font-mono uppercase">Mitigation Cost</div>
             <div className="text-base font-bold font-mono text-slate-200 mt-1">
-              ${resolution.net_cost_impact.toLocaleString()}
+              ${resolution.net_cost_impact.toLocaleString('en-US')}
             </div>
             <div className="text-[10px] text-slate-400">Gate + Air Split</div>
           </div>
@@ -109,7 +111,7 @@ export const ResolutionDrawer: React.FC<ResolutionDrawerProps> = ({
           <div>
             <div className="text-[10px] text-slate-400 font-mono uppercase">SLA Penalties Saved</div>
             <div className="text-base font-bold font-mono text-emerald-400 mt-1">
-              ${resolution.sla_penalties_prevented.toLocaleString()}
+              ${resolution.sla_penalties_prevented.toLocaleString('en-US')}
             </div>
             <div className="text-[10px] text-slate-400">Avoided Fines</div>
           </div>
@@ -314,11 +316,12 @@ export const ResolutionDrawer: React.FC<ResolutionDrawerProps> = ({
           </div>
         ) : isLocked ? (
           <button
-            disabled
-            className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-slate-800 text-slate-500 font-semibold text-xs border border-slate-700 cursor-not-allowed"
+            onClick={onExecuteFix}
+            disabled={isExecuting}
+            className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-red-600 hover:from-amber-400 hover:to-red-500 text-white font-bold text-xs shadow-amber-glow transition disabled:opacity-50 border border-amber-400/50"
           >
-            <Lock className="w-4 h-4" />
-            <span>Autonomous Fix Locked (Human Approval Mandatory)</span>
+            <ShieldCheck className="w-4 h-4 text-white" />
+            <span>{isExecuting ? 'Dispatching Supervisor Authorization...' : 'Authorize Supervisor Override & Execute'}</span>
           </button>
         ) : (
           <button

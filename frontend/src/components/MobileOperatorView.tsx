@@ -121,7 +121,7 @@ export const MobileOperatorView: React.FC<MobileOperatorViewProps> = ({
         <div className="bg-slate-900/80 p-2.5 rounded-lg border border-slate-800 text-center">
           <div className="text-[10px] font-mono text-slate-400 uppercase">At Risk</div>
           <div className={`text-base font-bold font-mono mt-0.5 ${delayedShipments.length > 0 ? 'text-amber-400' : 'text-slate-300'}`}>
-            ${delayedShipments.reduce((sum, s) => sum + s.sla_penalty_rate_per_hour * 12, 0).toLocaleString()}
+            ${delayedShipments.reduce((sum, s) => sum + s.sla_penalty_rate_per_hour * 12, 0).toLocaleString('en-US')}
           </div>
           <div className="text-[9px] text-amber-500/80 font-mono">{delayedShipments.length} Anomaly</div>
         </div>
@@ -129,7 +129,7 @@ export const MobileOperatorView: React.FC<MobileOperatorViewProps> = ({
         <div className="bg-slate-900/80 p-2.5 rounded-lg border border-slate-800 text-center">
           <div className="text-[10px] font-mono text-slate-400 uppercase">Protected</div>
           <div className="text-base font-bold font-mono text-emerald-400 mt-0.5">
-            +${resolvedShipments.reduce((sum, s) => sum + (s.sla_penalty_rate_per_hour * 12) - 1645, 0).toLocaleString()}
+            +${resolvedShipments.reduce((sum, s) => sum + (s.sla_penalty_rate_per_hour * 12) - 1645, 0).toLocaleString('en-US')}
           </div>
           <div className="text-[9px] text-emerald-500/80 font-mono">{resolvedShipments.length} Fixed</div>
         </div>
@@ -153,7 +153,7 @@ export const MobileOperatorView: React.FC<MobileOperatorViewProps> = ({
               {activeAlert.vessel_name}: {activeAlert.container_id}
             </div>
             <div className="text-xs text-slate-300 leading-snug mb-3">
-              {activeAlert.cargo_description} (Valued at ${(activeAlert.value).toLocaleString()})
+              {activeAlert.cargo_description} (Valued at ${(activeAlert.value).toLocaleString('en-US')})
             </div>
 
             <div className="grid grid-cols-2 gap-2 text-center text-xs font-mono bg-slate-950/70 p-2 rounded-lg border border-slate-800 mb-3">
@@ -170,14 +170,36 @@ export const MobileOperatorView: React.FC<MobileOperatorViewProps> = ({
             {/* 1-Tap Autonomous Action Mobile Button */}
             {resolution ? (
               <div className="space-y-2">
-                <button
-                  onClick={onExecuteFix}
-                  disabled={isExecuting || resolution.requires_human_approval}
-                  className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-slate-950 font-bold text-xs shadow-emerald-glow transition flex items-center justify-center gap-2"
-                >
-                  <Sparkles className="w-4 h-4" />
-                  <span>{isExecuting ? 'Dispatching Fix...' : '1-Tap Autonomous Fix (Save $3,755)'}</span>
-                </button>
+                {resolution.requires_human_approval ? (
+                  <div className="space-y-2">
+                    <div className="p-2.5 rounded-lg bg-red-950/60 border border-red-500/40 text-[11px] text-red-200">
+                      <div className="font-bold flex items-center gap-1">
+                        <AlertTriangle className="w-3.5 h-3.5 text-red-400" />
+                        <span>🔒 SUPERVISOR LOCK (Exceeds $10k Ceiling)</span>
+                      </div>
+                      <div className="text-[10px] text-slate-300 mt-1">
+                        Cost: ${resolution.net_cost_impact.toLocaleString('en-US')} • Confidence: {(resolution.confidence_score * 100).toFixed(0)}%
+                      </div>
+                    </div>
+                    <button
+                      onClick={onExecuteFix}
+                      disabled={isExecuting}
+                      className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-amber-500 to-red-600 hover:from-amber-400 hover:to-red-500 text-white font-bold text-xs shadow-amber-glow transition flex items-center justify-center gap-2 border border-amber-400/50"
+                    >
+                      <ShieldCheck className="w-4 h-4 text-white" />
+                      <span>{isExecuting ? 'Dispatching Supervisor Approval...' : 'Authorize Supervisor Override & Execute'}</span>
+                    </button>
+                  </div>
+                ) : (
+                  <button
+                    onClick={onExecuteFix}
+                    disabled={isExecuting}
+                    className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-slate-950 font-bold text-xs shadow-emerald-glow transition flex items-center justify-center gap-2"
+                  >
+                    <Sparkles className="w-4 h-4" />
+                    <span>{isExecuting ? 'Dispatching Fix...' : '1-Tap Autonomous Fix (Save $3,755)'}</span>
+                  </button>
+                )}
 
                 {/* Collapsible Mobile CoT */}
                 <button

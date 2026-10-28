@@ -124,3 +124,54 @@ async def test_executive_audit_report_endpoint():
         assert "financial_telemetry" in data
         assert data["venture_summary"]["tracked_containers"] == 5
 
+
+@pytest.mark.asyncio
+async def test_customs_parse_bol_endpoint():
+    """Milestone M5: Autonomous Mirsal-II BoL & Commercial Invoice Parser."""
+    transport = ASGITransport(app=app)
+    async with AsyncClient(transport=transport, base_url="http://test") as client:
+        bol_text = """
+        BILL OF LADING / COMMERCIAL INVOICE
+        Port of Discharge: Jebel Ali Port (AEJEA) Terminal 2
+        Consignee: DUBAI SOUTH TELECOM INFRASTRUCTURE FZE
+        Free Zone License: FZ-88391-JAFZA
+        Container Number: MSCU7829104
+        Harmonized Code: 8517.62
+        Cargo: 5G Telecom Base Station Transceiver Modules
+        Declared CIF Value: USD 840,000.00
+        Origin: Shenzhen Port (CNSZN)
+        Carrier: Mediterranean Shipping Company (MSC)
+        """
+        res = await client.post("/api/customs/parse-bol", json={"raw_document_text": bol_text})
+        assert res.status_code == 200
+        data = res.json()
+        assert data["container_id"] == "MSCU7829104"
+        assert data["hs_code"] == "8517.62"
+        assert data["is_free_zone"] is True
+        assert data["free_zone_exemption_applied"] is True
+        assert data["duty_amount_usd"] == 0.0
+        assert data["risk_channel"] == "GREEN_LANE"
+        assert "UAE-FCA-HS2026" in data["source_citation"]
+        assert data["status"] == "MIRSAL_II_PRE_CLEARED"
+
+
+@pytest.mark.asyncio
+async def test_cold_chain_supervisor_lock():
+    """Milestone M6: High-Stakes Escalation Lock (> $10k Ceiling) on Biopharma Vaccines."""
+    transport = ASGITransport(app=app)
+    async with AsyncClient(transport=transport, base_url="http://test") as client:
+        res = await client.post("/api/simulate-delay", json={
+            "container_id": "MAEU9182301",
+            "delay_hours": 16,
+            "reason": "Critical Cold-Chain Alert: Active reefer container delay at Berth 2",
+            "affected_berth": "Berth 2"
+        })
+        assert res.status_code == 200
+        data = res.json()
+        assert data["container_id"] == "MAEU9182301"
+        assert data["net_cost_impact"] > 10000.0
+        assert data["requires_human_approval"] is True
+        assert "HUMAN SUPERVISOR OVERRIDE REQUIRED" in data["recommended_action_title"]
+        assert data["confidence_score"] < 0.85
+
+

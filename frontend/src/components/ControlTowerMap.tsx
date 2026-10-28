@@ -170,7 +170,7 @@ export const ControlTowerMap: React.FC<ControlTowerMapProps> = ({
               <button
                 key={s.id}
                 onClick={() => onSelectShipment(s)}
-                className={`flex-shrink-0 text-left px-3 py-2 rounded-lg border transition-all ${
+                className={`flex-shrink-0 min-w-[225px] text-left px-3.5 py-2.5 rounded-lg border transition-all ${
                   isSelected
                     ? 'border-cyan-400 bg-cyan-950/70 shadow-cyan-glow'
                     : isDelayed
@@ -191,7 +191,7 @@ export const ControlTowerMap: React.FC<ControlTowerMapProps> = ({
                     )}
                     <span className="font-mono text-xs font-bold text-slate-100">{s.container_id}</span>
                   </div>
-                  <span className={`text-[10px] font-mono px-1.5 py-0.2 rounded font-semibold ${
+                  <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded font-semibold ${
                     isDelayed ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40' :
                     isResolved ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' :
                     'bg-slate-800 text-slate-300'
@@ -199,11 +199,11 @@ export const ControlTowerMap: React.FC<ControlTowerMapProps> = ({
                     {s.status}
                   </span>
                 </div>
-                <div className="text-[11px] text-slate-300 font-medium truncate max-w-[200px] mt-0.5">
+                <div className="text-[11px] text-slate-300 font-medium truncate max-w-[210px] mt-0.5">
                   {s.vessel_name} ({s.current_berth})
                 </div>
-                <div className="text-[10px] font-mono text-slate-400">
-                  Val: ${(s.value / 1000).toFixed(0)}k • SLA: ${s.sla_penalty_rate_per_hour}/h
+                <div className="text-[10px] font-mono text-slate-400 leading-tight truncate mt-0.5">
+                  Val: ${(s.value / 1000).toLocaleString('en-US', { maximumFractionDigits: 0 })}k • SLA: ${s.sla_penalty_rate_per_hour.toLocaleString('en-US')}/h
                 </div>
               </button>
             );

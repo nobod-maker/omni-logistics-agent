@@ -89,13 +89,13 @@ class MasterOrchestrator:
         
         if gross_costs > 10000.0:
             requires_human = True
-            human_reason = f"Financial Exposure Threshold Exceeded: Operational cost (${gross_costs:,.2f}) > $10,000 safety limit."
-            action_title = "I'm not sure — Human Review Required"
+            human_reason = f"Financial Exposure Threshold Exceeded: Operational cost (${gross_costs:,.2f}) > $10,000 safety ceiling."
+            action_title = "🔒 HUMAN SUPERVISOR OVERRIDE REQUIRED (Exceeds $10,000 Autonomous Ceiling)"
             cot_steps.append(f"[SAFETY LOCK] TRIGGERED: {human_reason}. Autonomous execution disabled.")
         elif confidence_score < 0.85:
             requires_human = True
             human_reason = f"Confidence Governance Violation: Computed confidence ({confidence_score * 100:.1f}%) < 85% minimum required threshold."
-            action_title = "I'm not sure — Human Review Required"
+            action_title = "🔒 HUMAN SUPERVISOR OVERRIDE REQUIRED (Low Confidence Threshold)"
             cot_steps.append(f"[SAFETY LOCK] TRIGGERED: {human_reason}. Autonomous execution disabled.")
         else:
             cot_steps.append("[SAFETY CLEARANCE] All guardrails passed. Master Orchestrator cleared plan for Autonomous One-Click Execution.")

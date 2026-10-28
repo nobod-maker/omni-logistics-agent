@@ -14,6 +14,7 @@ import { ResolutionDrawer } from '@/components/ResolutionDrawer';
 import { TariffLookupModal } from '@/components/TariffLookupModal';
 import { AgencyRosterModal } from '@/components/AgencyRosterModal';
 import { MobileOperatorView } from '@/components/MobileOperatorView';
+import { VentureCaseModal } from '@/components/VentureCaseModal';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
@@ -27,6 +28,7 @@ export default function ControlTowerHome() {
   const [isResolutionDrawerOpen, setIsResolutionDrawerOpen] = useState(false);
   const [isTariffModalOpen, setIsTariffModalOpen] = useState(false);
   const [isAgencyRosterOpen, setIsAgencyRosterOpen] = useState(false);
+  const [isVentureModalOpen, setIsVentureModalOpen] = useState(false);
   const [isMobileMode, setIsMobileMode] = useState(false);
 
   // Active Multi-Agent Resolution Plan
@@ -104,6 +106,39 @@ export default function ControlTowerHome() {
       }
     } catch (err) {
       console.error('Simulation error:', err);
+    } finally {
+      setIsSimulating(false);
+    }
+  };
+
+  // Milestone M6: Trigger simulated cold-chain crisis (MAEU9182301 / Biopharma vaccines > $10,000 threshold)
+  const handleSimulateColdChainCrisis = async () => {
+    setIsSimulating(true);
+    try {
+      const target = shipments.find(s => s.container_id === 'MAEU9182301') || shipments[1] || shipments[0];
+      const res = await fetch(`${API_BASE}/api/simulate-delay`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          container_id: target?.container_id || 'MAEU9182301',
+          delay_hours: 16,
+          reason: 'Critical Cold-Chain Alert: Active cryogenic reefer delay at Berth 2',
+          affected_berth: target?.current_berth || 'Berth 2',
+        }),
+      });
+
+      if (res.ok) {
+        const resolutionData: DisruptionResolution = await res.json();
+        setCurrentResolution(resolutionData);
+        if (target) {
+          setSelectedShipment({ ...target, status: 'DELAYED' });
+        }
+        setIsResolutionDrawerOpen(true);
+        await fetchShipments();
+        await fetchEvents();
+      }
+    } catch (err) {
+      console.error('Cold chain simulation error:', err);
     } finally {
       setIsSimulating(false);
     }
@@ -224,8 +259,10 @@ export default function ControlTowerHome() {
       <MetricsOverview
         shipments={shipments}
         onSimulateDelay={handleSimulateDelay}
+        onSimulateColdChainCrisis={handleSimulateColdChainCrisis}
         onOpenTariffModal={() => setIsTariffModalOpen(true)}
         onOpenAgencyRoster={() => setIsAgencyRosterOpen(true)}
+        onOpenVentureModal={() => setIsVentureModalOpen(true)}
         onToggleMobileView={() => setIsMobileMode(!isMobileMode)}
         onExportAudit={handleExportAudit}
         isMobileView={isMobileMode}
@@ -312,6 +349,12 @@ export default function ControlTowerHome() {
         isOpen={isAgencyRosterOpen}
         onClose={() => setIsAgencyRosterOpen(false)}
         apiBaseUrl={API_BASE}
+      />
+
+      {/* Milestone M7: Dubai 3PL Venture Case & Commercial ROI Simulator */}
+      <VentureCaseModal
+        isOpen={isVentureModalOpen}
+        onClose={() => setIsVentureModalOpen(false)}
       />
     </main>
   );

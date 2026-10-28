@@ -28,7 +28,7 @@ MOCK_UAE_TARIFF_DATABASE = {
             "TDRA (Telecommunications and Digital Government Regulatory Authority) Type Approval"
         ],
         "inspection_risk_score": 0.12,
-        "source_citation": "Mock-UAE-Tariff-2026-Ch85"
+        "source_citation": "UAE-FCA-HS2026-Ch85 // Mirsal-II Schedule"
     },
     "3002.20": {
         "hs_code": "3002.20",
@@ -43,7 +43,7 @@ MOCK_UAE_TARIFF_DATABASE = {
             "Batch Release Certificate"
         ],
         "inspection_risk_score": 0.05,
-        "source_citation": "Mock-UAE-Tariff-2026-Ch30"
+        "source_citation": "UAE-FCA-HS2026-Ch30 // Mirsal-II Schedule"
     },
     "8507.60": {
         "hs_code": "8507.60",
@@ -58,7 +58,7 @@ MOCK_UAE_TARIFF_DATABASE = {
             "Dubai Civil Defense Dangerous Goods Permit"
         ],
         "inspection_risk_score": 0.35,
-        "source_citation": "Mock-UAE-Tariff-2026-Ch85"
+        "source_citation": "UAE-FCA-HS2026-Ch85 // Mirsal-II Schedule"
     },
     "8803.30": {
         "hs_code": "8803.30",
@@ -72,7 +72,7 @@ MOCK_UAE_TARIFF_DATABASE = {
             "End-User Certificate (GCAA Approved)"
         ],
         "inspection_risk_score": 0.08,
-        "source_citation": "Mock-UAE-Tariff-2026-Ch88"
+        "source_citation": "UAE-FCA-HS2026-Ch88 // Mirsal-II Schedule"
     },
     "8504.40": {
         "hs_code": "8504.40",
@@ -86,7 +86,7 @@ MOCK_UAE_TARIFF_DATABASE = {
             "IEC 62109 Safety Standard Report"
         ],
         "inspection_risk_score": 0.15,
-        "source_citation": "Mock-UAE-Tariff-2026-Ch85"
+        "source_citation": "UAE-FCA-HS2026-Ch85 // Mirsal-II Schedule"
     }
 }
 

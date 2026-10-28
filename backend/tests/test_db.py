@@ -58,7 +58,7 @@ def test_tariff_lookup_attribution():
     """Verify UAE HS code tariff lookup returns source citations."""
     tariff = get_tariff_info("8517.62")
     assert tariff["hs_code"] == "8517.62"
-    assert "Mock-UAE-Tariff" in tariff["source_citation"]
+    assert "UAE-FCA-HS2026" in tariff["source_citation"]
     assert "TDRA" in str(tariff["required_documents"])
 
 

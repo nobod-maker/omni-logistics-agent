@@ -96,7 +96,7 @@ export const DisruptionModal: React.FC<DisruptionModalProps> = ({
             <div className="bg-red-950/20 border border-red-500/30 rounded-xl p-3.5 text-center">
               <div className="text-[11px] font-mono text-red-400 uppercase">Unmitigated Financial Risk</div>
               <div className="text-2xl font-bold font-mono text-red-300 mt-0.5">
-                ${totalExposure.toLocaleString()}
+                ${totalExposure.toLocaleString('en-US')}
               </div>
               <div className="text-[10px] text-slate-400 font-mono mt-1">
                 SLA Penalties (${slaLoss}) + Demurrage

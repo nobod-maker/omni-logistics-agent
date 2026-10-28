@@ -115,7 +115,7 @@ export const TelemetryFeed: React.FC<TelemetryFeedProps> = ({
               <div className="grid grid-cols-3 gap-2 py-2 px-2.5 bg-slate-950/60 rounded-lg text-center border border-slate-800/80 mb-3">
                 <div>
                   <div className="text-[10px] text-slate-400 uppercase font-mono">Cargo Value</div>
-                  <div className="text-xs font-mono font-bold text-slate-200">${(s.value).toLocaleString()}</div>
+                  <div className="text-xs font-mono font-bold text-slate-200">${(s.value).toLocaleString('en-US')}</div>
                 </div>
                 <div>
                   <div className="text-[10px] text-slate-400 uppercase font-mono">SLA Penalty</div>

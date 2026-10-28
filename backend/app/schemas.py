@@ -149,3 +149,29 @@ class ExecuteActionResponse(BaseModel):
     decision_id: str
     executed_at: datetime
     updated_shipment: Shipment
+
+
+class ParseBoLRequest(BaseModel):
+    raw_document_text: str
+
+
+class MirsalIIDeclaration(BaseModel):
+    declaration_number: str
+    container_id: str
+    hs_code: str
+    cargo_description: str
+    consignee_name: str
+    consignee_license: str
+    is_free_zone: bool
+    cif_value_usd: float
+    duty_rate_pct: float
+    duty_amount_usd: float
+    vat_rate_pct: float
+    vat_amount_usd: float
+    free_zone_exemption_applied: bool
+    risk_channel: str
+    regulatory_approvals: List[str]
+    source_citation: str
+    verification_hash: str
+    status: str
+
