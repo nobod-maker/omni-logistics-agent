@@ -175,3 +175,44 @@ async def test_cold_chain_supervisor_lock():
         assert data["confidence_score"] < 0.85
 
 
+@pytest.mark.asyncio
+async def test_marketplace_manifest_endpoint():
+    """Milestone M9: Dubai Chambers Agentic AI Marketplace Manifest Specification."""
+    transport = ASGITransport(app=app)
+    async with AsyncClient(transport=transport, base_url="http://test") as client:
+        res = await client.get("/api/marketplace/manifest")
+        assert res.status_code == 200
+        data = res.json()
+        assert data["agent_id"] == "omni-logistics-master-agent"
+        assert data["category"] == "Best Business AI Agent"
+        assert len(data["supported_connectors"]) >= 4
+        assert "CargoWise One" in str(data["supported_connectors"])
+        assert "Dubai Trade Mirsal-II" in str(data["supported_connectors"])
+        assert data["monetization"]["base_monthly_platform_fee_usd"] == 499.0
+        assert data["monetization"]["performance_fee_pct"] == 10.0
+
+
+@pytest.mark.asyncio
+async def test_erp_webhook_ingest_endpoint():
+    """Milestone M9: Legacy TMS/ERP Webhook Automated Ingestion Gateway."""
+    transport = ASGITransport(app=app)
+    async with AsyncClient(transport=transport, base_url="http://test") as client:
+        payload = {
+            "source_system": "CargoWise One",
+            "event_type": "BERTH_SLIP",
+            "container_id": "MSCU7829104",
+            "vessel_name": "MSC Zoe",
+            "delay_hours": 12,
+            "reason": "Automated EDI 315 Berth Delay Signal from Jebel Ali Port"
+        }
+        res = await client.post("/api/webhooks/erp-ingest", json=payload)
+        assert res.status_code == 200
+        data = res.json()
+        assert data["success"] is True
+        assert "CORR-CAR-" in data["correlation_id"]
+        assert data["container_id"] == "MSCU7829104"
+        assert data["status"] == "INGESTED_AND_DISPATCHED"
+        assert len(data["dispatched_sub_agents"]) == 3
+
+
+

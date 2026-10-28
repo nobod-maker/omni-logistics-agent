@@ -1,0 +1,77 @@
+name: Championship CI/CD & Free-Tier Keep-Alive
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  schedule:
+    # Ping Render backend every 14 minutes to prevent free-tier cold spin-down during judging
+    - cron: '*/14 * * * *'
+  workflow_dispatch:
+
+jobs:
+  test-and-build:
+    name: Automated Verification (Pytest & Next.js Build)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Backend Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r backend/requirements.txt
+
+      - name: Run Backend Pytest Suite (15/15 Tests)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || 'test-mock-key' }}
+        run: |
+          pytest backend/tests -v
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install Frontend Dependencies
+        working-directory: ./frontend
+        run: npm ci
+
+      - name: Build Next.js Production App
+        working-directory: ./frontend
+        env:
+          NEXT_PUBLIC_API_URL: ${{ secrets.RENDER_BACKEND_URL || 'http://localhost:8000' }}
+        run: npm run build
+
+  render-keepalive:
+    name: Free-Tier Render Keep-Alive Ping
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+
+    steps:
+      - name: Ping Deployed Render Backend Health Endpoint
+        env:
+          BACKEND_URL: ${{ secrets.RENDER_BACKEND_URL }}
+        run: |
+          if [ -n "$BACKEND_URL" ]; then
+            echo "Pinging deployed backend health endpoint at $BACKEND_URL/health ..."
+            HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$BACKEND_URL/health" || echo "000")
+            echo "HTTP Status Code: $HTTP_STATUS"
+            if [ "$HTTP_STATUS" -eq 200 ]; then
+              echo "Backend is warm, healthy, and ready for Championship judges!"
+            else
+              echo "Warning: Received HTTP status $HTTP_STATUS from backend."
+            fi
+          else
+            echo "RENDER_BACKEND_URL secret not yet set in repo settings; skipping keep-alive ping."
+          fi

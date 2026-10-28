@@ -24,6 +24,8 @@ interface MetricsOverviewProps {
   onOpenTariffModal: () => void;
   onOpenAgencyRoster: () => void;
   onOpenVentureModal?: () => void;
+  onOpenJudgeTour?: () => void;
+  onOpenPitchDeck?: () => void;
   onToggleMobileView: () => void;
   onExportAudit?: () => void;
   isMobileView: boolean;
@@ -38,6 +40,8 @@ export const MetricsOverview: React.FC<MetricsOverviewProps> = ({
   onOpenTariffModal,
   onOpenAgencyRoster,
   onOpenVentureModal,
+  onOpenJudgeTour,
+  onOpenPitchDeck,
   onToggleMobileView,
   onExportAudit,
   isMobileView,
@@ -96,6 +100,27 @@ export const MetricsOverview: React.FC<MetricsOverviewProps> = ({
 
         {/* Global Action Toolbar */}
         <div className="flex items-center flex-wrap gap-2">
+          {onOpenJudgeTour && (
+            <button
+              onClick={onOpenJudgeTour}
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 shadow-emerald-glow transition animate-pulse border border-emerald-400/50"
+              title="Launch 60-Second Guided Auto-Walkthrough for Championship Judges"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-slate-950" />
+              <span>▶️ 60s Judge Tour</span>
+            </button>
+          )}
+
+          {onOpenPitchDeck && (
+            <button
+              onClick={onOpenPitchDeck}
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-indigo-950/80 hover:bg-indigo-900/90 text-indigo-300 border border-indigo-500/40 shadow-lg transition"
+              title="Open 10-Slide Dubai Chamber Championship Pitch Deck"
+            >
+              <span>📊 Pitch Deck</span>
+            </button>
+          )}
+
           {onExportAudit && (
             <button
               onClick={onExportAudit}

@@ -15,6 +15,8 @@ import { TariffLookupModal } from '@/components/TariffLookupModal';
 import { AgencyRosterModal } from '@/components/AgencyRosterModal';
 import { MobileOperatorView } from '@/components/MobileOperatorView';
 import { VentureCaseModal } from '@/components/VentureCaseModal';
+import { JudgeTourOverlay } from '@/components/JudgeTourOverlay';
+import { PitchDeckModal } from '@/components/PitchDeckModal';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
@@ -29,6 +31,9 @@ export default function ControlTowerHome() {
   const [isTariffModalOpen, setIsTariffModalOpen] = useState(false);
   const [isAgencyRosterOpen, setIsAgencyRosterOpen] = useState(false);
   const [isVentureModalOpen, setIsVentureModalOpen] = useState(false);
+  const [isJudgeTourOpen, setIsJudgeTourOpen] = useState(false);
+  const [isPitchDeckOpen, setIsPitchDeckOpen] = useState(false);
+  const [tariffInitialTab, setTariffInitialTab] = useState<'rag' | 'bol_parser'>('rag');
   const [isMobileMode, setIsMobileMode] = useState(false);
 
   // Active Multi-Agent Resolution Plan
@@ -143,6 +148,62 @@ export default function ControlTowerHome() {
       setIsSimulating(false);
     }
   };
+
+  // Milestone M9: 60s Judge Tour Execution Coordinator
+  const handleExecuteTourStep = useCallback(async (stepNumber: number) => {
+    switch (stepNumber) {
+      case 1:
+        // Step 1: DEFINE - The $4.2B Dubai Port Friction
+        setIsDisruptionModalOpen(false);
+        setIsResolutionDrawerOpen(false);
+        setIsTariffModalOpen(false);
+        setIsVentureModalOpen(false);
+        setIsAgencyRosterOpen(false);
+        setIsMobileMode(false);
+        break;
+      case 2:
+        // Step 2: BUILD - Multi-Agent Berth 4 Delay
+        setIsTariffModalOpen(false);
+        setIsVentureModalOpen(false);
+        setIsMobileMode(false);
+        await handleSimulateDelay();
+        setIsDisruptionModalOpen(false);
+        setIsResolutionDrawerOpen(true);
+        break;
+      case 3:
+        // Step 3: PAPERWORK - Mirsal-II BoL Parser
+        setIsResolutionDrawerOpen(false);
+        setIsVentureModalOpen(false);
+        setIsMobileMode(false);
+        setTariffInitialTab('bol_parser');
+        setIsTariffModalOpen(true);
+        break;
+      case 4:
+        // Step 4: SAFETY - >$10,000 Human-in-the-Loop Ceiling & Rollback
+        setIsTariffModalOpen(false);
+        setIsVentureModalOpen(false);
+        setIsMobileMode(false);
+        await handleSimulateColdChainCrisis();
+        setIsResolutionDrawerOpen(true);
+        break;
+      case 5:
+        // Step 5: MOBILE - Workshop 1 Quayside PWA
+        setIsResolutionDrawerOpen(false);
+        setIsTariffModalOpen(false);
+        setIsVentureModalOpen(false);
+        setIsMobileMode(true);
+        break;
+      case 6:
+        // Step 6: TRANSFORM - 3PL Venture Case
+        setIsMobileMode(false);
+        setIsResolutionDrawerOpen(false);
+        setIsTariffModalOpen(false);
+        setIsVentureModalOpen(true);
+        break;
+      default:
+        break;
+    }
+  }, [handleSimulateDelay]);
 
   // Launch Orchestrator from Disruption Modal
   const handleLaunchOrchestrator = (shipment: Shipment) => {
@@ -260,9 +321,14 @@ export default function ControlTowerHome() {
         shipments={shipments}
         onSimulateDelay={handleSimulateDelay}
         onSimulateColdChainCrisis={handleSimulateColdChainCrisis}
-        onOpenTariffModal={() => setIsTariffModalOpen(true)}
+        onOpenTariffModal={() => {
+          setTariffInitialTab('rag');
+          setIsTariffModalOpen(true);
+        }}
         onOpenAgencyRoster={() => setIsAgencyRosterOpen(true)}
         onOpenVentureModal={() => setIsVentureModalOpen(true)}
+        onOpenJudgeTour={() => setIsJudgeTourOpen(true)}
+        onOpenPitchDeck={() => setIsPitchDeckOpen(true)}
         onToggleMobileView={() => setIsMobileMode(!isMobileMode)}
         onExportAudit={handleExportAudit}
         isMobileView={isMobileMode}
@@ -342,6 +408,7 @@ export default function ControlTowerHome() {
         isOpen={isTariffModalOpen}
         onClose={() => setIsTariffModalOpen(false)}
         apiBaseUrl={API_BASE}
+        initialTab={tariffInitialTab}
       />
 
       {/* Agency Agents 271 Ready-Made Specialists Roster Modal */}
@@ -355,6 +422,19 @@ export default function ControlTowerHome() {
       <VentureCaseModal
         isOpen={isVentureModalOpen}
         onClose={() => setIsVentureModalOpen(false)}
+      />
+
+      {/* Milestone M9: 60s Judge Tour Auto-Walkthrough Overlay */}
+      <JudgeTourOverlay
+        isOpen={isJudgeTourOpen}
+        onClose={() => setIsJudgeTourOpen(false)}
+        onExecuteTourStep={handleExecuteTourStep}
+      />
+
+      {/* Milestone M9: In-App 10-Slide Interactive Pitch Deck Modal */}
+      <PitchDeckModal
+        isOpen={isPitchDeckOpen}
+        onClose={() => setIsPitchDeckOpen(false)}
       />
     </main>
   );

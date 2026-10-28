@@ -175,3 +175,26 @@ class MirsalIIDeclaration(BaseModel):
     verification_hash: str
     status: str
 
+
+class ERPWebhookPayload(BaseModel):
+    source_system: str = Field(..., description="Legacy TMS/ERP: CargoWise, SAP TM, Oracle OTM, Dubai Trade")
+    event_type: str = Field(..., description="Telemetry event type: AIS_DELAY, BERTH_SLIP, CUSTOMS_HOLD")
+    container_id: str = Field(..., description="Standard ISO container identifier e.g. MSCU7829104")
+    vessel_name: Optional[str] = "MSC Zoe"
+    delay_hours: Optional[int] = 12
+    reason: Optional[str] = "TMS webhook automated disruption signal"
+    priority: Optional[str] = "HIGH"
+    raw_payload: Optional[Dict[str, Any]] = None
+
+
+class ERPWebhookResponse(BaseModel):
+    success: bool
+    correlation_id: str
+    source_system: str
+    container_id: str
+    status: str
+    dispatched_sub_agents: List[str]
+    routing_receipt: Dict[str, Any]
+    message: str
+
+

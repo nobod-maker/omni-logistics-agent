@@ -22,6 +22,7 @@ interface TariffLookupModalProps {
   isOpen: boolean;
   onClose: () => void;
   apiBaseUrl: string;
+  initialTab?: 'rag' | 'bol_parser';
 }
 
 const SAMPLE_BOL_MSCU = `BILL OF LADING & COMMERCIAL INVOICE
@@ -54,8 +55,15 @@ export const TariffLookupModal: React.FC<TariffLookupModalProps> = ({
   isOpen,
   onClose,
   apiBaseUrl,
+  initialTab = 'rag',
 }) => {
-  const [activeTab, setActiveTab] = useState<'rag' | 'bol_parser'>('rag');
+  const [activeTab, setActiveTab] = useState<'rag' | 'bol_parser'>(initialTab);
+
+  React.useEffect(() => {
+    if (initialTab) {
+      setActiveTab(initialTab);
+    }
+  }, [initialTab, isOpen]);
   
   // HS RAG state
   const [queryCode, setQueryCode] = useState('8517.62');
