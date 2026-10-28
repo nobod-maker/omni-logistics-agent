@@ -13,6 +13,7 @@ import { DisruptionModal } from '@/components/DisruptionModal';
 import { ResolutionDrawer } from '@/components/ResolutionDrawer';
 import { TariffLookupModal } from '@/components/TariffLookupModal';
 import { AgencyRosterModal } from '@/components/AgencyRosterModal';
+import { MobileOperatorView } from '@/components/MobileOperatorView';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
@@ -26,6 +27,7 @@ export default function ControlTowerHome() {
   const [isResolutionDrawerOpen, setIsResolutionDrawerOpen] = useState(false);
   const [isTariffModalOpen, setIsTariffModalOpen] = useState(false);
   const [isAgencyRosterOpen, setIsAgencyRosterOpen] = useState(false);
+  const [isMobileMode, setIsMobileMode] = useState(false);
 
   // Active Multi-Agent Resolution Plan
   const [currentResolution, setCurrentResolution] = useState<DisruptionResolution | null>(null);
@@ -181,6 +183,8 @@ export default function ControlTowerHome() {
         onSimulateDelay={handleSimulateDelay}
         onOpenTariffModal={() => setIsTariffModalOpen(true)}
         onOpenAgencyRoster={() => setIsAgencyRosterOpen(true)}
+        onToggleMobileView={() => setIsMobileMode(!isMobileMode)}
+        isMobileView={isMobileMode}
         onRefresh={() => {
           fetchShipments();
           fetchEvents();
@@ -188,28 +192,46 @@ export default function ControlTowerHome() {
         isSimulating={isSimulating}
       />
 
-      {/* Main Operational Grid */}
-      <div className="flex-1 p-6 max-w-[1720px] w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6">
-        {/* Left Column: Corridor Radar Map & Active Links */}
-        <div className="lg:col-span-7 flex flex-col space-y-6">
-          <ControlTowerMap
+      {isMobileMode ? (
+        <div className="py-4">
+          <MobileOperatorView
             shipments={shipments}
-            selectedShipmentId={selectedShipment?.id}
+            onSimulateDelay={handleSimulateDelay}
+            onOpenTariffModal={() => setIsTariffModalOpen(true)}
+            onOpenAgencyRoster={() => setIsAgencyRosterOpen(true)}
             onSelectShipment={s => setSelectedShipment(s)}
+            selectedShipment={selectedShipment}
+            resolution={currentResolution}
+            onExecuteFix={handleExecuteFix}
+            isSimulating={isSimulating}
+            isExecuting={isExecutingFix}
+            onCloseMobileMode={() => setIsMobileMode(false)}
           />
         </div>
+      ) : (
+        /* Main Operational Grid */
+        <div className="flex-1 p-6 max-w-[1720px] w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6">
+          {/* Left Column: Corridor Radar Map & Active Links */}
+          <div className="lg:col-span-7 flex flex-col space-y-6">
+            <ControlTowerMap
+              shipments={shipments}
+              selectedShipmentId={selectedShipment?.id}
+              onSelectShipment={s => setSelectedShipment(s)}
+            />
+          </div>
 
-        {/* Right Column: High-Density Telemetry & Event Feed */}
-        <div className="lg:col-span-5 flex flex-col space-y-6">
-          <TelemetryFeed
-            shipments={shipments}
-            events={events}
-            selectedShipmentId={selectedShipment?.id}
-            onSelectShipment={s => setSelectedShipment(s)}
-            onResolveDisruption={handleInspectResolution}
-          />
+          {/* Right Column: High-Density Telemetry & Event Feed */}
+          <div className="lg:col-span-5 flex flex-col space-y-6">
+            <TelemetryFeed
+              shipments={shipments}
+              events={events}
+              selectedShipmentId={selectedShipment?.id}
+              onSelectShipment={s => setSelectedShipment(s)}
+              onResolveDisruption={handleInspectResolution}
+            />
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Screen 2: Proactive Disruption Alert Modal */}
       <DisruptionModal

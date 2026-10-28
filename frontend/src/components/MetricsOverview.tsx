@@ -9,7 +9,8 @@ import {
   Clock, 
   Sparkles,
   Search,
-  RefreshCw
+  RefreshCw,
+  Smartphone
 } from 'lucide-react';
 import { Shipment } from '@/types';
 
@@ -18,6 +19,8 @@ interface MetricsOverviewProps {
   onSimulateDelay: () => void;
   onOpenTariffModal: () => void;
   onOpenAgencyRoster: () => void;
+  onToggleMobileView: () => void;
+  isMobileView: boolean;
   onRefresh: () => void;
   isSimulating: boolean;
 }
@@ -27,6 +30,8 @@ export const MetricsOverview: React.FC<MetricsOverviewProps> = ({
   onSimulateDelay,
   onOpenTariffModal,
   onOpenAgencyRoster,
+  onToggleMobileView,
+  isMobileView,
   onRefresh,
   isSimulating
 }) => {
@@ -139,6 +144,19 @@ export const MetricsOverview: React.FC<MetricsOverviewProps> = ({
 
         {/* Action Trigger Buttons */}
         <div className="flex items-center gap-2">
+          <button
+            onClick={onToggleMobileView}
+            className={`flex items-center gap-1.5 px-3 py-2 text-xs font-medium rounded-lg border transition ${
+              isMobileView
+                ? 'bg-amber-500 text-slate-950 border-amber-400 font-bold shadow-amber-glow'
+                : 'bg-slate-800/80 hover:bg-slate-700 text-slate-200 border-slate-700'
+            }`}
+            title="Preview Mobile Operator Journey (PWA view for port coordinators)"
+          >
+            <Smartphone className="w-3.5 h-3.5 text-cyan-400" />
+            <span>{isMobileView ? 'Exit Mobile' : 'Mobile View'}</span>
+          </button>
+
           <button
             onClick={onOpenAgencyRoster}
             className="flex items-center gap-1.5 px-3 py-2 text-xs font-medium rounded-lg bg-cyan-950/70 hover:bg-cyan-900/80 text-cyan-300 border border-cyan-500/40 shadow-cyan-glow transition"

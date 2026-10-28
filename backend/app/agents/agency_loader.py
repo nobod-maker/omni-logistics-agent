@@ -16,6 +16,7 @@ from typing import Dict, Any, List, Optional
 
 SKILLS_WORKSPACE_DIR = Path(__file__).resolve().parent.parent.parent / ".agent" / "skills"
 SKILLS_GLOBAL_DIR = Path.home() / ".gemini" / "config" / "skills"
+PERSONAS_DIR = Path(__file__).resolve().parent / "personas"
 CATALOG_PATH = Path(__file__).resolve().parent.parent.parent / "AGENCY_AGENTS_CATALOG.json"
 
 
@@ -34,18 +35,33 @@ class AgencyAgentLoader:
 
     @classmethod
     def load_agent(cls, slug: str) -> Optional[Dict[str, Any]]:
-        """Load a ready-made agency agent skill definition."""
+        """Load a ready-made agency agent skill definition or custom runtime persona."""
         if slug in cls._cache:
             return cls._cache[slug]
 
         clean_slug = slug if slug.startswith("agency-") else f"agency-{slug}"
+        bare_slug = slug.replace("agency-", "")
 
-        # Check workspace first, then global
-        target_path = SKILLS_WORKSPACE_DIR / clean_slug / "SKILL.md"
-        if not target_path.exists():
-            target_path = SKILLS_GLOBAL_DIR / clean_slug / "SKILL.md"
+        # 1. Check custom runtime logistics personas directory first
+        target_path = None
+        for cand in [PERSONAS_DIR / f"{bare_slug}.md", PERSONAS_DIR / f"{slug}.md"]:
+            if cand.exists():
+                target_path = cand
+                break
 
-        if not target_path.exists():
+        # 2. Check workspace .agent/skills/
+        if not target_path or not target_path.exists():
+            ws_cand = SKILLS_WORKSPACE_DIR / clean_slug / "SKILL.md"
+            if ws_cand.exists():
+                target_path = ws_cand
+
+        # 3. Check global ~/.gemini/config/skills/
+        if not target_path or not target_path.exists():
+            glob_cand = SKILLS_GLOBAL_DIR / clean_slug / "SKILL.md"
+            if glob_cand.exists():
+                target_path = glob_cand
+
+        if not target_path or not target_path.exists():
             return None
 
         content = target_path.read_text(encoding="utf-8")
