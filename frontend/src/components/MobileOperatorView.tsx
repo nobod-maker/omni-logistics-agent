@@ -20,7 +20,8 @@ import {
   Smartphone, 
   PhoneCall,
   Search,
-  ExternalLink
+  ExternalLink,
+  RotateCcw
 } from 'lucide-react';
 import { Shipment, DisruptionResolution } from '@/types';
 
@@ -33,8 +34,10 @@ interface MobileOperatorViewProps {
   selectedShipment: Shipment | null;
   resolution: DisruptionResolution | null;
   onExecuteFix: () => void;
+  onRollback?: (shipmentId: string) => void;
   isSimulating: boolean;
   isExecuting: boolean;
+  isRollingBack?: boolean;
   onCloseMobileMode?: () => void;
 }
 
@@ -47,8 +50,10 @@ export const MobileOperatorView: React.FC<MobileOperatorViewProps> = ({
   selectedShipment,
   resolution,
   onExecuteFix,
+  onRollback,
   isSimulating,
   isExecuting,
+  isRollingBack = false,
   onCloseMobileMode,
 }) => {
   const [activeTab, setActiveTab] = useState<'alerts' | 'containers' | 'approvals'>('alerts');
@@ -281,6 +286,20 @@ export const MobileOperatorView: React.FC<MobileOperatorViewProps> = ({
                   <span className="truncate max-w-[180px]">{s.destination.split('->')[1] || s.destination}</span>
                   <span className="text-cyan-400 font-bold">${(s.value / 1000).toFixed(0)}k</span>
                 </div>
+
+                {isResolved && onRollback && (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onRollback(s.id);
+                    }}
+                    disabled={isRollingBack}
+                    className="mt-2 w-full flex items-center justify-center gap-1.5 py-1.5 rounded-lg bg-red-950/40 hover:bg-red-900/60 border border-red-500/40 text-red-300 font-mono text-[10px] font-semibold transition"
+                  >
+                    <RotateCcw className={`w-3 h-3 ${isRollingBack ? 'animate-spin' : ''}`} />
+                    <span>{isRollingBack ? 'Reverting...' : 'Revert Fix (Rollback to Delayed)'}</span>
+                  </button>
+                )}
               </div>
             );
           })}

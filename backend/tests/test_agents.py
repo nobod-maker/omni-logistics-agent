@@ -102,3 +102,25 @@ async def test_execute_autonomous_action_flow():
         assert exec_data["success"] is True
         assert exec_data["new_status"] == "RESOLVED"
         assert exec_data["updated_shipment"]["status"] == "RESOLVED"
+
+        # Rollback action
+        decision_id = exec_data["decision_id"]
+        rb_res = await client.post(f"/api/decisions/{decision_id}/rollback")
+        assert rb_res.status_code == 200
+        rb_data = rb_res.json()
+        assert rb_data["success"] is True
+        assert rb_data["restored_status"] == "IN_TRANSIT"
+        assert rb_data["updated_shipment"]["status"] == "IN_TRANSIT"
+
+
+@pytest.mark.asyncio
+async def test_executive_audit_report_endpoint():
+    transport = ASGITransport(app=app)
+    async with AsyncClient(transport=transport, base_url="http://test") as client:
+        res = await client.get("/api/reports/executive-audit")
+        assert res.status_code == 200
+        data = res.json()
+        assert "venture_summary" in data
+        assert "financial_telemetry" in data
+        assert data["venture_summary"]["tracked_containers"] == 5
+

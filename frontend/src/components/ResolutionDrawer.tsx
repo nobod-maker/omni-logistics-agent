@@ -27,7 +27,9 @@ interface ResolutionDrawerProps {
   onClose: () => void;
   resolution: DisruptionResolution | null;
   onExecuteFix: () => void;
+  onRollback?: () => void;
   isExecuting: boolean;
+  isRollingBack?: boolean;
   isResolvedAlready?: boolean;
 }
 
@@ -36,7 +38,9 @@ export const ResolutionDrawer: React.FC<ResolutionDrawerProps> = ({
   onClose,
   resolution,
   onExecuteFix,
+  onRollback,
   isExecuting,
+  isRollingBack = false,
   isResolvedAlready = false,
 }) => {
   const [showCoT, setShowCoT] = useState(true);
@@ -291,9 +295,22 @@ export const ResolutionDrawer: React.FC<ResolutionDrawerProps> = ({
         </button>
 
         {isResolvedAlready ? (
-          <div className="flex items-center gap-2 text-emerald-400 font-mono text-xs font-bold px-4 py-2 bg-emerald-950/40 border border-emerald-500/40 rounded-xl">
-            <CheckCircle className="w-4 h-4" />
-            <span>Resolution Already Executed & Audited</span>
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 text-emerald-400 font-mono text-xs font-bold px-3 py-2 bg-emerald-950/40 border border-emerald-500/40 rounded-xl">
+              <CheckCircle className="w-4 h-4" />
+              <span>Fix Committed</span>
+            </div>
+            {onRollback && (
+              <button
+                onClick={onRollback}
+                disabled={isRollingBack}
+                className="flex items-center gap-1.5 px-4 py-2 bg-red-950/40 hover:bg-red-900/60 border border-red-500/50 text-red-300 font-mono text-xs font-semibold rounded-xl transition disabled:opacity-50"
+                title="Revert autonomous actions and restore previous corridor state"
+              >
+                <RotateCcw className={`w-3.5 h-3.5 ${isRollingBack ? 'animate-spin' : ''}`} />
+                <span>{isRollingBack ? 'Reverting...' : 'Rollback Action'}</span>
+              </button>
+            )}
           </div>
         ) : isLocked ? (
           <button

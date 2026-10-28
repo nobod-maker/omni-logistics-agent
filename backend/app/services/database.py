@@ -234,6 +234,51 @@ def execute_agent_decision(decision_id: str) -> Optional[Dict[str, Any]]:
     return decision_dict
 
 
+def rollback_agent_decision(decision_id: str) -> Optional[Dict[str, Any]]:
+    """Restore previous shipment status using rollback snapshot and log ROLLED_BACK audit event."""
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM agent_decisions WHERE id = ?", (decision_id,))
+    decision_row = cursor.fetchone()
+    if not decision_row:
+        conn.close()
+        return None
+
+    shipment_id = decision_row["shipment_id"]
+    raw_action = decision_row["proposed_action"]
+    proposed_action = json.loads(raw_action) if isinstance(raw_action, str) else raw_action
+    
+    snapshot = proposed_action.get("rollback_snapshot", {}) if isinstance(proposed_action, dict) else {}
+    target_status = snapshot.get("original_status", "DELAYED")
+    if target_status == "RESOLVED":
+        target_status = "DELAYED"
+
+    cursor.execute("UPDATE shipments SET status = ? WHERE id = ?", (target_status, shipment_id))
+    cursor.execute("UPDATE agent_decisions SET executed = 0, executed_at = NULL WHERE id = ?", (decision_id,))
+
+    event_id = str(uuid.uuid4())
+    now = datetime.utcnow().isoformat() + "Z"
+    cursor.execute("""
+    INSERT INTO events (id, shipment_id, event_type, severity, description, impact_hours, timestamp)
+    VALUES (?, ?, 'ROLLED_BACK', 'MEDIUM', ?, 0, ?)
+    """, (event_id, shipment_id, f"Operator reverted autonomous fix for decision {decision_id[:8]}. Restored status to {target_status}.", now))
+
+    conn.commit()
+    cursor.execute("SELECT * FROM shipments WHERE id = ?", (shipment_id,))
+    shipment_row = cursor.fetchone()
+    conn.close()
+
+    return {
+        "success": True,
+        "decision_id": decision_id,
+        "shipment_id": shipment_id,
+        "restored_status": target_status,
+        "updated_shipment": dict(shipment_row) if shipment_row else None,
+        "rolled_back_at": now
+    }
+
+
+
 def get_agent_decisions(shipment_id: Optional[str] = None) -> List[Dict[str, Any]]:
     """Get audit history of agent decisions."""
     conn = get_db_connection()

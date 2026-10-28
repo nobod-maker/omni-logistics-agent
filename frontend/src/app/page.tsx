@@ -35,6 +35,7 @@ export default function ControlTowerHome() {
   // Loading states
   const [isSimulating, setIsSimulating] = useState(false);
   const [isExecutingFix, setIsExecutingFix] = useState(false);
+  const [isRollingBack, setIsRollingBack] = useState(false);
 
   // Fetch initial shipments
   const fetchShipments = useCallback(async () => {
@@ -175,6 +176,48 @@ export default function ControlTowerHome() {
     }
   };
 
+  // Rollback Action
+  const handleRollback = async (shipmentId?: string) => {
+    const targetId = shipmentId || currentResolution?.shipment_id || selectedShipment?.id;
+    if (!targetId) return;
+    setIsRollingBack(true);
+    try {
+      const res = await fetch(`${API_BASE}/api/shipments/${targetId}/rollback`, {
+        method: 'POST',
+      });
+      if (res.ok) {
+        await fetchShipments();
+        await fetchEvents();
+        setIsResolutionDrawerOpen(false);
+      }
+    } catch (err) {
+      console.error('Rollback error:', err);
+    } finally {
+      setIsRollingBack(false);
+    }
+  };
+
+  // Export Executive Audit Report
+  const handleExportAudit = async () => {
+    try {
+      const res = await fetch(`${API_BASE}/api/reports/executive-audit`);
+      if (res.ok) {
+        const data = await res.json();
+        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `omni-logistics-audit-${new Date().toISOString().slice(0, 10)}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }
+    } catch (err) {
+      console.error('Audit export error:', err);
+    }
+  };
+
   return (
     <main className="min-h-screen bg-[#070B14] flex flex-col">
       {/* Top HUD Metrics Bar */}
@@ -184,6 +227,7 @@ export default function ControlTowerHome() {
         onOpenTariffModal={() => setIsTariffModalOpen(true)}
         onOpenAgencyRoster={() => setIsAgencyRosterOpen(true)}
         onToggleMobileView={() => setIsMobileMode(!isMobileMode)}
+        onExportAudit={handleExportAudit}
         isMobileView={isMobileMode}
         onRefresh={() => {
           fetchShipments();
@@ -203,8 +247,10 @@ export default function ControlTowerHome() {
             selectedShipment={selectedShipment}
             resolution={currentResolution}
             onExecuteFix={handleExecuteFix}
+            onRollback={handleRollback}
             isSimulating={isSimulating}
             isExecuting={isExecutingFix}
+            isRollingBack={isRollingBack}
             onCloseMobileMode={() => setIsMobileMode(false)}
           />
         </div>
@@ -248,7 +294,9 @@ export default function ControlTowerHome() {
         onClose={() => setIsResolutionDrawerOpen(false)}
         resolution={currentResolution}
         onExecuteFix={handleExecuteFix}
+        onRollback={() => handleRollback(currentResolution?.shipment_id)}
         isExecuting={isExecutingFix}
+        isRollingBack={isRollingBack}
         isResolvedAlready={selectedShipment?.status === 'RESOLVED'}
       />
 

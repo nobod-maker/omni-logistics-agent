@@ -10,7 +10,9 @@ import {
   Sparkles,
   Search,
   RefreshCw,
-  Smartphone
+  Smartphone,
+  Download,
+  TrendingUp
 } from 'lucide-react';
 import { Shipment } from '@/types';
 
@@ -20,6 +22,7 @@ interface MetricsOverviewProps {
   onOpenTariffModal: () => void;
   onOpenAgencyRoster: () => void;
   onToggleMobileView: () => void;
+  onExportAudit?: () => void;
   isMobileView: boolean;
   onRefresh: () => void;
   isSimulating: boolean;
@@ -31,6 +34,7 @@ export const MetricsOverview: React.FC<MetricsOverviewProps> = ({
   onOpenTariffModal,
   onOpenAgencyRoster,
   onToggleMobileView,
+  onExportAudit,
   isMobileView,
   onRefresh,
   isSimulating
@@ -44,6 +48,11 @@ export const MetricsOverview: React.FC<MetricsOverviewProps> = ({
   
   // Projected savings from resolved autonomous interventions
   const marginProtected = resolvedShipments.reduce((sum, s) => sum + (s.sla_penalty_rate_per_hour * 12) - 1645, 0);
+  const demurrageAvoided = resolvedShipments.length * 360;
+  const customsHoursSaved = resolvedShipments.length * 6;
+  const roiPct = resolvedShipments.length > 0 && marginProtected > 0 
+    ? Math.round((marginProtected / (resolvedShipments.length * 1645)) * 100) 
+    : 0;
 
   return (
     <div className="bg-[#0A0F1D]/80 backdrop-blur border-b border-slate-800/80 sticky top-0 z-30 px-6 py-4">
@@ -121,22 +130,26 @@ export const MetricsOverview: React.FC<MetricsOverviewProps> = ({
               <span className="text-xl font-bold font-mono text-emerald-400">
                 +${Math.max(marginProtected, 0).toLocaleString()}
               </span>
-              <span className="text-[11px] font-mono text-emerald-500/80">
-                {resolvedShipments.length} Resolved
+              <span className="text-[11px] font-mono text-emerald-400 font-bold">
+                {roiPct > 0 ? `+${roiPct}% ROI` : `${resolvedShipments.length} Fixed`}
               </span>
             </div>
             <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-emerald-500/50" />
           </div>
 
-          {/* Autonomous Clearances */}
+          {/* Autonomous Clearances & Demurrage Avoided */}
           <div className="bg-slate-900/90 border border-slate-800 rounded-lg p-3 relative overflow-hidden">
             <div className="flex items-center justify-between text-xs text-slate-400">
-              <span>Free Zone Pre-Clear</span>
+              <span>Demurrage Saved</span>
               <ShieldCheck className="w-3.5 h-3.5 text-cyan-400" />
             </div>
             <div className="mt-1 flex items-baseline justify-between">
-              <span className="text-xl font-bold font-mono text-cyan-400">100%</span>
-              <span className="text-[11px] font-mono text-cyan-300/80">Mirsal-II Direct</span>
+              <span className="text-xl font-bold font-mono text-cyan-400">
+                ${demurrageAvoided > 0 ? demurrageAvoided.toLocaleString() : '0'}
+              </span>
+              <span className="text-[11px] font-mono text-cyan-300/80">
+                +{customsHoursSaved}h Mirsal
+              </span>
             </div>
             <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-cyan-400/50" />
           </div>
@@ -144,6 +157,17 @@ export const MetricsOverview: React.FC<MetricsOverviewProps> = ({
 
         {/* Action Trigger Buttons */}
         <div className="flex items-center gap-2">
+          {onExportAudit && (
+            <button
+              onClick={onExportAudit}
+              className="flex items-center gap-1.5 px-3 py-2 text-xs font-medium rounded-lg bg-slate-800/80 hover:bg-slate-700 text-slate-200 border border-slate-700 transition"
+              title="Download Executive Audit Report for Championship & Compliance"
+            >
+              <Download className="w-3.5 h-3.5 text-emerald-400" />
+              <span>Audit Report</span>
+            </button>
+          )}
+
           <button
             onClick={onToggleMobileView}
             className={`flex items-center gap-1.5 px-3 py-2 text-xs font-medium rounded-lg border transition ${
