@@ -6,6 +6,8 @@
 ## 1. Quick Profile & One-Line Pitch
 
 - **Project Name:** Omni-Logistics Master Agent (Autonomous Control Tower)
+- **Live Production App URL:** [Omni-Logistics Master Agent | Autonomous Control Tower](https://frontend-one-lemon-23.vercel.app/)
+- **GitHub Repository:** [nobod-maker/omni-logistics-agent](https://github.com/nobod-maker/omni-logistics-agent)
 - **Track / Category:** Best Business AI Agent ($150,000 USD Growth Grant Track)
 - **Target Corridor:** DP World Jebel Ali Port (AEJEA), JAFZA, Dubai South, DAFZA, and Dubai Industrial City (DIC)
 - **AI Engine:** Google Gemini 1.5 Flash via `google-genai` SDK

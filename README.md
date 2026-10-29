@@ -1,11 +1,15 @@
 # 🚢 OMNI-LOGISTICS MASTER AGENT
 ### Autonomous Multi-Agent Control Tower for Dubai Port & Free Zone Corridors
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-frontend--one--lemon--23.vercel.app-00E5FF?style=for-the-badge&logo=vercel)](https://frontend-one-lemon-23.vercel.app/)
 [![Dubai Chamber of Digital Economy](https://img.shields.io/badge/Championship-Best_Business_AI_Agent_%28$150k_Grant%29-00B4D8?style=for-the-badge)](https://dubaichamberdigital.gov.ae/)
 [![Gemini 1.5 Flash](https://img.shields.io/badge/AI_Engine-Gemini_1.5_Flash-4285F4?style=for-the-badge&logo=google)](https://ai.google.dev/)
 [![Agency Agents 271](https://img.shields.io/badge/Agency_Agents-271_Specialists_Installed-8338EC?style=for-the-badge)](https://github.com/msitarzewski/agency-agents)
-[![Test Suite](https://img.shields.io/badge/Pytest-13%2F13_Passed_%28100%25%29-06D6A0?style=for-the-badge)](file:///d:/OMNI-LOGISTICS%20MASTER%20AGENT/backend/tests)
-[![Production Build](https://img.shields.io/badge/Next.js_14-Zero_Errors_Build-111111?style=for-the-badge&logo=nextdotjs)](file:///d:/OMNI-LOGISTICS%20MASTER%20AGENT/frontend)
+[![Test Suite](https://img.shields.io/badge/Pytest-15%2F15_Passed_%28100%25%29-06D6A0?style=for-the-badge)](backend/tests)
+[![Production Build](https://img.shields.io/badge/Next.js_14-Zero_Errors_Build-111111?style=for-the-badge&logo=nextdotjs)](frontend)
+
+🌐 **Live Production Deployment**: [Omni-Logistics Master Agent | Autonomous Control Tower](https://frontend-one-lemon-23.vercel.app/)  
+📱 **Quayside Mobile Operator PWA**: [Mobile Journey View](https://frontend-one-lemon-23.vercel.app/)
 
 > **Autonomous multi-agent orchestration bridging DP World Jebel Ali Terminal 2, Dubai Customs Mirsal-II, Emirates SkyCargo (DWC), and the E611 freight corridor into an enterprise-grade, zero-cost AI Control Tower.**
 
@@ -140,23 +144,25 @@ Run the full pytest suite:
 & "backend\.venv\Scripts\pytest.exe" backend\tests -v
 ```
 
-### Test Evidence (13/13 Passed):
+### Test Evidence (15/15 Passed):
 ```
-backend/tests/test_agents.py::test_health_endpoint PASSED                [  7%]
-backend/tests/test_agents.py::test_list_shipments PASSED                 [ 15%]
-backend/tests/test_agents.py::test_simulate_delay_and_mas_orchestration PASSED [ 23%]
-backend/tests/test_agents.py::test_human_in_the_loop_threshold_lock PASSED [ 30%]
-backend/tests/test_agents.py::test_execute_autonomous_action_flow PASSED [ 38%]
-backend/tests/test_agents.py::test_executive_audit_report_endpoint PASSED [ 46%]
-backend/tests/test_agents.py::test_customs_parse_bol_endpoint PASSED     [ 53%]
-backend/tests/test_agents.py::test_cold_chain_supervisor_lock PASSED     [ 61%]
-backend/tests/test_db.py::test_database_initialization_and_seeding PASSED [ 69%]
-backend/tests/test_db.py::test_shipment_retrieval_and_status_update PASSED [ 76%]
-backend/tests/test_db.py::test_event_creation PASSED                     [ 84%]
-backend/tests/test_db.py::test_tariff_lookup_attribution PASSED          [ 92%]
+backend/tests/test_agents.py::test_health_endpoint PASSED                [  6%]
+backend/tests/test_agents.py::test_list_shipments PASSED                 [ 13%]
+backend/tests/test_agents.py::test_simulate_delay_and_mas_orchestration PASSED [ 20%]
+backend/tests/test_agents.py::test_human_in_the_loop_threshold_lock PASSED [ 26%]
+backend/tests/test_agents.py::test_execute_autonomous_action_flow PASSED [ 33%]
+backend/tests/test_agents.py::test_executive_audit_report_endpoint PASSED [ 40%]
+backend/tests/test_agents.py::test_customs_parse_bol_endpoint PASSED     [ 46%]
+backend/tests/test_agents.py::test_cold_chain_supervisor_lock PASSED     [ 53%]
+backend/tests/test_agents.py::test_marketplace_manifest_endpoint PASSED  [ 60%]
+backend/tests/test_agents.py::test_erp_webhook_ingest_endpoint PASSED    [ 66%]
+backend/tests/test_db.py::test_database_initialization_and_seeding PASSED [ 73%]
+backend/tests/test_db.py::test_shipment_retrieval_and_status_update PASSED [ 80%]
+backend/tests/test_db.py::test_event_creation PASSED                     [ 86%]
+backend/tests/test_db.py::test_tariff_lookup_attribution PASSED          [ 93%]
 backend/tests/test_db.py::test_agent_decision_audit_and_execution PASSED [100%]
 
-====================== 13 passed, 21 warnings in 11.81s =======================
+====================== 15 passed, 24 warnings in 16.64s =======================
 ```
 
 Run frontend production build verification:
