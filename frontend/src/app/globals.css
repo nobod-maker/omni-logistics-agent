@@ -1,39 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #0F172A;
-  --foreground: #F8FAFC;
+  /* --- R1. Raycast Design System & Theme Tokens --- */
+  --color-void-black: #040506;
+  --color-ink: #07080a;
+  --color-obsidian: #111214;
+  --color-graphite: #1b1c1e;
+  --color-smoke: #6a6b6c;
+  --color-ash: #9c9c9d;
+  --color-mist: #e6e6e6;
+  --color-iron: #454647;
+  --color-slate: #2f3031;
+  --color-pure-white: #ffffff;
+  --color-coral-pulse: #ff6363;
+  --color-ember-hush: #452324;
+  --color-hairline: #363739;
+
+  /* Tactile keyboard-key shadow */
+  --shadow-key: rgba(255, 255, 255, 0.05) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.25) 0px 0px 0px 1px, rgba(0, 0, 0, 0.2) 0px -1px 0px 0px inset;
+
+  /* Standard Base Variables */
+  --background: #040506;
+  --foreground: #e6e6e6;
+
+  /* Font Families */
+  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-geist-mono: 'Geist Mono', 'GeistMono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #040506 !important;
+  font-family: var(--font-inter);
   overflow-x: hidden;
 }
 
-/* Custom scrollbars for telemetry feeds & chain of thought drawers */
+/* --- Raycast Tactile Key Utility --- */
+.shadow-key {
+  box-shadow: var(--shadow-key);
+}
+
+.shadow-key-hover:hover {
+  box-shadow: rgba(255, 255, 255, 0.08) 0px 1px 0px 0px inset,
+              rgba(255, 255, 255, 0.35) 0px 0px 0px 1px,
+              rgba(0, 0, 0, 0.3) 0px -1px 0px 0px inset;
+}
+
+/* --- Raycast Typography Hierarchy --- */
+.raycast-hero-heading {
+  font-size: 56px;
+  font-weight: 400;
+  letter-spacing: 0.22px;
+  line-height: 1.08;
+}
+
+.raycast-title-heading {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0.22px;
+  line-height: 1.15;
+}
+
+/* --- Raycast Neutral Mist Action Buttons --- */
+.btn-mist {
+  background-color: #e6e6e6;
+  color: #454647;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: var(--shadow-key);
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-mist:hover:not(:disabled) {
+  background-color: #ffffff;
+  color: #111214;
+}
+
+.btn-mist:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* --- Raycast Recessed Obsidian Secondary Button --- */
+.btn-obsidian {
+  background-color: #111214;
+  color: #e6e6e6;
+  border: 1px solid #1b1c1e;
+  border-radius: 8px;
+  box-shadow: var(--shadow-key);
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-obsidian:hover:not(:disabled) {
+  background-color: #1b1c1e;
+  border-color: #363739;
+  color: #ffffff;
+}
+
+.btn-obsidian:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* --- Raycast Elevated Surface Cards --- */
+.raycast-card {
+  background-color: #111214;
+  border: 1px solid #1b1c1e;
+  border-radius: 8px;
+  box-shadow: var(--shadow-key);
+}
+
+.raycast-card-ink {
+  background-color: #07080a;
+  border: 1px solid #1b1c1e;
+  border-radius: 8px;
+  box-shadow: var(--shadow-key);
+}
+
+/* --- Coral Brand Accent Badges --- */
+.badge-coral {
+  background-color: #452324;
+  color: #ff6363;
+  border: 1px solid rgba(255, 99, 99, 0.35);
+}
+
+/* --- Raycast Hairline Borders --- */
+.border-hairline {
+  border-color: #363739;
+}
+
+.border-graphite {
+  border-color: #1b1c1e;
+}
+
+/* --- Minimal Achromatic Custom Scrollbars --- */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0B1120;
+  background: #07080a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: #1b1c1e;
   border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #06B6D4;
+  background: #2f3031;
 }
 
-/* Radar pulse animation */
+/* Radar pulse animation adjusted for Raycast */
 @keyframes radar-pulse {
   0% {
     transform: scale(0.95);

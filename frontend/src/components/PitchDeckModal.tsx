@@ -8,15 +8,12 @@ import {
   Printer, 
   Layers, 
   ShieldCheck, 
-  TrendingUp, 
   Smartphone, 
   Sparkles, 
-  CheckCircle, 
   Award,
   DollarSign,
   AlertTriangle,
   RotateCcw,
-  Zap,
   Globe,
   FileText
 } from 'lucide-react';
@@ -39,25 +36,25 @@ export const PitchDeckModal: React.FC<PitchDeckModalProps> = ({ isOpen, onClose 
       category: "Category: Best Business AI Agent ($150,000 USD Growth Grant Track)",
       body: (
         <div className="space-y-6 text-center max-w-2xl mx-auto py-8">
-          <div className="w-20 h-20 mx-auto rounded-2xl bg-gradient-to-tr from-cyan-600 to-blue-500 flex items-center justify-center shadow-cyan-glow border border-cyan-400/40">
-            <Layers className="w-10 h-10 text-white" />
+          <div className="w-16 h-16 mx-auto rounded-[6px] bg-[#111214] flex items-center justify-center border border-[#ff6363]/40 shadow-key">
+            <Layers className="w-8 h-8 text-[#ff6363]" />
           </div>
           <div>
-            <h2 className="text-3xl font-bold text-white tracking-tight">
+            <h2 className="text-2xl md:text-3xl font-normal text-white tracking-tight">
               From Reactive Panic to Autonomous Precision
             </h2>
-            <p className="text-sm text-slate-300 mt-3 leading-relaxed">
+            <p className="text-xs md:text-sm text-[#9c9c9d] mt-3 leading-relaxed">
               Unifying DP World Jebel Ali Terminal 2, Dubai Customs Mirsal-II, Emirates SkyCargo (DWC), and the E611 freight corridor into an enterprise-governed Multi-Agent System (MAS).
             </p>
           </div>
           <div className="flex justify-center gap-3 pt-2">
-            <span className="px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-500/40 text-cyan-300 font-mono text-xs">
+            <span className="px-3 py-1 rounded-[4px] bg-[#111214] border border-[#2f3031] text-[#e6e6e6] font-mono text-xs shadow-key">
               Gemini 1.5 Flash Orchestrated
             </span>
-            <span className="px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 font-mono text-xs">
+            <span className="px-3 py-1 rounded-[4px] bg-[#111214] border border-[#2f3031] text-[#e6e6e6] font-mono text-xs shadow-key">
               271 agency-agents Squad
             </span>
-            <span className="px-3 py-1 rounded-full bg-purple-950/80 border border-purple-500/40 text-purple-300 font-mono text-xs">
+            <span className="px-3 py-1 rounded-[4px] bg-[#111214] border border-[#2f3031] text-[#e6e6e6] font-mono text-xs shadow-key">
               $0 Cost MVP Stack
             </span>
           </div>
@@ -74,32 +71,32 @@ export const PitchDeckModal: React.FC<PitchDeckModalProps> = ({ isOpen, onClose 
       category: "Pain Point Analysis",
       body: (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-6">
-          <div className="p-5 rounded-2xl bg-slate-900 border border-red-500/30 space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-red-950/80 flex items-center justify-center text-red-400 border border-red-500/30">
-              <AlertTriangle className="w-5 h-5" />
+          <div className="p-5 rounded-[8px] bg-[#111214] border border-[#1b1c1e] space-y-3 shadow-key">
+            <div className="w-10 h-10 rounded-[6px] bg-[#07080a] flex items-center justify-center text-[#ff6363] border border-[#2f3031] shadow-key">
+              <AlertTriangle className="w-5 h-5 text-[#ff6363]" />
             </div>
-            <h3 className="font-bold text-white text-base">Berth Delays & Demurrage</h3>
-            <p className="text-xs text-slate-300 leading-relaxed">
+            <h3 className="font-semibold text-white text-base">Berth Delays & Demurrage</h3>
+            <p className="text-xs text-[#9c9c9d] leading-relaxed">
               AIS fog shifts slip vessel docking by 12–24h. Empty trucks jam Gate 4, STS cranes idle, and storage demurrage fines hit $180–$360/day per container.
             </p>
           </div>
 
-          <div className="p-5 rounded-2xl bg-slate-900 border border-amber-500/30 space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-amber-950/80 flex items-center justify-center text-amber-400 border border-amber-500/30">
-              <FileText className="w-5 h-5" />
+          <div className="p-5 rounded-[8px] bg-[#111214] border border-[#1b1c1e] space-y-3 shadow-key">
+            <div className="w-10 h-10 rounded-[6px] bg-[#07080a] flex items-center justify-center text-white border border-[#2f3031] shadow-key">
+              <FileText className="w-5 h-5 text-white" />
             </div>
-            <h3 className="font-bold text-white text-base">Customs Paperwork Holds</h3>
-            <p className="text-xs text-slate-300 leading-relaxed">
+            <h3 className="font-semibold text-white text-base">Customs Paperwork Holds</h3>
+            <p className="text-xs text-[#9c9c9d] leading-relaxed">
               Unstructured Bills of Lading and complex HS tariff codes cause 6–18 hour border inspection holds, forfeiting Free Zone 0% duty exemptions.
             </p>
           </div>
 
-          <div className="p-5 rounded-2xl bg-slate-900 border border-cyan-500/30 space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-cyan-950/80 flex items-center justify-center text-cyan-400 border border-cyan-500/30">
-              <DollarSign className="w-5 h-5" />
+          <div className="p-5 rounded-[8px] bg-[#111214] border border-[#1b1c1e] space-y-3 shadow-key">
+            <div className="w-10 h-10 rounded-[6px] bg-[#07080a] flex items-center justify-center text-white border border-[#2f3031] shadow-key">
+              <DollarSign className="w-5 h-5 text-white" />
             </div>
-            <h3 className="font-bold text-white text-base">Customer SLA Penalties</h3>
-            <p className="text-xs text-slate-300 leading-relaxed">
+            <h3 className="font-semibold text-white text-base">Customer SLA Penalties</h3>
+            <p className="text-xs text-[#9c9c9d] leading-relaxed">
               High-value tech components and cold-chain biopharma incur strict penalty clauses ($450–$850/hr), turning profitable freight jobs into catastrophic margin losses.
             </p>
           </div>
@@ -116,31 +113,31 @@ export const PitchDeckModal: React.FC<PitchDeckModalProps> = ({ isOpen, onClose 
       category: "System Topology",
       body: (
         <div className="space-y-4 py-4">
-          <div className="p-4 rounded-xl bg-gradient-to-r from-cyan-950/60 to-slate-900 border border-cyan-500/40">
-            <div className="font-mono text-xs text-cyan-400 font-bold uppercase">1. Omni Master Orchestrator Agent</div>
-            <div className="text-xs text-slate-200 mt-1">
+          <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] shadow-key">
+            <div className="font-mono text-xs text-white font-semibold uppercase">1. Omni Master Orchestrator Agent</div>
+            <div className="text-xs text-[#9c9c9d] mt-1">
               Ingests AIS & TMS disruption signals, calculates dynamic margin ROI, evaluates safety ceilings ($10k / 85% confidence), and formats auditable Gemini CoT reasoning traces.
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
-              <div className="font-mono text-xs text-blue-400 font-bold">Terminal Sub-Agent</div>
-              <div className="text-[11px] text-slate-300 mt-1 leading-relaxed">
+            <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] shadow-key">
+              <div className="font-mono text-xs text-white font-semibold">Terminal Sub-Agent</div>
+              <div className="text-[11px] text-[#9c9c9d] mt-1 leading-relaxed">
                 Connects to DP World Jebel Ali Terminal 2. Cancels dry-run gate bookings (#GT-8821), secures priority STS crane discharge slots, and eliminates yard storage fines.
               </div>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
-              <div className="font-mono text-xs text-emerald-400 font-bold">Customs Sub-Agent</div>
-              <div className="text-[11px] text-slate-300 mt-1 leading-relaxed">
+            <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] shadow-key">
+              <div className="font-mono text-xs text-white font-semibold">Customs Sub-Agent</div>
+              <div className="text-[11px] text-[#9c9c9d] mt-1 leading-relaxed">
                 Audits unstructured Bills of Lading against UAE FCA schedules (HS 8517.62, 3002.20), verifies Free Zone 0% duty exemptions, and generates green-lane inspection tokens.
               </div>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-900/90 border border-slate-800">
-              <div className="font-mono text-xs text-amber-400 font-bold">Routing Sub-Agent</div>
-              <div className="text-[11px] text-slate-300 mt-1 leading-relaxed">
+            <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] shadow-key">
+              <div className="font-mono text-xs text-white font-semibold">Routing Sub-Agent</div>
+              <div className="text-[11px] text-[#9c9c9d] mt-1 leading-relaxed">
                 Executes Cost vs. Speed simulations, schedules dynamic 30% cargo splits via Emirates SkyCargo (DWC), and re-routes inland road carriers via the E611 freight corridor.
               </div>
             </div>
@@ -158,28 +155,28 @@ export const PitchDeckModal: React.FC<PitchDeckModalProps> = ({ isOpen, onClose 
       category: "Authenticity & Localization",
       body: (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-6 text-center">
-          <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
-            <span className="text-2xl font-mono text-cyan-400">AEJEA</span>
-            <div className="font-bold text-white text-xs">DP World Jebel Ali Terminal 2</div>
-            <div className="text-[10px] text-slate-400">Berths 1–4 STS Dual-Trolley Crane scheduling & Truck Gate Appointment System.</div>
+          <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] space-y-2 shadow-key">
+            <span className="text-xl font-mono text-white font-normal">AEJEA</span>
+            <div className="font-semibold text-white text-xs">DP World Jebel Ali Terminal 2</div>
+            <div className="text-[10px] text-[#9c9c9d]">Berths 1–4 STS Dual-Trolley Crane scheduling & Truck Gate Appointment System.</div>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
-            <span className="text-2xl font-mono text-emerald-400">MIRSAL-II</span>
-            <div className="font-bold text-white text-xs">Dubai Customs Electronic B2G</div>
-            <div className="text-[10px] text-slate-400">Digital pre-clearance declarations, Green Lane tokens, and UAE FCA Tariff RAG.</div>
+          <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] space-y-2 shadow-key">
+            <span className="text-xl font-mono text-white font-normal">MIRSAL-II</span>
+            <div className="font-semibold text-white text-xs">Dubai Customs Electronic B2G</div>
+            <div className="text-[10px] text-[#9c9c9d]">Digital pre-clearance declarations, Green Lane tokens, and UAE FCA Tariff RAG.</div>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
-            <span className="text-2xl font-mono text-amber-400">DWC / OMAM</span>
-            <div className="font-bold text-white text-xs">Emirates SkyCargo Hub</div>
-            <div className="text-[10px] text-slate-400">Al Maktoum International bonded air-sea cargo transfers & priority cold-chain charters.</div>
+          <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] space-y-2 shadow-key">
+            <span className="text-xl font-mono text-white font-normal">DWC / OMAM</span>
+            <div className="font-semibold text-white text-xs">Emirates SkyCargo Hub</div>
+            <div className="text-[10px] text-[#9c9c9d]">Al Maktoum International bonded air-sea cargo transfers & priority cold-chain charters.</div>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
-            <span className="text-2xl font-mono text-purple-400">E611 CORRIDOR</span>
-            <div className="font-bold text-white text-xs">Dubai Heavy Freight Bypass</div>
-            <div className="text-[10px] text-slate-400">Bypasses urban peak congestion zones, linking JAFZA directly to Dubai South and DIC.</div>
+          <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] space-y-2 shadow-key">
+            <span className="text-xl font-mono text-white font-normal">E611 CORRIDOR</span>
+            <div className="font-semibold text-white text-xs">Dubai Heavy Freight Bypass</div>
+            <div className="text-[10px] text-[#9c9c9d]">Bypasses urban peak congestion zones, linking JAFZA directly to Dubai South and DIC.</div>
           </div>
         </div>
       )
@@ -195,38 +192,38 @@ export const PitchDeckModal: React.FC<PitchDeckModalProps> = ({ isOpen, onClose 
       body: (
         <div className="space-y-4 py-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="p-4 rounded-xl bg-slate-900 border border-red-500/40 space-y-2">
-              <div className="flex items-center gap-2 text-red-400 font-bold font-mono text-xs">
-                <ShieldCheck className="w-4 h-4" />
+            <div className="p-4 rounded-[8px] bg-[#111214] border border-[#ff6363]/40 space-y-2 shadow-key">
+              <div className="flex items-center gap-2 text-[#ff6363] font-semibold font-mono text-xs">
+                <ShieldCheck className="w-4 h-4 text-[#ff6363]" />
                 <span>$10,000 Financial Ceiling Lock</span>
               </div>
-              <div className="text-xs text-slate-300 leading-relaxed">
+              <div className="text-xs text-[#9c9c9d] leading-relaxed">
                 If operational mitigation costs exceed $10,000 (e.g. emergency cold-chain air charters at $14,200), autonomous execution is locked. A human supervisor must authorize the override.
               </div>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-900 border border-amber-500/40 space-y-2">
-              <div className="flex items-center gap-2 text-amber-400 font-bold font-mono text-xs">
-                <ShieldCheck className="w-4 h-4" />
+            <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] space-y-2 shadow-key">
+              <div className="flex items-center gap-2 text-white font-semibold font-mono text-xs">
+                <ShieldCheck className="w-4 h-4 text-white" />
                 <span>85% Mathematical Confidence Floor</span>
               </div>
-              <div className="text-xs text-slate-300 leading-relaxed">
+              <div className="text-xs text-[#9c9c9d] leading-relaxed">
                 If weighted multi-agent confidence drops below 85%, the system automatically flags the plan as &ldquo;I&apos;m not sure — Human Review Required&rdquo; to eliminate hallucinated actions.
               </div>
             </div>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-900 border border-emerald-500/40 flex items-center justify-between">
+          <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] flex items-center justify-between shadow-key">
             <div className="space-y-1">
-              <div className="font-bold text-white text-xs flex items-center gap-2">
-                <RotateCcw className="w-4 h-4 text-emerald-400" />
+              <div className="font-semibold text-white text-xs flex items-center gap-2">
+                <RotateCcw className="w-4 h-4 text-[#9c9c9d]" />
                 <span>1-Click Autonomous Rollback Engine</span>
               </div>
-              <div className="text-[11px] text-slate-300">
+              <div className="text-[11px] text-[#9c9c9d]">
                 Every autonomous action stores a pre-execution state snapshot, enabling 1-click state reversion with full audit trail compliance.
               </div>
             </div>
-            <span className="px-3 py-1 rounded bg-emerald-950 text-emerald-300 font-mono text-xs border border-emerald-500/40">
+            <span className="px-3 py-1 rounded-[4px] bg-[#07080a] text-[#e6e6e6] font-mono text-xs border border-[#363739]">
               POST /api/decisions/rollback
             </span>
           </div>
@@ -244,15 +241,15 @@ export const PitchDeckModal: React.FC<PitchDeckModalProps> = ({ isOpen, onClose 
       body: (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center py-4">
           <div className="space-y-3">
-            <div className="flex items-center gap-2 text-cyan-400 font-mono text-xs font-bold">
-              <Smartphone className="w-4 h-4" />
+            <div className="flex items-center gap-2 text-white font-mono text-xs font-semibold">
+              <Smartphone className="w-4 h-4 text-white" />
               <span>Responsive Web App / PWA Manifest</span>
             </div>
-            <h3 className="text-lg font-bold text-white">High-Urgency Push Notifications</h3>
-            <p className="text-xs text-slate-300 leading-relaxed">
+            <h3 className="text-lg font-semibold text-white">High-Urgency Push Notifications</h3>
+            <p className="text-xs text-[#9c9c9d] leading-relaxed">
               When vessel AIS slips, the port coordinator receives an immediate alert on mobile, displaying at-risk margin ($5,400) and net savings (+$3,755).
             </p>
-            <ul className="text-xs text-slate-300 space-y-1.5 font-mono">
+            <ul className="text-xs text-[#9c9c9d] space-y-1.5 font-mono">
               <li>✓ 1-Tap Autonomous Mitigation Dispatch</li>
               <li>✓ Collapsible Mobile Gemini Chain-of-Thought</li>
               <li>✓ Touch-optimized 48px tap targets</li>
@@ -260,13 +257,13 @@ export const PitchDeckModal: React.FC<PitchDeckModalProps> = ({ isOpen, onClose 
             </ul>
           </div>
 
-          <div className="bg-slate-950 p-4 rounded-2xl border border-slate-800 text-center font-mono space-y-2">
-            <div className="text-[10px] text-amber-400 uppercase font-bold">LIVE MOBILE TELEMETRY VIEW</div>
-            <div className="text-xs text-white font-bold">MSCU7829104: Berth 4 (+12h)</div>
-            <div className="p-3 rounded-xl bg-emerald-950/40 border border-emerald-500/40 text-emerald-300 text-xs font-bold">
+          <div className="bg-[#040506] p-4 rounded-[8px] border border-[#1b1c1e] text-center font-mono space-y-2 shadow-key">
+            <div className="text-[10px] text-[#ff6363] uppercase font-semibold">LIVE MOBILE TELEMETRY VIEW</div>
+            <div className="text-xs text-white font-normal">MSCU7829104: Berth 4 (+12h)</div>
+            <div className="p-3 rounded-[6px] bg-[#e6e6e6] text-[#454647] text-xs font-semibold shadow-key">
               1-Tap Autonomous Fix (Save $3,755)
             </div>
-            <div className="text-[10px] text-slate-400">Verified on Chrome & Safari iOS standalone</div>
+            <div className="text-[10px] text-[#6a6b6c]">Verified on Chrome & Safari iOS standalone</div>
           </div>
         </div>
       )
@@ -281,28 +278,28 @@ export const PitchDeckModal: React.FC<PitchDeckModalProps> = ({ isOpen, onClose 
       category: "Venture Impact",
       body: (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-6 text-center font-mono">
-          <div className="p-4 rounded-xl bg-slate-900 border border-slate-800">
-            <div className="text-[10px] text-slate-400 uppercase">Demurrage Saved</div>
-            <div className="text-2xl font-bold text-cyan-400 mt-1">$360/TEU</div>
-            <div className="text-[10px] text-slate-400 mt-1">DP World Gate Rescheduled</div>
+          <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] shadow-key">
+            <div className="text-[10px] text-[#6a6b6c] uppercase">Demurrage Saved</div>
+            <div className="text-xl font-normal text-white mt-1">$360/TEU</div>
+            <div className="text-[10px] text-[#6a6b6c] mt-1">DP World Gate Rescheduled</div>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-900 border border-slate-800">
-            <div className="text-[10px] text-slate-400 uppercase">Customs Hours Saved</div>
-            <div className="text-2xl font-bold text-emerald-400 mt-1">+6.0 hrs</div>
-            <div className="text-[10px] text-slate-400 mt-1">Mirsal-II Green Lane Pre-Clear</div>
+          <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] shadow-key">
+            <div className="text-[10px] text-[#6a6b6c] uppercase">Customs Hours Saved</div>
+            <div className="text-xl font-normal text-white mt-1">+6.0 hrs</div>
+            <div className="text-[10px] text-[#6a6b6c] mt-1">Mirsal-II Green Lane Pre-Clear</div>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-900 border border-slate-800">
-            <div className="text-[10px] text-slate-400 uppercase">SLA Penalties Mitigated</div>
-            <div className="text-2xl font-bold text-amber-400 mt-1">$5,400</div>
-            <div className="text-[10px] text-slate-400 mt-1">DWC Air Split & E611 Reroute</div>
+          <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] shadow-key">
+            <div className="text-[10px] text-[#6a6b6c] uppercase">SLA Penalties Mitigated</div>
+            <div className="text-xl font-normal text-white mt-1">$5,400</div>
+            <div className="text-[10px] text-[#6a6b6c] mt-1">DWC Air Split & E611 Reroute</div>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-900 border border-slate-800">
-            <div className="text-[10px] text-slate-400 uppercase">Margin ROI</div>
-            <div className="text-2xl font-bold text-emerald-400 mt-1">+228%</div>
-            <div className="text-[10px] text-slate-400 mt-1">Net Savings / Mitigation Cost</div>
+          <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] shadow-key">
+            <div className="text-[10px] text-[#6a6b6c] uppercase">Margin ROI</div>
+            <div className="text-xl font-normal text-white mt-1">+228%</div>
+            <div className="text-[10px] text-[#6a6b6c] mt-1">Net Savings / Mitigation Cost</div>
           </div>
         </div>
       )
@@ -317,35 +314,35 @@ export const PitchDeckModal: React.FC<PitchDeckModalProps> = ({ isOpen, onClose 
       category: "Commercial Model",
       body: (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-4">
-          <div className="p-5 rounded-2xl bg-slate-900 border border-cyan-500/40 space-y-3 font-mono">
-            <div className="text-xs text-cyan-400 font-bold uppercase">Pricing Architecture</div>
+          <div className="p-5 rounded-[8px] bg-[#111214] border border-[#1b1c1e] space-y-3 font-mono shadow-key">
+            <div className="text-xs text-white font-semibold uppercase">Pricing Architecture</div>
             <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-bold text-white">$499</span>
-              <span className="text-xs text-slate-400">/ month base SaaS</span>
+              <span className="text-2xl font-normal text-white">$499</span>
+              <span className="text-xs text-[#9c9c9d]">/ month base SaaS</span>
             </div>
-            <div className="text-xs text-slate-300 leading-relaxed">
-              + <strong className="text-emerald-400">10% Performance Fee</strong> on verified demurrage and SLA penalties prevented by autonomous actions.
+            <div className="text-xs text-[#9c9c9d] leading-relaxed">
+              + <strong className="text-white font-semibold">10% Performance Fee</strong> on verified demurrage and SLA penalties prevented by autonomous actions.
             </div>
-            <div className="pt-2 text-[11px] text-slate-400 border-t border-slate-800">
+            <div className="pt-2 text-[11px] text-[#6a6b6c] border-t border-[#1b1c1e]">
               Zero upfront Capex. Deployed in 30 minutes via legacy TMS webhooks.
             </div>
           </div>
 
-          <div className="p-5 rounded-2xl bg-slate-900 border border-emerald-500/40 space-y-3 font-mono text-xs">
-            <div className="text-emerald-400 font-bold uppercase">Mid-Tier 3PL Economics (1,500 TEUs/mo)</div>
-            <div className="flex justify-between text-slate-300">
+          <div className="p-5 rounded-[8px] bg-[#111214] border border-[#1b1c1e] space-y-3 font-mono text-xs shadow-key">
+            <div className="text-white font-semibold uppercase">Mid-Tier 3PL Economics (1,500 TEUs/mo)</div>
+            <div className="flex justify-between text-[#9c9c9d]">
               <span>Annual Value Delivered:</span>
-              <span className="font-bold text-white">$1,114,800</span>
+              <span className="font-normal text-white">$1,114,800</span>
             </div>
-            <div className="flex justify-between text-slate-300">
+            <div className="flex justify-between text-[#9c9c9d]">
               <span>Omni-Logistics ARR:</span>
-              <span className="font-bold text-emerald-400">$165,480</span>
+              <span className="font-normal text-white">$165,480</span>
             </div>
-            <div className="flex justify-between text-slate-300">
+            <div className="flex justify-between text-[#9c9c9d]">
               <span>3PL Net Savings:</span>
-              <span className="font-bold text-white">$949,320</span>
+              <span className="font-normal text-white">$949,320</span>
             </div>
-            <div className="pt-2 flex justify-between font-bold text-emerald-400 border-t border-slate-800 text-sm">
+            <div className="pt-2 flex justify-between font-semibold text-white border-t border-[#1b1c1e] text-sm">
               <span>Client ROI Multiple:</span>
               <span>8.4x ROI</span>
             </div>
@@ -363,35 +360,35 @@ export const PitchDeckModal: React.FC<PitchDeckModalProps> = ({ isOpen, onClose 
       category: "Distribution & Connectors",
       body: (
         <div className="space-y-4 py-4">
-          <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
+          <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] flex items-center justify-between shadow-key">
             <div className="flex items-center gap-3">
-              <Globe className="w-6 h-6 text-cyan-400" />
+              <Globe className="w-5 h-5 text-white" />
               <div>
-                <div className="font-bold text-white text-xs">Dubai Chambers Agentic AI Marketplace Manifest</div>
-                <div className="text-[11px] text-slate-400">Live API endpoint: <code className="text-cyan-300">GET /api/marketplace/manifest</code></div>
+                <div className="font-semibold text-white text-xs">Dubai Chambers Agentic AI Marketplace Manifest</div>
+                <div className="text-[11px] text-[#9c9c9d]">Live API endpoint: <code className="text-white">GET /api/marketplace/manifest</code></div>
               </div>
             </div>
-            <span className="px-3 py-1 rounded bg-cyan-950 text-cyan-300 font-mono text-xs border border-cyan-500/40 font-bold">
+            <span className="px-3 py-1 rounded-[4px] bg-[#07080a] text-white font-mono text-xs border border-[#363739] font-semibold">
               Listed & Ready
             </span>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-center text-xs font-mono">
-            <div className="p-3 rounded-lg bg-slate-950 border border-slate-800">
-              <div className="font-bold text-white">CargoWise One</div>
-              <div className="text-[10px] text-emerald-400 mt-1">eAdaptor REST / Webhooks</div>
+            <div className="p-3 rounded-[6px] bg-[#07080a] border border-[#1b1c1e] shadow-key">
+              <div className="font-normal text-white">CargoWise One</div>
+              <div className="text-[10px] text-[#9c9c9d] mt-1">eAdaptor REST / Webhooks</div>
             </div>
-            <div className="p-3 rounded-lg bg-slate-950 border border-slate-800">
-              <div className="font-bold text-white">SAP TM</div>
-              <div className="text-[10px] text-emerald-400 mt-1">OData v4 Event Mesh</div>
+            <div className="p-3 rounded-[6px] bg-[#07080a] border border-[#1b1c1e] shadow-key">
+              <div className="font-normal text-white">SAP TM</div>
+              <div className="text-[10px] text-[#9c9c9d] mt-1">OData v4 Event Mesh</div>
             </div>
-            <div className="p-3 rounded-lg bg-slate-950 border border-slate-800">
-              <div className="font-bold text-white">Oracle OTM</div>
-              <div className="text-[10px] text-emerald-400 mt-1">REST XML Webhooks</div>
+            <div className="p-3 rounded-[6px] bg-[#07080a] border border-[#1b1c1e] shadow-key">
+              <div className="font-normal text-white">Oracle OTM</div>
+              <div className="text-[10px] text-[#9c9c9d] mt-1">REST XML Webhooks</div>
             </div>
-            <div className="p-3 rounded-lg bg-slate-950 border border-slate-800">
-              <div className="font-bold text-white">Dubai Trade</div>
-              <div className="text-[10px] text-emerald-400 mt-1">Mirsal-II B2G Gateway</div>
+            <div className="p-3 rounded-[6px] bg-[#07080a] border border-[#1b1c1e] shadow-key">
+              <div className="font-normal text-white">Dubai Trade</div>
+              <div className="text-[10px] text-[#9c9c9d] mt-1">Mirsal-II B2G Gateway</div>
             </div>
           </div>
         </div>
@@ -408,31 +405,31 @@ export const PitchDeckModal: React.FC<PitchDeckModalProps> = ({ isOpen, onClose 
       body: (
         <div className="space-y-4 py-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center font-mono">
-            <div className="p-4 rounded-xl bg-slate-900 border border-emerald-500/40">
-              <div className="text-2xl font-bold text-emerald-400">15 / 15</div>
-              <div className="text-xs text-slate-300 mt-1 font-sans">Automated Pytest Suite</div>
-              <div className="text-[10px] text-slate-500 mt-0.5">100% Green Test Coverage</div>
+            <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] shadow-key">
+              <div className="text-xl font-normal text-white">15 / 15</div>
+              <div className="text-xs text-[#9c9c9d] mt-1 font-sans">Automated Pytest Suite</div>
+              <div className="text-[10px] text-[#6a6b6c] mt-0.5">100% Green Test Coverage</div>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-900 border border-cyan-500/40">
-              <div className="text-2xl font-bold text-cyan-400">0 Errors</div>
-              <div className="text-xs text-slate-300 mt-1 font-sans">Next.js 14 Production Build</div>
-              <div className="text-[10px] text-slate-500 mt-0.5">SSR + PWA Optimized</div>
+            <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] shadow-key">
+              <div className="text-xl font-normal text-white">0 Errors</div>
+              <div className="text-xs text-[#9c9c9d] mt-1 font-sans">Next.js 14 Production Build</div>
+              <div className="text-[10px] text-[#6a6b6c] mt-0.5">SSR + PWA Optimized</div>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-900 border border-purple-500/40">
-              <div className="text-2xl font-bold text-purple-400">1-Command</div>
-              <div className="text-xs text-slate-300 mt-1 font-sans">Docker Compose Ready</div>
-              <div className="text-[10px] text-slate-500 mt-0.5">Zero-Friction Local Spinup</div>
+            <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] shadow-key">
+              <div className="text-xl font-normal text-white">1-Command</div>
+              <div className="text-xs text-[#9c9c9d] mt-1 font-sans">Docker Compose Ready</div>
+              <div className="text-[10px] text-[#6a6b6c] mt-0.5">Zero-Friction Local Spinup</div>
             </div>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-2 text-xs">
-            <div className="font-bold text-white flex items-center gap-2">
-              <Award className="w-4 h-4 text-emerald-400" />
+          <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] space-y-2 text-xs shadow-key">
+            <div className="font-semibold text-white flex items-center gap-2">
+              <Award className="w-4 h-4 text-white" />
               <span>Next Step: 90-Day JAFZA & Dubai South Pilot Execution</span>
             </div>
-            <p className="text-slate-300 text-[11px] leading-relaxed">
+            <p className="text-[#9c9c9d] text-[11px] leading-relaxed">
               With the $150,000 USD growth grant from Dubai Chamber of Digital Economy, we will deploy real-time DP World Terminal 2 API bridges, onboard 3 pilot 3PL forwarders in JAFZA, and scale multi-agent autonomous recovery across 25,000 TEUs in 2027.
             </p>
           </div>
@@ -462,19 +459,19 @@ export const PitchDeckModal: React.FC<PitchDeckModalProps> = ({ isOpen, onClose 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 md:p-6 bg-slate-950/90 backdrop-blur-md animate-in fade-in duration-200 print:p-0 print:bg-white">
-      <div className="bg-[#0A0F1D] border border-cyan-500/50 rounded-2xl w-full max-w-4xl overflow-hidden shadow-2xl flex flex-col max-h-[92vh] print:border-none print:shadow-none print:max-h-full print:bg-white print:text-black">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 md:p-6 bg-[#040506]/90 backdrop-blur-md animate-in fade-in duration-200 print:p-0 print:bg-white">
+      <div className="bg-[#07080a] border border-[#1b1c1e] rounded-[8px] w-full max-w-4xl overflow-hidden shadow-key flex flex-col max-h-[92vh] print:border-none print:shadow-none print:max-h-full print:bg-white print:text-black">
         {/* Header */}
-        <div className="bg-slate-900/90 border-b border-slate-800 px-6 py-4 flex items-center justify-between print:hidden">
+        <div className="bg-[#111214] border-b border-[#1b1c1e] px-6 py-4 flex items-center justify-between print:hidden">
           <div className="flex items-center gap-3">
-            <div className="p-2 rounded-lg bg-cyan-950 text-cyan-400 border border-cyan-500/40">
-              <Layers className="w-5 h-5" />
+            <div className="p-2 rounded-[6px] bg-[#1b1c1e] text-white border border-[#2f3031] shadow-key">
+              <Layers className="w-5 h-5 text-white" />
             </div>
             <div>
-              <div className="text-[10px] font-mono text-cyan-400 uppercase tracking-widest font-bold">
+              <div className="text-[10px] font-mono text-[#ff6363] uppercase tracking-widest font-semibold">
                 CHAMPIONSHIP PITCH DECK // 10 SLIDES
               </div>
-              <h3 className="text-base font-bold text-white">
+              <h3 className="text-base font-normal text-white">
                 Omni-Logistics Master Agent (Dubai Chamber Track)
               </h3>
             </div>
@@ -483,16 +480,16 @@ export const PitchDeckModal: React.FC<PitchDeckModalProps> = ({ isOpen, onClose 
           <div className="flex items-center gap-2">
             <button
               onClick={() => window.print()}
-              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition"
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-[6px] bg-[#111214] hover:bg-[#1b1c1e] text-[#9c9c9d] hover:text-white border border-[#363739] shadow-key transition"
               title="Print or Save Presentation as PDF"
             >
-              <Printer className="w-3.5 h-3.5 text-cyan-400" />
+              <Printer className="w-3.5 h-3.5 text-white" />
               <span>Export / Print PDF</span>
             </button>
 
             <button
               onClick={onClose}
-              className="text-slate-400 hover:text-white p-1.5 rounded-lg hover:bg-slate-800 transition"
+              className="text-[#9c9c9d] hover:text-white p-1.5 rounded-[6px] hover:bg-[#1b1c1e] border border-transparent hover:border-[#363739] transition"
             >
               <X className="w-5 h-5" />
             </button>
@@ -501,14 +498,14 @@ export const PitchDeckModal: React.FC<PitchDeckModalProps> = ({ isOpen, onClose 
 
         {/* Slide Content Area */}
         <div className="p-6 md:p-8 flex-1 overflow-y-auto space-y-4 print:p-4">
-          <div className="border-b border-slate-800 pb-3">
-            <span className="text-[10px] font-mono font-bold text-cyan-400 uppercase tracking-widest block">
+          <div className="border-b border-[#1b1c1e] pb-3">
+            <span className="text-[10px] font-mono font-semibold text-[#ff6363] uppercase tracking-widest block">
               {current.tag}
             </span>
-            <h2 className="text-xl md:text-2xl font-bold text-white mt-1">
+            <h2 className="text-xl md:text-2xl font-normal text-white tracking-tight mt-1">
               {current.title}
             </h2>
-            <p className="text-xs text-slate-400 mt-0.5">
+            <p className="text-xs text-[#9c9c9d] mt-0.5">
               {current.subtitle}
             </p>
           </div>
@@ -519,9 +516,9 @@ export const PitchDeckModal: React.FC<PitchDeckModalProps> = ({ isOpen, onClose 
         </div>
 
         {/* Footer Navigation Bar */}
-        <div className="bg-[#070B14] border-t border-slate-800 px-6 py-3.5 flex items-center justify-between print:hidden">
-          <div className="text-xs font-mono text-slate-400">
-            Slide <span className="text-cyan-400 font-bold">{current.slideNum}</span> of {slides.length}
+        <div className="bg-[#07080a] border-t border-[#1b1c1e] px-6 py-3.5 flex items-center justify-between print:hidden">
+          <div className="text-xs font-mono text-[#6a6b6c]">
+            Slide <span className="text-white font-normal">{current.slideNum}</span> of {slides.length}
           </div>
 
           {/* Dots */}
@@ -531,7 +528,7 @@ export const PitchDeckModal: React.FC<PitchDeckModalProps> = ({ isOpen, onClose 
                 key={s.slideNum}
                 onClick={() => setCurrentSlide(idx)}
                 className={`h-2 rounded-full transition-all ${
-                  idx === currentSlide ? 'w-6 bg-cyan-400' : 'w-2 bg-slate-700 hover:bg-slate-500'
+                  idx === currentSlide ? 'w-6 bg-[#e6e6e6]' : 'w-2 bg-[#2f3031] hover:bg-[#454647]'
                 }`}
                 title={`Jump to Slide ${s.slideNum}`}
               />
@@ -542,7 +539,7 @@ export const PitchDeckModal: React.FC<PitchDeckModalProps> = ({ isOpen, onClose 
             <button
               onClick={() => setCurrentSlide(c => Math.max(0, c - 1))}
               disabled={currentSlide === 0}
-              className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 disabled:opacity-40 transition"
+              className="p-2 rounded-[6px] bg-[#111214] hover:bg-[#1b1c1e] text-[#9c9c9d] hover:text-white border border-[#363739] disabled:opacity-40 transition shadow-key"
               title="Previous Slide (or Left Arrow)"
             >
               <ChevronLeft className="w-4 h-4" />
@@ -551,7 +548,7 @@ export const PitchDeckModal: React.FC<PitchDeckModalProps> = ({ isOpen, onClose 
             <button
               onClick={() => setCurrentSlide(c => Math.min(slides.length - 1, c + 1))}
               disabled={currentSlide === slides.length - 1}
-              className="p-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold border border-cyan-400 disabled:opacity-40 transition shadow-cyan-glow"
+              className="p-2 rounded-[6px] bg-[#e6e6e6] hover:bg-white text-[#454647] font-semibold border border-[#e6e6e6] disabled:opacity-40 transition shadow-key"
               title="Next Slide (or Right Arrow)"
             >
               <ChevronRight className="w-4 h-4" />

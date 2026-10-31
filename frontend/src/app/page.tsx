@@ -315,7 +315,7 @@ export default function ControlTowerHome() {
   };
 
   return (
-    <main className="min-h-screen bg-[#070B14] flex flex-col">
+    <main className="min-h-screen bg-[#040506] flex flex-col">
       {/* Top HUD Metrics Bar */}
       <MetricsOverview
         shipments={shipments}

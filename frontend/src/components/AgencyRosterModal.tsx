@@ -4,14 +4,10 @@ import React, { useState, useEffect } from 'react';
 import { 
   X, 
   Search, 
-  Users, 
   Bot, 
   Sparkles, 
-  ExternalLink, 
   CheckCircle, 
-  Layers, 
   BookOpen, 
-  ShieldCheck,
   ChevronRight
 } from 'lucide-react';
 
@@ -96,65 +92,65 @@ export const AgencyRosterModal: React.FC<AgencyRosterModalProps> = ({
   });
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="bg-[#0A0F1D] border border-cyan-500/50 rounded-2xl w-full max-w-5xl h-[88vh] overflow-hidden shadow-2xl flex flex-col">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#040506]/85 backdrop-blur-md animate-in fade-in duration-200">
+      <div className="bg-[#07080a] border border-[#1b1c1e] rounded-[8px] w-full max-w-5xl h-[88vh] overflow-hidden shadow-key flex flex-col">
         {/* Header */}
-        <div className="bg-slate-900/90 border-b border-slate-800 px-6 py-4 flex items-center justify-between">
+        <div className="bg-[#111214] border-b border-[#1b1c1e] px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 bg-gradient-to-tr from-cyan-600 to-blue-500 text-white rounded-xl shadow-cyan-glow">
-              <Bot className="w-5 h-5" />
+            <div className="p-2.5 bg-[#1b1c1e] text-white border border-[#2f3031] rounded-[6px] shadow-key">
+              <Bot className="w-5 h-5 text-white" />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-xs font-mono uppercase tracking-widest text-cyan-400 font-bold">
+                <span className="text-xs font-mono uppercase tracking-widest text-[#ff6363] font-semibold">
                   AGENCY AGENTS CATALOG // 271 READY-MADE SPECIALISTS
                 </span>
-                <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-950 text-cyan-300 border border-cyan-500/30">
+                <span className="px-2 py-0.5 rounded-[4px] text-[10px] font-mono bg-[#1b1c1e] text-[#9c9c9d] border border-[#2f3031]">
                   Antigravity Native
                 </span>
               </div>
-              <h3 className="text-base font-bold text-white">
+              <h3 className="text-base font-normal text-white">
                 Pre-Trained AI Agent Personas Integrated with Omni-Logistics
               </h3>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="text-slate-400 hover:text-white p-1.5 rounded-lg hover:bg-slate-800 transition"
+            className="text-[#9c9c9d] hover:text-white p-1.5 rounded-[6px] hover:bg-[#1b1c1e] border border-transparent hover:border-[#363739] transition"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Mapped Control Tower Agents Banner */}
-        <div className="bg-slate-950 px-6 py-3 border-b border-slate-800/80 flex items-center justify-between overflow-x-auto gap-4 text-xs font-mono">
-          <span className="text-slate-400 whitespace-nowrap">Core System Mappings:</span>
+        <div className="bg-[#040506] px-6 py-3 border-b border-[#1b1c1e] flex items-center justify-between overflow-x-auto gap-4 text-xs font-mono">
+          <span className="text-[#6a6b6c] whitespace-nowrap">Core System Mappings:</span>
           <div className="flex items-center gap-2">
-            <span className="px-2.5 py-1 rounded bg-slate-900 border border-slate-700 text-cyan-300">
-              Master: <strong className="text-white">Agents Orchestrator</strong>
+            <span className="px-2.5 py-1 rounded-[4px] bg-[#111214] border border-[#2f3031] text-[#9c9c9d] shadow-key">
+              Master: <strong className="text-white font-normal">Agents Orchestrator</strong>
             </span>
-            <span className="px-2.5 py-1 rounded bg-slate-900 border border-slate-700 text-amber-300">
-              Terminal: <strong className="text-white">Operations Manager</strong>
+            <span className="px-2.5 py-1 rounded-[4px] bg-[#111214] border border-[#2f3031] text-[#9c9c9d] shadow-key">
+              Terminal: <strong className="text-white font-normal">Operations Manager</strong>
             </span>
-            <span className="px-2.5 py-1 rounded bg-slate-900 border border-slate-700 text-emerald-300">
-              Routing: <strong className="text-white">Supply Chain Strategist</strong>
+            <span className="px-2.5 py-1 rounded-[4px] bg-[#111214] border border-[#2f3031] text-[#9c9c9d] shadow-key">
+              Routing: <strong className="text-white font-normal">Supply Chain Strategist</strong>
             </span>
-            <span className="px-2.5 py-1 rounded bg-slate-900 border border-slate-700 text-purple-300">
-              Spatial: <strong className="text-white">GIS Spatial Data Engineer</strong>
+            <span className="px-2.5 py-1 rounded-[4px] bg-[#111214] border border-[#2f3031] text-[#9c9c9d] shadow-key">
+              Spatial: <strong className="text-white font-normal">GIS Spatial Data Engineer</strong>
             </span>
           </div>
         </div>
 
         {/* Filter & Search Bar */}
-        <div className="p-4 bg-slate-900/60 border-b border-slate-800 flex flex-col sm:flex-row gap-3">
+        <div className="p-4 bg-[#07080a] border-b border-[#1b1c1e] flex flex-col sm:flex-row gap-3">
           <div className="relative flex-1">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-[#6a6b6c] absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search by role, capability, or keyword (e.g. 'supply chain', 'gis', 'customs', 'pricing')..."
-              className="w-full bg-slate-950 border border-slate-700 rounded-xl pl-9 pr-4 py-2 text-xs font-mono text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400"
+              className="w-full bg-[#111214] border border-[#2f3031] rounded-[6px] pl-9 pr-4 py-2 text-xs font-mono text-white placeholder-[#6a6b6c] focus:outline-none focus:border-[#454647] shadow-key"
             />
           </div>
 
@@ -163,10 +159,10 @@ export const AgencyRosterModal: React.FC<AgencyRosterModalProps> = ({
               <button
                 key={div}
                 onClick={() => setSelectedDivision(div)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-mono capitalize transition whitespace-nowrap border ${
+                className={`px-3 py-1.5 rounded-[4px] text-xs font-mono capitalize transition whitespace-nowrap border shadow-key ${
                   selectedDivision === div
-                    ? 'border-cyan-400 bg-cyan-950/80 text-cyan-300 font-bold'
-                    : 'border-slate-800 bg-slate-900 text-slate-400 hover:text-slate-200'
+                    ? 'border-[#454647] bg-[#2f3031] text-white font-semibold'
+                    : 'border-[#1b1c1e] bg-[#111214] text-[#9c9c9d] hover:text-white'
                 }`}
               >
                 {div}
@@ -178,17 +174,17 @@ export const AgencyRosterModal: React.FC<AgencyRosterModalProps> = ({
         {/* Split View: List on left, details on right */}
         <div className="flex-1 flex overflow-hidden">
           {/* Agent Cards List */}
-          <div className="w-1/2 border-r border-slate-800 overflow-y-auto p-4 space-y-2.5">
-            <div className="text-[11px] font-mono text-slate-400 mb-2">
+          <div className="w-1/2 border-r border-[#1b1c1e] overflow-y-auto p-4 space-y-2.5 bg-[#07080a]">
+            <div className="text-[11px] font-mono text-[#6a6b6c] mb-2">
               Showing {filteredAgents.length} Ready-Made Agents
             </div>
 
             {loading ? (
-              <div className="py-12 text-center text-slate-500 font-mono text-xs">
+              <div className="py-12 text-center text-[#6a6b6c] font-mono text-xs">
                 Loading Agency Agents roster...
               </div>
             ) : filteredAgents.length === 0 ? (
-              <div className="py-12 text-center text-slate-500 font-mono text-xs">
+              <div className="py-12 text-center text-[#6a6b6c] font-mono text-xs">
                 No matching agents found. Try a different keyword or division.
               </div>
             ) : (
@@ -198,27 +194,27 @@ export const AgencyRosterModal: React.FC<AgencyRosterModalProps> = ({
                   <div
                     key={agent.slug}
                     onClick={() => loadAgentDetail(agent.slug)}
-                    className={`p-3.5 rounded-xl border transition cursor-pointer ${
+                    className={`p-3.5 rounded-[6px] border transition cursor-pointer shadow-key ${
                       isSelected
-                        ? 'border-cyan-400 bg-cyan-950/40 shadow-cyan-glow'
-                        : 'border-slate-800 bg-slate-900/60 hover:bg-slate-900 hover:border-slate-700'
+                        ? 'border-[#9c9c9d] bg-[#1b1c1e]'
+                        : 'border-[#1b1c1e] bg-[#111214] hover:bg-[#1b1c1e] hover:border-[#363739]'
                     }`}
                   >
                     <div className="flex items-center justify-between mb-1">
-                      <h4 className="text-xs font-bold text-white font-mono flex items-center gap-1.5">
-                        <Sparkles className="w-3 h-3 text-cyan-400" />
+                      <h4 className="text-xs font-semibold text-white font-mono flex items-center gap-1.5">
+                        <Sparkles className="w-3 h-3 text-[#ff6363]" />
                         {agent.name}
                       </h4>
-                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">
+                      <span className="text-[10px] font-mono px-2 py-0.5 rounded-[4px] bg-[#07080a] text-[#9c9c9d] border border-[#2f3031]">
                         {agent.division}
                       </span>
                     </div>
-                    <p className="text-[11px] text-slate-400 leading-snug line-clamp-2">
+                    <p className="text-[11px] text-[#9c9c9d] leading-snug line-clamp-2">
                       {agent.description}
                     </p>
-                    <div className="mt-2 text-[10px] font-mono text-cyan-400/80 flex items-center justify-between">
+                    <div className="mt-2 text-[10px] font-mono text-[#6a6b6c] flex items-center justify-between">
                       <span>/{agent.slug}</span>
-                      <ChevronRight className="w-3 h-3" />
+                      <ChevronRight className="w-3 h-3 text-[#9c9c9d]" />
                     </div>
                   </div>
                 );
@@ -227,49 +223,49 @@ export const AgencyRosterModal: React.FC<AgencyRosterModalProps> = ({
           </div>
 
           {/* Agent Full Profile Details Pane */}
-          <div className="w-1/2 overflow-y-auto p-6 bg-[#070B14]">
+          <div className="w-1/2 overflow-y-auto p-6 bg-[#040506]">
             {loadingDetail ? (
-              <div className="py-20 text-center text-slate-500 font-mono text-xs">
+              <div className="py-20 text-center text-[#6a6b6c] font-mono text-xs">
                 Loading Agent Persona Details...
               </div>
             ) : selectedAgent ? (
               <div className="space-y-4">
-                <div className="p-4 rounded-xl bg-slate-900 border border-slate-800">
-                  <div className="flex items-center justify-between text-xs font-mono text-cyan-400 mb-1">
+                <div className="p-4 rounded-[6px] bg-[#111214] border border-[#1b1c1e] shadow-key">
+                  <div className="flex items-center justify-between text-xs font-mono text-[#9c9c9d] mb-1">
                     <span>READY-MADE AI SPECIALIST</span>
-                    <span className="px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-500/30">
+                    <span className="px-2 py-0.5 rounded-[4px] bg-[#07080a] text-white border border-[#2f3031]">
                       /{selectedAgent.slug}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold text-white">{selectedAgent.name}</h3>
-                  <p className="text-xs text-slate-300 mt-2 leading-relaxed">
+                  <h3 className="text-lg font-normal text-white">{selectedAgent.name}</h3>
+                  <p className="text-xs text-[#9c9c9d] mt-2 leading-relaxed">
                     {selectedAgent.description}
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
-                  <div className="text-xs font-mono uppercase text-slate-400 font-bold mb-3 flex items-center gap-1.5">
-                    <BookOpen className="w-4 h-4 text-cyan-400" />
+                <div className="p-4 rounded-[6px] bg-[#111214] border border-[#1b1c1e] shadow-key">
+                  <div className="text-xs font-mono uppercase text-[#9c9c9d] font-semibold mb-3 flex items-center gap-1.5">
+                    <BookOpen className="w-4 h-4 text-[#9c9c9d]" />
                     <span>Agent Instructions & Core Persona</span>
                   </div>
-                  <div className="bg-[#050811] p-4 rounded-lg border border-slate-800 text-xs font-mono text-slate-300 max-h-[380px] overflow-y-auto whitespace-pre-wrap leading-relaxed">
+                  <div className="bg-[#07080a] p-4 rounded-[6px] border border-[#1b1c1e] text-xs font-mono text-[#9c9c9d] max-h-[380px] overflow-y-auto whitespace-pre-wrap leading-relaxed shadow-key">
                     {selectedAgent.system_instructions}
                   </div>
                 </div>
 
-                <div className="p-3.5 rounded-lg bg-emerald-950/20 border border-emerald-500/30 text-xs text-emerald-300 flex items-center justify-between font-mono">
+                <div className="p-3.5 rounded-[6px] bg-[#111214] border border-[#1b1c1e] text-xs text-[#e6e6e6] flex items-center justify-between font-mono shadow-key">
                   <span className="flex items-center gap-1.5">
-                    <CheckCircle className="w-4 h-4 text-emerald-400" />
+                    <CheckCircle className="w-4 h-4 text-white" />
                     Installed & Active in Antigravity Engine
                   </span>
-                  <span className="text-[10px] text-slate-400">Ready for Subagent Delegation</span>
+                  <span className="text-[10px] text-[#6a6b6c]">Ready for Subagent Delegation</span>
                 </div>
               </div>
             ) : (
-              <div className="h-full flex flex-col items-center justify-center text-center text-slate-500 font-mono text-xs p-8">
-                <Bot className="w-12 h-12 text-slate-600 mb-3 animate-pulse" />
-                <div className="font-semibold text-slate-400">Select Any Agent from the Roster</div>
-                <div className="text-[11px] text-slate-500 mt-1 max-w-xs">
+              <div className="h-full flex flex-col items-center justify-center text-center text-[#6a6b6c] font-mono text-xs p-8">
+                <Bot className="w-12 h-12 text-[#2f3031] mb-3 animate-pulse" />
+                <div className="font-semibold text-[#9c9c9d]">Select Any Agent from the Roster</div>
+                <div className="text-[11px] text-[#6a6b6c] mt-1 max-w-xs">
                   Inspect the full system instructions, identity traits, and workflows of any ready-made specialist.
                 </div>
               </div>

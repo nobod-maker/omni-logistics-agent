@@ -4,15 +4,9 @@ import React, { useState } from 'react';
 import { 
   X, 
   TrendingUp, 
-  DollarSign, 
-  ShieldCheck, 
-  Clock, 
-  BarChart3, 
   Calculator,
   Download,
-  Layers,
-  Sparkles,
-  ChevronRight
+  Sparkles
 } from 'lucide-react';
 
 interface VentureCaseModalProps {
@@ -94,47 +88,47 @@ export const VentureCaseModal: React.FC<VentureCaseModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="bg-[#0A0F1D] border border-cyan-500/40 rounded-2xl w-full max-w-3xl overflow-hidden shadow-cyan-glow flex flex-col max-h-[90vh]">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#040506]/85 backdrop-blur-sm animate-in fade-in duration-200">
+      <div className="bg-[#07080a] border border-[#1b1c1e] rounded-[8px] w-full max-w-3xl overflow-hidden shadow-key flex flex-col max-h-[90vh]">
         {/* Header */}
-        <div className="bg-cyan-950/40 border-b border-cyan-500/30 px-6 py-4 flex items-center justify-between">
+        <div className="bg-[#111214] border-b border-[#1b1c1e] px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-gradient-to-tr from-cyan-600 to-emerald-500 text-white rounded-lg">
-              <TrendingUp className="w-5 h-5" />
+            <div className="p-2 bg-[#1b1c1e] text-[#9c9c9d] border border-[#2f3031] rounded-[6px] shadow-key">
+              <TrendingUp className="w-5 h-5 text-white" />
             </div>
             <div>
-              <div className="text-xs font-mono uppercase tracking-widest text-cyan-400 font-bold">
+              <div className="text-xs font-mono uppercase tracking-widest text-[#9c9c9d] font-semibold">
                 COMMERCIAL VENTURE CASE // DUBAI CHAMBER CHAMPIONSHIP
               </div>
-              <h3 className="text-base font-bold text-white">
+              <h3 className="text-base font-normal text-white">
                 3PL ROI Simulator & Unit Economics Engine
               </h3>
             </div>
           </div>
           <button 
             onClick={onClose}
-            className="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 transition"
+            className="text-[#9c9c9d] hover:text-white p-1 rounded-[6px] hover:bg-[#1b1c1e] border border-transparent hover:border-[#363739] transition"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
-        {/* Content Body */}
-        <div className="p-6 overflow-y-auto flex-1 space-y-6">
-          {/* Interactive Volume Slider */}
-          <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-5 space-y-3">
+        {/* Content Body / Dark Bento Grid */}
+        <div className="p-6 overflow-y-auto flex-1 space-y-4">
+          {/* Bento Card 1: Interactive Volume Slider */}
+          <div className="bg-[#111214] border border-[#1b1c1e] rounded-[8px] p-5 space-y-3 shadow-key">
             <div className="flex items-center justify-between">
               <div>
-                <label className="text-xs font-bold text-white uppercase tracking-wider font-mono">
+                <label className="text-xs font-semibold text-white uppercase tracking-wider font-mono">
                   3PL Monthly Container Volume (TEUs):
                 </label>
-                <div className="text-[11px] text-slate-400">
+                <div className="text-[11px] text-[#9c9c9d]">
                   Target: Medium to Large Freight Forwarders operating via Jebel Ali Port & Free Zones
                 </div>
               </div>
               <div className="text-right">
-                <span className="text-2xl font-bold font-mono text-cyan-400">{monthlyTeu.toLocaleString('en-US')}</span>
-                <span className="text-xs font-mono text-slate-400 ml-1.5">TEUs/mo</span>
+                <span className="text-2xl font-normal font-mono text-white">{monthlyTeu.toLocaleString('en-US')}</span>
+                <span className="text-xs font-mono text-[#9c9c9d] ml-1.5">TEUs/mo</span>
               </div>
             </div>
 
@@ -145,93 +139,93 @@ export const VentureCaseModal: React.FC<VentureCaseModalProps> = ({
               step="100"
               value={monthlyTeu}
               onChange={(e) => setMonthlyTeu(Number(e.target.value))}
-              className="w-full h-2 bg-slate-950 rounded-lg appearance-none cursor-pointer accent-cyan-400"
+              className="w-full h-2 bg-[#040506] border border-[#2f3031] rounded-lg appearance-none cursor-pointer accent-[#e6e6e6]"
             />
 
-            <div className="flex justify-between text-[10px] font-mono text-slate-500">
+            <div className="flex justify-between text-[10px] font-mono text-[#6a6b6c]">
               <span>Boutique Forwarder (100 TEUs)</span>
               <span>Mid-Market (1,500 TEUs)</span>
               <span>Regional 3PL Major (10,000 TEUs)</span>
             </div>
           </div>
 
-          {/* Value Delivered Scorecard */}
+          {/* Bento Cards 2, 3, 4: Value Delivered Scorecard */}
           <div className="grid grid-cols-3 gap-3">
-            <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 text-center">
-              <div className="text-[10px] font-mono text-slate-400 uppercase">Annual Demurrage Avoided</div>
-              <div className="text-lg font-bold font-mono text-cyan-400 mt-1">
+            <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] text-center shadow-key">
+              <div className="text-[10px] font-mono text-[#6a6b6c] uppercase">Annual Demurrage Avoided</div>
+              <div className="text-lg font-normal font-mono text-white mt-1">
                 ${annualDemurrageSaved.toLocaleString('en-US')}
               </div>
-              <div className="text-[10px] font-mono text-slate-400 mt-0.5">
+              <div className="text-[10px] font-mono text-[#6a6b6c] mt-0.5">
                 {annualDisruptions.toLocaleString('en-US')} Boxes @ $360/box
               </div>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 text-center">
-              <div className="text-[10px] font-mono text-slate-400 uppercase">Customs Time Recovered</div>
-              <div className="text-lg font-bold font-mono text-emerald-400 mt-1">
+            <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] text-center shadow-key">
+              <div className="text-[10px] font-mono text-[#6a6b6c] uppercase">Customs Time Recovered</div>
+              <div className="text-lg font-normal font-mono text-white mt-1">
                 +{annualCustomsHoursSaved.toLocaleString('en-US')} hrs
               </div>
-              <div className="text-[10px] font-mono text-slate-400 mt-0.5">
+              <div className="text-[10px] font-mono text-[#6a6b6c] mt-0.5">
                 Mirsal-II Automated Green Lane
               </div>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 text-center">
-              <div className="text-[10px] font-mono text-slate-400 uppercase">Gross SLA Penalties Mitigated</div>
-              <div className="text-lg font-bold font-mono text-amber-400 mt-1">
+            <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] text-center shadow-key">
+              <div className="text-[10px] font-mono text-[#6a6b6c] uppercase">Gross SLA Penalties Mitigated</div>
+              <div className="text-lg font-normal font-mono text-white mt-1">
                 ${annualSlaProtected.toLocaleString('en-US')}
               </div>
-              <div className="text-[10px] font-mono text-slate-400 mt-0.5">
+              <div className="text-[10px] font-mono text-[#6a6b6c] mt-0.5">
                 Saved via DWC Split & E611
               </div>
             </div>
           </div>
 
-          {/* Revenue & Unit Economics Matrix */}
-          <div className="p-5 rounded-xl bg-gradient-to-br from-cyan-950/30 via-slate-900 to-slate-950 border border-cyan-500/40 space-y-4">
-            <div className="flex items-center justify-between border-b border-slate-800/80 pb-3">
+          {/* Bento Card 5: Revenue & Unit Economics Matrix */}
+          <div className="p-5 rounded-[8px] bg-[#111214] border border-[#1b1c1e] shadow-key space-y-4">
+            <div className="flex items-center justify-between border-b border-[#1b1c1e] pb-3">
               <div className="flex items-center gap-2">
-                <Calculator className="w-4 h-4 text-cyan-400" />
-                <span className="font-bold text-white text-sm">Monetization & Client ROI Multiple</span>
+                <Calculator className="w-4 h-4 text-[#9c9c9d]" />
+                <span className="font-semibold text-white text-sm">Monetization & Client ROI Multiple</span>
               </div>
-              <span className="px-3 py-1 rounded-full font-mono text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
+              <span className="px-3 py-1 rounded-[4px] font-mono text-xs font-semibold bg-[#1b1c1e] text-[#e6e6e6] border border-[#363739]">
                 {roiMultiple}x Client ROI
               </span>
             </div>
 
             <div className="grid grid-cols-2 gap-4 text-xs">
-              <div className="space-y-2 bg-slate-950/80 p-3.5 rounded-lg border border-slate-800">
-                <span className="font-mono font-bold text-cyan-300 text-[11px] uppercase block">
+              <div className="space-y-2 bg-[#07080a] p-3.5 rounded-[6px] border border-[#1b1c1e] shadow-key">
+                <span className="font-mono font-semibold text-white text-[11px] uppercase block">
                   Omni-Logistics ARR Generated:
                 </span>
-                <div className="flex justify-between text-slate-300 font-mono text-[11px]">
+                <div className="flex justify-between text-[#9c9c9d] font-mono text-[11px]">
                   <span>Base SaaS ($4,500/mo):</span>
                   <span>${annualBaseSaas.toLocaleString('en-US')}</span>
                 </div>
-                <div className="flex justify-between text-slate-300 font-mono text-[11px]">
+                <div className="flex justify-between text-[#9c9c9d] font-mono text-[11px]">
                   <span>10% Performance Fee:</span>
                   <span>+${annualPerformanceFee.toLocaleString('en-US', { maximumFractionDigits: 0 })}</span>
                 </div>
-                <div className="flex justify-between text-emerald-400 font-mono font-bold pt-1.5 border-t border-slate-800">
+                <div className="flex justify-between text-white font-mono font-semibold pt-1.5 border-t border-[#1b1c1e]">
                   <span>Total ACV / ARR:</span>
                   <span>${omniAnnualRevenue.toLocaleString('en-US', { maximumFractionDigits: 0 })}/yr</span>
                 </div>
               </div>
 
-              <div className="space-y-2 bg-slate-950/80 p-3.5 rounded-lg border border-slate-800">
-                <span className="font-mono font-bold text-emerald-300 text-[11px] uppercase block">
+              <div className="space-y-2 bg-[#07080a] p-3.5 rounded-[6px] border border-[#1b1c1e] shadow-key">
+                <span className="font-mono font-semibold text-white text-[11px] uppercase block">
                   Client 3PL Financial Impact:
                 </span>
-                <div className="flex justify-between text-slate-300 font-mono text-[11px]">
+                <div className="flex justify-between text-[#9c9c9d] font-mono text-[11px]">
                   <span>Total Margin Protected:</span>
                   <span>${totalAnnualValue.toLocaleString('en-US')}</span>
                 </div>
-                <div className="flex justify-between text-slate-300 font-mono text-[11px]">
+                <div className="flex justify-between text-[#9c9c9d] font-mono text-[11px]">
                   <span>Less Omni Platform Cost:</span>
                   <span>-${omniAnnualRevenue.toLocaleString('en-US', { maximumFractionDigits: 0 })}</span>
                 </div>
-                <div className="flex justify-between text-emerald-400 font-mono font-bold pt-1.5 border-t border-slate-800">
+                <div className="flex justify-between text-white font-mono font-semibold pt-1.5 border-t border-[#1b1c1e]">
                   <span>Net Annual Profit Added:</span>
                   <span>+${clientNetSavings.toLocaleString('en-US', { maximumFractionDigits: 0 })}/yr</span>
                 </div>
@@ -239,30 +233,30 @@ export const VentureCaseModal: React.FC<VentureCaseModalProps> = ({
             </div>
           </div>
 
-          {/* Strategic Market Sizing for Championship Jury */}
-          <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 text-xs text-slate-300 space-y-2">
-            <div className="font-bold text-white flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+          {/* Bento Card 6: Strategic Market Sizing for Championship Jury */}
+          <div className="p-4 rounded-[8px] bg-[#111214] border border-[#1b1c1e] shadow-key text-xs text-[#9c9c9d] space-y-2">
+            <div className="font-semibold text-white flex items-center gap-1.5">
+              <Sparkles className="w-3.5 h-3.5 text-[#ff6363]" />
               <span>Dubai Hub Market TAM & Scalability:</span>
             </div>
-            <p className="leading-relaxed text-[11px] text-slate-400">
-              Jebel Ali Port handles over <strong className="text-slate-200">14.0 Million TEUs annually</strong> across 90+ container shipping lines. Capturing just <strong className="text-cyan-300">1.5% market penetration</strong> (210,000 TEUs) yields <strong className="text-emerald-400 font-mono">$11.8M ARR</strong> while protecting over $85M in supply chain margins for UAE trade operators.
+            <p className="leading-relaxed text-[11px] text-[#9c9c9d]">
+              Jebel Ali Port handles over <strong className="text-white font-semibold">14.0 Million TEUs annually</strong> across 90+ container shipping lines. Capturing just <strong className="text-white font-semibold">1.5% market penetration</strong> (210,000 TEUs) yields <strong className="text-white font-mono font-semibold">$11.8M ARR</strong> while protecting over $85M in supply chain margins for UAE trade operators.
             </p>
           </div>
         </div>
 
         {/* Footer */}
-        <div className="p-5 border-t border-slate-800 bg-[#070B14] flex items-center justify-between">
+        <div className="p-5 border-t border-[#1b1c1e] bg-[#07080a] flex items-center justify-between">
           <button
             onClick={onClose}
-            className="px-4 py-2 rounded-xl border border-slate-700 text-xs font-medium text-slate-300 hover:bg-slate-800 transition"
+            className="px-4 py-2 rounded-[6px] border border-[#363739] text-xs font-medium text-[#9c9c9d] hover:text-white hover:bg-[#111214] shadow-key transition"
           >
             Close Simulator
           </button>
 
           <button
             onClick={handleExportPlan}
-            className="flex items-center gap-2 px-5 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-slate-950 font-bold text-xs shadow-emerald-glow transition"
+            className="flex items-center gap-2 px-5 py-2 rounded-[6px] bg-[#e6e6e6] hover:bg-white text-[#454647] font-semibold text-xs shadow-key transition"
           >
             <Download className="w-4 h-4" />
             <span>Export 3PL Venture Case (.JSON)</span>
